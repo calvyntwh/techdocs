@@ -48,7 +48,7 @@
 
 - Efficient smart contract engine, BCB's smart contracts support [Solidity](https://en.wikipedia.org/wiki/Solidity) language and Golang language to develop.
 
-- Support side chain, its TPS can reach 1w.
+- Support side chain, it can reach up to 10,000 TPS (transactions per second).
 
 ### 4.2 Security Privacy
 
