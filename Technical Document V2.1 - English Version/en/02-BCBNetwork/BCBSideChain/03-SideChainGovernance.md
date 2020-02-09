@@ -1,14 +1,12 @@
 # Side Chain Governance
 
-
-
 ## 1. Quick start for the side chain governance
 
 ### 1.1  Adjust the side chain public URL
 
 Query the account balance of the side chain owner `scowner` on the main chain `local` to ensure that the `gas` needed to set the side chain `OpenURLs` is paid, querying command is:
 
-```
+```shell
  ./bcc balance --accAddress="localHMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG" --tokenName="LOC" --chainid local
 
 Return results:
@@ -25,9 +23,9 @@ Response: [
 
 To set the `OpenURLs` for the side chain, we take the side chain name is `smartCity`, the side chain public URL is `["http://ip1:46657"]` as an example to show how to use bcc tool to set the `OpenURLs` for the side chain:
 
-```
+```shell
 ./bcc call --contract netgovernance --method SetOpenURLs --splitBy @ --params smartCity@"[\"http://ip1:46657\"]" --gasLimit 100000 --orgName genesis --name scowner --password SCOwner@2019 --chainid local
- 
+
 Return results:
 
 OK
@@ -42,28 +40,30 @@ Response: {
 
 The value of option `params` in the command line is the argument to set for the side chain OpenURLs.
 
-```
+```html
 the first parameter: smartCity, the side chain name
-the second parameter: ["http://ip1:46657"], the list of URL open to the public, it could be many, such as ["http://ip1:46657", "http://ip2:46657"] 
+the second parameter: ["http://ip1:46657"], the list of URL open to the public, it could be many, such as ["http://ip1:46657", "http://ip2:46657"]
 ```
+
 After adjusting `openURLs` for the side chain, you can query whether the `openURLs` of the side chain is set successfully. Query command is:
 
-```
+```shell
 ./bcc query -k /sidechain/local[smartCity]/openurls
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /sidechain/local[smartCity]/openurls
   Value: ["ip1:46657"]
   
 After querying, you can see the side chian URL is the above set URL.
 ```
+
 If the querying result is not the URL set above, you can query the details of the transaction by the returned`txhash` when you set the URL:
 
-```
+```shell
 ./bcc tx --txhash 0xCE0E3359A967E60A73316E7AE7726D7890AFD05B70FDCA319BC5E50E8E161464
 OK
 Response: {
@@ -104,19 +104,19 @@ Response: {
       }
     },
     "/1/0/totalFee": {
-      	......
+      ......
     },
     "/1/1/transferFee": {
-    	......
+      ......
     },
     "/1/2/transferFee": {
-    	......
+      ......
     },
     "/1/3/transferFee": {
-   		......
+      ......
     },
     "/1/4/transferFee": {
-     	......
+      ......
     }
   }
 }
@@ -128,7 +128,7 @@ You can find the receipt for `netgovernance.setOpenURL` in the tag, and check if
 
 You can use the bcc tool to adjust the gas price ratio of the side chain, we take the side chain is `smartCity`, the gas price ratio is `2.000` as an example to show how to adjust the gas price ratio of the side chain:
 
-```
+```shell
 ./bcc call --contract netgovernance --method SetGasPriceRatio --splitBy @ --params SmartCity@"2.000" --gasLimit 100000 --orgName genesis --name scowner --password SCOwner@2019 --chainid local
 
 Return results:
@@ -145,21 +145,21 @@ Response: {
 
 The value of option `params` in the command line is the argument to set for the side chain genesis creation:
 
-```
+```html
 the first parameter: SmartCity, the side chain name
 the second parameter: "2.000", the gas price ratio, note that the format must be accurate to three decimal places.
 ```
 
 If we want to query if the above operation is successful, you can use the following command:
 
-```
+```shell
 Query on the main chain:
 ./bcc query -k /sidechain/local[SmartCity]/chaininfo
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /sidechain/local[SmartCity]/chaininfo
   Value: {"sideChainName":"SmartCity","chainID":"local[SmartCity]","NodeNames":["node1"],"orgName":"SmartCity","owner":"localHMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","height":748,"status":"ready","gasPriceRatio":"2.000"}
@@ -170,7 +170,7 @@ Query on the side chain:
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /genesis/gaspriceratio
   Value: "2.000"
@@ -178,7 +178,7 @@ Response:
 
 Through querying, you can see the side chian gas price ratio is the above set `gaspriceratio`. If the query result is not as expected, you can query the receipt by the following command:
 
-```
+```shell
 ./bcc tx  --chainid local --txhash 0x5100A109C3FDEACED7B5E7B90A61C966E1A093D6409ACFD2045D3CC8CBAB679E
 OK
 Response: {
@@ -204,7 +204,7 @@ Response: {
   ],
   "tags": {
     "/0/0/std::fee": {
-    	......
+      ......
     },
     "/0/1/netgovernance.setGasPriceRatio": {
       "Name": "netgovernance.setGasPriceRatio",
@@ -218,7 +218,7 @@ Response: {
       }
     },
     "/0/2/std::fee": {
-     	......
+      ......
     },
     "/0/3/ibc::packet/local->local[SmartCity]": {
       "Name": "ibc::packet/local->local[SmartCity]",
@@ -248,19 +248,19 @@ Response: {
       }
     },
     "/1/0/totalFee": {
-     	......
+      ......
     },
     "/1/1/transferFee": {
-     	......
+      ......
     },
     "/1/2/transferFee": {
-    	......
+      ......
     },
     "/1/3/transferFee": {
-     	......
+      ......
     },
     "/1/4/transferFee": {
-    	......
+      ......
     }
   }
 }
@@ -285,7 +285,7 @@ Using the following command to export the public key on the machine of the side 
 
 If you want to add a verifier node, you need to use the following command to add by the node public key from above, we take the verifier node name is `node2`, node public key is `0x0d180d63841102960cd86d88cf1f79e6695891d85385b4abf25f97b94cfaf2c0`, reward address is `local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG`, node weight is `10` as an example to show how to add verifier node:
 
-```
+```shell
 ./bcc call --contract governance --method NewValidator --params node2@0x0d180d63841102960cd86d88cf1f79e6695891d85385b4abf25f97b94cfaf2c0@local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG@10 --gasLimit 1000000 --orgName genesis --name scowner --password SCOwner@2019 --chainid local[SmartCity]
 
 Return results:
@@ -302,7 +302,7 @@ Response: {
 
 The value of option `params` in the command line is the argument to set for the side chain genesis creation.
 
-```
+```html
 the first parameter: node2, the verifier node name you added
 the second parameter: 0x0d180d63841102960cd86d88cf1f79e6695891d85385b4abf25f97b94cfaf2c0, the node public key you got above + 0x
 the third parameter:local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG, reward address
@@ -311,13 +311,13 @@ the forth parameter: 10, the node weight
 
 Check the side chain `SmartCity` successfully adds the node by the following command:
 
-```
+```shell
 ./bcc query -k /ibc/local[SmartCity] --chainid local[SmartCity]
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /ibc/local[SmartCity]
   Value: {"local[SmartCity]33KDwKPQrtwdgTejxeGspyR7u4fefXTb7":{"nodepubkey":"0D180D63841102960CD86D88CF1F79E6695891D85385B4ABF25F97B94CFAF2C0","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node2","nodeaddr":"local[SmartCity]33KDwKPQrtwdgTejxeGspyR7u4fefXTb7"},"local[SmartCity]91TcFC3vPqsS3DWh5TksV1xCKZLWEftpD":{"nodepubkey":"10366FE4D47A9EA4AD54C864143B7FBD3ECA247995C663BCC3C8835D29317A30","power":10,"rewardaddr":"local[SmartCity]2V6b1EW2cExW5UtuUX9XXQhJCaaxXzLV6","name":"node1","nodeaddr":"local[SmartCity]91TcFC3vPqsS3DWh5TksV1xCKZLWEftpD"}}
@@ -327,13 +327,11 @@ You can see the side chain has added the new node `node2` successfully.
 
 > Notice: when the current total number of the node is less than 4, the new node weight must be equal to 10, otherwise the addation of the new node will fail.
 
-
-
 ### 2.4 Adjust verifier node weight
 
 When adjusting the verifier node weight, the current node must be guranteed to be greater than or equal to 4, we take the node public key is `0x2113d7a30d47a08ca79c8ebbc32a9c73a65a488b3f93da3a1eb42c57b35f9c9f`, ndoe weight is `12` as an example to show how to adjust the verifier node weight:
 
-```
+```shell
 ./bcc call --contract governance --method SetPower --params 0x2113d7a30d47a08ca79c8ebbc32a9c73a65a488b3f93da3a1eb42c57b35f9c9f@12 --gasLimit 1000000 --orgName genesis --name scowner --password SCOwner@2019 --chainid local[SmartCity]
 
 Return result:
@@ -350,20 +348,20 @@ Response: {
 
 The value of option `params` in the command line is the argument to set for the side chain genesis creation:
 
-```
+```html
 the first parameter:0x2113d7a30d47a08ca79c8ebbc32a9c73a65a488b3f93da3a1eb42c57b35f9c9f,  the node public key + 0x
 the second parameter:12, the node weight
 ```
 
 If you want to query if the node weight be set successfully, you can verify by the following command:
 
-```
+```shell
 ./bcc query -k /ibc/local[SmartCity] --chainid local[SmartCity]
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /ibc/local[SmartCity]
   Value: {"local[SmartCity]CFCHxFV6z6djWJR5FH1uSrJ8eN7AYj6gE":{"nodepubkey":"E1464972D492C1FB916336658068F0B7A92B458A6D7D0D010BDE5F035BC32A90","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node2","nodeaddr":"local[SmartCity]CFCHxFV6z6djWJR5FH1uSrJ8eN7AYj6gE"},"local[SmartCity]F5GqPDn294pdydBfxSgPEspbU5RPpwnUS":{"nodepubkey":"F3D77C12669A83AF7E922A7190001A40304AF01AD545A464D786A332761FB494","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node4","nodeaddr":"local[SmartCity]F5GqPDn294pdydBfxSgPEspbU5RPpwnUS"},"local[SmartCity]Gbh2JuVFg6orPcpCpQvAdv5gYT5kFQV3Q":{"nodepubkey":"2113D7A30D47A08CA79C8EBBC32A9C73A65A488B3F93DA3A1EB42C57B35F9C9F","power":12,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node3","nodeaddr":"local[SmartCity]Gbh2JuVFg6orPcpCpQvAdv5gYT5kFQV3Q"},"local[SmartCity]MwKS9rCK2nBNsevTdBBeiqKCrqQRkAK18":{"nodepubkey":"D781A3CE164052F8E103D5F9DE216659438ABF2D2F956FF76483A7E6B9C93117","power":10,"rewardaddr":"local[SmartCity]8LtT8AonWgJ8nMCEdAR5UGrbRfUmuoeiz","name":"node1","nodeaddr":"local[SmartCity]MwKS9rCK2nBNsevTdBBeiqKCrqQRkAK18"}}
@@ -373,20 +371,19 @@ You can see the node weight of the node `node3` is set to 12 successfully.
 
 > Notice: if current node number is less than 4, you are not allowed to modify the node weight.
 
-
 ### 2.5 Delete verifier node
 
 Deleting a node means to set the node weight to 0.
 
 Before delete a node, you can query the current node details:
 
-```
+```shell
 ./bcc query -k /ibc/local[SmartCity] --chainid local[SmartCity]
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /ibc/local[SmartCity]
   Value: {"local[SmartCity]33KDwKPQrtwdgTejxeGspyR7u4fefXTb7":{"nodepubkey":"0D180D63841102960CD86D88CF1F79E6695891D85385B4ABF25F97B94CFAF2C0","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node5","nodeaddr":"local[SmartCity]33KDwKPQrtwdgTejxeGspyR7u4fefXTb7"},"local[SmartCity]CFCHxFV6z6djWJR5FH1uSrJ8eN7AYj6gE":{"nodepubkey":"E1464972D492C1FB916336658068F0B7A92B458A6D7D0D010BDE5F035BC32A90","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node2","nodeaddr":"local[SmartCity]CFCHxFV6z6djWJR5FH1uSrJ8eN7AYj6gE"},"local[SmartCity]F5GqPDn294pdydBfxSgPEspbU5RPpwnUS":{"nodepubkey":"F3D77C12669A83AF7E922A7190001A40304AF01AD545A464D786A332761FB494","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node4","nodeaddr":"local[SmartCity]F5GqPDn294pdydBfxSgPEspbU5RPpwnUS"},"local[SmartCity]Gbh2JuVFg6orPcpCpQvAdv5gYT5kFQV3Q":{"nodepubkey":"2113D7A30D47A08CA79C8EBBC32A9C73A65A488B3F93DA3A1EB42C57B35F9C9F","power":12,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node3","nodeaddr":"local[SmartCity]Gbh2JuVFg6orPcpCpQvAdv5gYT5kFQV3Q"},"local[SmartCity]MwKS9rCK2nBNsevTdBBeiqKCrqQRkAK18":{"nodepubkey":"D781A3CE164052F8E103D5F9DE216659438ABF2D2F956FF76483A7E6B9C93117","power":10,"rewardaddr":"local[SmartCity]8LtT8AonWgJ8nMCEdAR5UGrbRfUmuoeiz","name":"node1","nodeaddr":"local[SmartCity]MwKS9rCK2nBNsevTdBBeiqKCrqQRkAK18"}}
@@ -394,8 +391,7 @@ Response:
 
 We take the node `node5`(its node public key is `0d180d63841102960cd86d88cf1f79e6695891d85385b4abf25f97b94cfaf2c0`) as an example to delete a node:
 
-
-```
+```shell
 ./bcc call --contract governance --method SetPower --params 0x0d180d63841102960cd86d88cf1f79e6695891d85385b4abf25f97b94cfaf2c0@0 --gasLimit 1000000 --orgName genesis --name scowner --password SCOwner@2019 --chainid local[SmartCity]
 
 Return results:
@@ -412,18 +408,17 @@ Response: {
 
 You can verify the removal of the node by the following command:
 
-```
+```shell
 ./bcc query -k /ibc/local[SmartCity] --chainid local[SmartCity]
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /ibc/local[SmartCity]
   Value: {"local[SmartCity]CFCHxFV6z6djWJR5FH1uSrJ8eN7AYj6gE":{"nodepubkey":"E1464972D492C1FB916336658068F0B7A92B458A6D7D0D010BDE5F035BC32A90","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node2","nodeaddr":"local[SmartCity]CFCHxFV6z6djWJR5FH1uSrJ8eN7AYj6gE"},"local[SmartCity]F5GqPDn294pdydBfxSgPEspbU5RPpwnUS":{"nodepubkey":"F3D77C12669A83AF7E922A7190001A40304AF01AD545A464D786A332761FB494","power":10,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node4","nodeaddr":"local[SmartCity]F5GqPDn294pdydBfxSgPEspbU5RPpwnUS"},"local[SmartCity]Gbh2JuVFg6orPcpCpQvAdv5gYT5kFQV3Q":{"nodepubkey":"2113D7A30D47A08CA79C8EBBC32A9C73A65A488B3F93DA3A1EB42C57B35F9C9F","power":12,"rewardaddr":"local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG","name":"node3","nodeaddr":"local[SmartCity]Gbh2JuVFg6orPcpCpQvAdv5gYT5kFQV3Q"},"local[SmartCity]MwKS9rCK2nBNsevTdBBeiqKCrqQRkAK18":{"nodepubkey":"D781A3CE164052F8E103D5F9DE216659438ABF2D2F956FF76483A7E6B9C93117","power":10,"rewardaddr":"local[SmartCity]8LtT8AonWgJ8nMCEdAR5UGrbRfUmuoeiz","name":"node1","nodeaddr":"local[SmartCity]MwKS9rCK2nBNsevTdBBeiqKCrqQRkAK18"}}
 ```
-
 
 You can see the node `node5` has been deleted successfully.
 

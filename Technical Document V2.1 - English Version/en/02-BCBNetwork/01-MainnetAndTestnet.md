@@ -1,13 +1,12 @@
 # BCB Mainnet and Testnet
 
-
 ## 1. BCB Mainnet
 
 The BCB node connects to the BCB main network by default. Users can access the BCB main network through the official website to query the network status, submit transactions and so on. For specific protocols and interfaces, please refer to the `BCB RPC Interface Description` document.
 
 ### 1.1 Mainnet Official Domain Name
 
-```
+```html
 https://earth.bcbchain.io
 https://venus.bcbchain.io
 https://jupiter.bcbchain.io
@@ -22,7 +21,7 @@ https://sirius.bcbchain.io
 
 ### 1.2 Mainnet Block Browser
 
-```
+```html
 https://www.bcbscan.io/
 ```
 
@@ -34,7 +33,7 @@ All block data on the testnet is independent of the mainnet. Developers should d
 
 ### 2.1 Testnet Domain Name
 
-```
+```html
 https://test-earth.bcbchain.io
 https://test-venus.bcbchain.io
 https://test-jupiter.bcbchain.io
@@ -44,11 +43,11 @@ https://test-altair.bcbchain.io
 
 ### 2.2 Testnet Block Browser
 
-```
+```html
 https://titan.bcbscan.io
 ```
 
-### 2.3 Testnet Advantages 
+### 2.3 Testnet Advantages
 
 - Assets registration, assets distribution, contract execution and so on will not consume real currency.
 - Global, deployed on the Internet.
@@ -58,10 +57,6 @@ https://titan.bcbscan.io
 
 ### 2.4 Test Faucet
 
-```
+```html
 https://ttoken.bcbchain.io
 ```
-
-
-
-

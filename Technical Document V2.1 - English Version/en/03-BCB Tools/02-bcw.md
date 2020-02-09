@@ -6,13 +6,13 @@ bcw：wallet tool, used to create, import and export wallets, sign binary or tex
 
 Execute command is as follows:
 
-```
+```shell
 Usage:
   bcw [command] [flags]
 
 Available commands:
   create         create a new wallet
-  export  		 export a wallet
+  export         export a wallet
   import         import a wallet
   signFile       sign a file
   signData       sign raw data
@@ -22,8 +22,6 @@ Global flags:
 
 Use "bcw <command> --help" for more information about a command.
 ```
-
-
 
 ## 2. Commands Details
 
@@ -37,14 +35,13 @@ Use "bcw <command> --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Option**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-  | ------------ | :------: | ------------------------------------------------------------ |
-  | name         |  String  | Wallet name, 1-40 characters in length, can only be composed of `uppercase letter, lowercase letter, number, @, ', -,.' '`. |
-  | password     |  String  |  Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). <br> If do not specify a password at the command line, the program will prompt the user to enter the password twice.
-  |
-  | keystorepath |  String  | Optional, wallet storage path, if not specified, the system will use the default path        |
+  | **Option**     | **Type** | **Comment**|
+  | :------------ | :------: | :------------------------------------------------------------ |
+  | name | String | Wallet name, 1-40 characters in length, can only be composed of `uppercase letter, lowercase letter, number, @, ', -,.' '`. |
+  | password | String | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter the password twice.|
+  | keystorepath |  String  | Optional, wallet storage path, if not specified, the system will use the default path |
 
-- **Output SUCCESS Result** 
+- **Output SUCCESS Result**
 
   ```
   OK

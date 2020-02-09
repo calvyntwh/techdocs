@@ -12,11 +12,9 @@
 
 After building the observer node of the main chain, we need to derive the public key of the observer node, which will be used when sending the side chain creation transaction.
 
+Excute the following commands on the observer node of the main chain to export the public key of the node:
 
-在主链的观察者节点执行以下命令导出节点公钥。
-Excute the following commands on the observer node of the main chain to export the public key of the node: 
-
-```
+```shell
 export TMHOME=/etc/tmcore
 /usr/local/tmcore/bin/tendermint show_validator
 
@@ -36,7 +34,7 @@ Return results:
 
 After the node public key is exported, the side chain genesis transactioncan be sent to the main chain, using the owner account prepared in `Side chain registration 1.3` for genesis transaction. we take the side chain name is `smartCity`, the side chain node name is `node1`, the side chain reward address is `0x75f90e9fd9b8c7cc2ac4ecfb8be865a41a3774d7b2d1327e9a5b93dc8a18a29a`, the side chain open access path OpenURLs is `http://side chain ip:46657`, and the gas price ratio is `1.000` as an example to show how to send the side chain genesis transaction.
 
-```
+```shell
 ./bcc call --contract netgovernance --method GenesisSideChain --splitBy @ --params smartCity@node1@0x75f90e9fd9b8c7cc2ac4ecfb8be865a41a3774d7b2d1327e9a5b93dc8a18a29a@local[smartCity]LvP9ForVPgagpSuH23MTp9jfW3GVxWfDK@http:// side chain ip:46657@"1.000" --gasLimit 10000000 --orgName genesis --name scowner --password SCOwner@2019
 
 Return results:
@@ -53,7 +51,7 @@ Response: {
 
 The value of option `params` in the command line is the argument to set for the side chain genesis transaction:
 
-```
+```html
 the first parameter：smartCity is side chain name, after genesis creation, the side chain id is the same as the main chain id.
 the second parameter: node1 is the side chain genesis node name.
 the third parameter: 0x75f90e9fd9b8c7cc2ac4ecfb8be865a41a3774d7b2d1327e9a5b93dc8a18a29a is the public key of the side chain genesis node(that is the public key derived from the section 1.2, and it is preceded by 0x).
@@ -64,7 +62,7 @@ the sixth parameter："1.000" is gas rrice ratio that keeps three decimals place
 
 You can query the receipt to confirm the genesis information, the query command is:
 
-```
+```shell
 ./bcc tx --txhash 0xB6107AAAA7527523153A69EE2CE87EA0C27A02A10131502950A444A28C436AD9 --chainid local
 
 Return results:
@@ -87,7 +85,7 @@ OK
     },
   .....
 
-The side chain information can be seen from the above genesisInfo, the "nodepubkey" in the 
+The side chain information can be seen from the above genesisInfo, the "nodepubkey" in the
 "validators\":[{\"nodepubkey\":\"75F90E9FD9B8C7CC2AC4ECFB8BE865A41A3774D7B2D1327E9A5B93DC8A18A29A\",\"power\":10,\"reward_addr\":\"local[smartCity]LvP9ForVPgagpSuH23MTp9jfW3GVxWfDK\",\"name\":\"node1\",\"nodeaddr\":\"local[smartCity]AKHbp57Sqfv8G39KHmsntWodxAfPDPTrd\"}]}" should be the same as the node public key derived from section 1.2 converted to uppercase letters, "openURLs" is the side chain addrress set at the genesis creation.
 ```
 
@@ -98,14 +96,14 @@ In order to confirm whether the genesis creation of the side chain is successful
 
 Confirm on the main chain:
 
-```
+```shell
 Query commands on the main chain: the state becomes to ready
 ./bcc query -k /sidechain/local[smartCity]/chaininfo
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /sidechain/local[smartCity]/chaininfo
   Value: {"sideChainName":"smartCity","chainID":"local[smartCity]","NodeNames":["node1"],"orgName":"smartCity","owner":"localLvP9ForVPgagpSuH23MTp9jfW3GVxWfDK","height":1934,"status":"ready","gasPriceRatio":"1.000"}
@@ -113,18 +111,17 @@ Response:
 
 Confirm on the side chain:
 
-```
+```shell
 Query commands on the side chain:
 ./bcc query -k /genesis/chainid
 
 Return results:
 
 OK
-Response: 
+Response:
   Code: 200
   Key: /genesis/chainid
   Value: "local[smartCity]"
 
 You can see the chain id of the original main chain observer has become the chain id of the new side chain.
 ```
-

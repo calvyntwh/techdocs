@@ -39,5 +39,3 @@ BCBChain ToolBox is the auxiliary toolbox of the BCB chain, which is convenient 
 * txparse
 
   Tools for analyzing transactions.
-
-

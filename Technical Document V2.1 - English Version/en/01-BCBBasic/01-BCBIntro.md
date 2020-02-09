@@ -8,7 +8,7 @@
 
 ## 2.System Structure
 
-<img src=".\p\BCB-arch-3.png" style="zoom:75%;" />
+![BCB Architecture](./p/BCB-arch-3.png)
 
 ## 3. Core Design
 
