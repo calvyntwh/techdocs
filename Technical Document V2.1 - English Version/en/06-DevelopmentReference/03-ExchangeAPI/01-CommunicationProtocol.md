@@ -1,18 +1,18 @@
-# 通讯协议
+# Protocol
 
-## 1. 协议概览
+## 1. Protocol Overview
 
-​	bcbXwallet_rpc服务程序支持如下所示的RPC通讯协议：
+bcbXwallet_rpc server supports the the following PRC communication protocols:
 
 - URI over HTTPS
 
 - JSONRPC over HTTPS
 
-  bcbXwallet_rpc服务程序所支持的所有RPC接口及其参数可通过URL：https://ip:port获取。
+  All RPC interfaces supported by the bcbXwallet_rpc server and their parameters can be obtained at: <https://ip:port>
 
-  bcbXwallet_rpc服务程序提供的RPC接口列表如下所示（支持HTTPS，默认端口为37657）:
+  The list of RPC interfaces provided by the bcbXwallet_rpc server is as follows (supports HTTPS, default port 37657):
   
-  ```
+  ```html
   Available endpoints:
   //localhost:37657/bcb_blockHeight
   //localhost:37657/bcb_version
@@ -32,20 +32,14 @@
   //localhost:37657/bcb_walletImport?name=_&privateKey=_&password=_&accessKey=_&plainText=_
   //localhost:37657/bcb_walletList?pageNum=_
   ```
-  
-  
 
-<div STYLE="page-break-after: always;"></div>
-<div STYLE="page-break-after: always;"></div>
 ## 2. URI over HTTP
 
-​	采用HTTP协议GET方法进行RPC请求时，参数必须采用URI编码，所有RPC调用的URL格式参见上表，具体业务及参数描述参见本章后续小节。
-
-
+When using the HTTP GET method for RPC requests, the parameters must be URI-encoded. For the URL format of all RPC calls, see the list above. For details about each service and its parameters, refer to the following parts of this section.
 
 ## 3. JSONRPC over HTTP
 
-​	采用HTTP协议POST方法进行RPC请求时，使用JSONRPC应用协议，请求的HTTP数据体的格式如下所示：
+When using HTTP POST and JSONRPC application protocol for requests, data body format is as follows:
 
 ```json
 Example：
@@ -59,25 +53,21 @@ Example：
 }
 ```
 
-​	具体通讯接口业务及参数描述参见后续章节。
+Refer to the following parts of the section for in-depth information on the services and their parameters.
 
+General format of the return data of a successful request is as below:
 
-
-​	接口执行成功返回的通用数据结构定义如下：
-
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
   "result": {
-    …		//不同API返回的JSON结构都是定制化的
+    …  //JSON format varies depending on the api called
   }
 }
 ```
 
-
-
-​	执行失败返回的通用数据结构定义如下（所有接口的失败返回的数据结构相同）：
+General format of the return data of a failed request is as below (same for all failed requests):
 
 ```json
 {

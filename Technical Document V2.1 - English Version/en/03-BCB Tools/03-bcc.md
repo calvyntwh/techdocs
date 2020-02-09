@@ -6,8 +6,7 @@ bcc：it can query the information on the chain, send transactions, execute comb
 
 Execute command is as follows:
 
-
-```
+```shell
 Usage:
   bcc [command]
 
@@ -40,25 +39,25 @@ Use "bcc [command] --help" for more information about a command.
 
 - **command**
 
-  ```
+  ```shell
   bcc registerOrg --name hotwal001 --password aBig62_123 --orgName example --gasLimit 1000000 [--note ...] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
   | orgName      |  String  | *organization name                                                  |
   | gasLimit     |  String  | *gas limit for trading                                            |
   | note         |  String  | [optional] transaction notes                                             |
-  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
+  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file |
   | keystorepath |  String  | [optional] wallet access path, default is `./. keystore`                   |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -79,21 +78,19 @@ Use "bcc [command] --help" for more information about a command.
   | orgID              |  String   | organization id                                                     |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                                 |
 
-
-
 ### 2.2 setOrgSigners
 
 - Function Description: set organization public key
 
 - **command**
 
-  ```
+  ```shell
   bcc setOrgSigners --name hotwal001 --password aBig62_123 --orgName example --pubKeys ["0x..."] --gasLimit 1000000 [--note ...] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -101,12 +98,12 @@ Use "bcc [command] --help" for more information about a command.
   | gasLimit     |  String  | *gas limit for trading                                            |
   | pubKeys      |  String  | *public key list.                                                  |
   | note         |  String  | [optional] transaction notes                                             |
-  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
+  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file |
   | keystorepath |  String  | wallet access path, default is `./.keystore`                   |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -118,14 +115,12 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success                              |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`                                   |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                                 |
-
-
 
 ### 2.3 setOrgDeployer
 
@@ -133,13 +128,13 @@ Use "bcc [command] --help" for more information about a command.
 
 - **command**
 
-  ```
+  ```shell
   bcc setOrgDeployer --name hotwal001 --password aBig62_123 --orgName example --deployer local... --gasLimit 1000000 [--note ...] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                   |
   | password     |  String  | *wallet password                                                  |
@@ -147,12 +142,12 @@ Use "bcc [command] --help" for more information about a command.
   | gasLimit     |  String  | *gas limit for trading                                            |
   | deployer     | Address  | *publish account address.                                              |
   | note         |  String  | [optional] transaction notes                                             |
-  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
+  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file |
   | keystorepath |  String  | wallet access path, default is `./.keystore`                   |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -164,14 +159,12 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success                              |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`                                     |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                                 |
-
-
 
 ### 2.4 deployContract
 
@@ -179,13 +172,13 @@ Use "bcc [command] --help" for more information about a command.
 
 - **command**
 
-  ```
+  ```shell
   bcc deployContract --name hotwal001 --password aBig62_123 --contractName dice2win --version 2.0 --orgName genesis --codeFile ./example.tar.gz --effectHeight 100 --owner bcbES5d6kwoX4vMeNLENMee2Mnsf2KL9ZpWo --gasLimit 10000 [--chainid bcb] [--note ...] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                   |
   | password     |  String  | *wallet password                                                  |
@@ -197,12 +190,12 @@ Use "bcc [command] --help" for more information about a command.
   | owner        | Address  | *owner address                                                |
   | gasLimit     |  String  | *gas limit for trading                                            |
   | note         |  String  | [optional] transaction notes                                             |
-  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
+  | chainid      |  String  | [optional] Chain ID, the default is the configuration in the configuration file |
   | keystorepath |  String  | [optional]wallet access path, default is `./.keystore`                |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -215,7 +208,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success  |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -229,13 +222,13 @@ Use "bcc [command] --help" for more information about a command.
 
 - **command**
 
-  ```
+  ```shell
   bcc registerToken --name hotwal001 --password aBig62_123 --tokenName xt --tokenSymbol xt --totalSupply 1000000000000 --addSupplyEnabled true --burnEnabled true --gasPrice 2500 --gasLimit 10000 [--note ...] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**         | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**         | **Type** | **Comment** |
   | ---------------- | :------: | ------------------------------------------------------------ |
   | name             |  String  | *wallet name                                                  |
   | password         |  String  | *wallet password                                                  |
@@ -252,7 +245,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -265,7 +258,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -273,22 +266,20 @@ Use "bcc [command] --help" for more information about a command.
   | tokenAddress       |  Address  | token address                        |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 2.6 transfer
 
 - Function Description: transfer transaction
 
 - **command**
 
-  ```
+  ```shell
   bcc transfer --name hotwal001 --password aBig62_123 --token bcb
   --gasLimit 600 [--note hello] --to bcbLocFJG5Q792eLQXhvNkG417kwiaaoPH5a --value 1500000000 [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Request Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -302,7 +293,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -314,14 +305,12 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
-
-
 
 ### 2.7 call
 
@@ -329,13 +318,13 @@ Use "bcc [command] --help" for more information about a command.
 
 - **command**
 
-  ```
+  ```shell
   bcc call --name hotwal001 --password aBig62_123 --orgName example --contract dice2win --method placeBet --gasLimit 5000 [--splitBy @] [--params @ --paramsFile ./params] [--note ...]  [--pay 1.003(loc)] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet access password                                       |
@@ -362,7 +351,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response: {
     "code": 200,
@@ -374,7 +363,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -384,7 +373,7 @@ Use "bcc [command] --help" for more information about a command.
 ### 2.8 contractInfo
 
 - Function Description: query contract information
-- Mode: (orgName+contractName=specify contract information);(orgID+contractName=specify contract information)<br>(contractAddr=specify contract information);(no parameter = print all contract addresses)
+- Mode: (orgName+contractName=specify contract information);(orgID+contractName=specify contract information)(contractAddr=specify contract information);(no parameter = print all contract addresses)
 
 - **command**
 
@@ -395,7 +384,7 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | orgName      |  String  | *organization name                                                  |
   | contractName |  String  | *contract name                                                  |
@@ -404,7 +393,7 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Output SUCCESS Example**
 
-  ```
+  ```shell
   OK
   Response:
     Version: "1.0"
@@ -577,32 +566,32 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Output SUCCESS Example2**(brief information）
 
-```
+```shell
 OK
 Response: {
  "result": [
- 	{
- 	 "blockHeight": 2500,
-	 "blockHash": "0x95880AC3BE0A89AA2C82FA5E9DADF95A0E99DC3C",
- 	 "blockTime": "2019-05-10T09:37:14.923456881Z",
-  	},
-  	{
- 	 "blockHeight": 2501,
-	 "blockHash": "0x476DC319F4D3AD9B8C4C4AB03EDCC100BB7C90DA",
- 	 "blockTime": "2019-05-10T09:39:16.234023422Z",
-  	},
-  	{
- 	 "blockHeight": 2502,
-	 "blockHash": "0xCF499509BF839A3083B954F409742C3C9AF93367",
- 	 "blockTime": "2019-05-10T09:41:17.544988709Z",
-  	}
+  {
+   "blockHeight": 2500,
+  "blockHash": "0x95880AC3BE0A89AA2C82FA5E9DADF95A0E99DC3C",
+   "blockTime": "2019-05-10T09:37:14.923456881Z",
+   },
+   {
+   "blockHeight": 2501,
+  "blockHash": "0x476DC319F4D3AD9B8C4C4AB03EDCC100BB7C90DA",
+   "blockTime": "2019-05-10T09:39:16.234023422Z",
+   },
+   {
+   "blockHeight": 2502,
+  "blockHash": "0xCF499509BF839A3083B954F409742C3C9AF93367",
+   "blockTime": "2019-05-10T09:41:17.544988709Z",
+   }
   ]
 }
 ```
 
 - **Output SUCCESS Result**
 
-  | **Grammer**                                       |   **Type**   | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Grammer**                                       |   **Type**   | **Comment** |
   | ---------------------------------------------- | :----------: | ------------------------------------------------------------ |
   | blockHeight                                    |    Int64     | block height                                                   |
   | blockHash                                      |  HexString   | block hash value, starting with '0x'                          |
@@ -634,8 +623,6 @@ Response: {
   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value      |    String    | transfer amount (unit: cong), valid only when the transaction is standard brc20 transfer        |
   | &nbsp;&nbsp;}                                  |              |                                                              |
   | ]                                              |              |                                                              |
-
-
 
 ### 2.10 transaction
 
