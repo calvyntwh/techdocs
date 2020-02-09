@@ -58,7 +58,7 @@ Response:
   Key: /sidechain/local[smartCity]/openurls
   Value: ["ip1:46657"]
   
-After querying, you can see the side chian URL is the above set URL.
+After querying, you can see the side chain URL is the above set URL.
 ```
 
 If the querying result is not the URL set above, you can query the details of the transaction by the returned`txhash` when you set the URL:
@@ -176,7 +176,7 @@ Response:
   Value: "2.000"
 ```
 
-Through querying, you can see the side chian gas price ratio is the above set `gaspriceratio`. If the query result is not as expected, you can query the receipt by the following command:
+Through querying, you can see the side chain gas price ratio is the above set `gaspriceratio`. If the query result is not as expected, you can query the receipt by the following command:
 
 ```shell
 ./bcc tx  --chainid local --txhash 0x5100A109C3FDEACED7B5E7B90A61C966E1A093D6409ACFD2045D3CC8CBAB679E
@@ -281,7 +281,7 @@ Using the following command to export the public key on the machine of the side 
 
 ### 2.3 Add verifier node
 
-> Notice: When add the verifier node for the side chian(verifier node is less than four), you must confirm the added public key is correct, otherwise the side chain will not work.
+> Notice: When add the verifier node for the side chain(verifier node is less than four), you must confirm the added public key is correct, otherwise the side chain will not work.
 
 If you want to add a verifier node, you need to use the following command to add by the node public key from above, we take the verifier node name is `node2`, node public key is `0x0d180d63841102960cd86d88cf1f79e6695891d85385b4abf25f97b94cfaf2c0`, reward address is `local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG`, node weight is `10` as an example to show how to add verifier node:
 

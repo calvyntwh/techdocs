@@ -2,7 +2,7 @@
 
 > In this section, we will experience how to achieve cross-chain transfer based on the built side chain `SmartCity` and `EShop`.
 >
-> BCB chain supports three modes of cross-chain transfer, they are main chain to side chain, side chain to main chian, and side chain to side chain, respectively.
+> BCB chain supports three modes of cross-chain transfer, they are main chain to side chain, side chain to main chain, and side chain to side chain, respectively.
 
 ## 1. Preparation
 
@@ -248,7 +248,7 @@ Response: {
 }
 ```
 
-We can complete the cross-chian transfer of the token `Diamond Coin` by the above command, then we try to check if the transaction is successful:
+We can complete the cross-chain transfer of the token `Diamond Coin` by the above command, then we try to check if the transaction is successful:
 
 ```shell
 ./bcc balance --accAddress="local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG" --tokenName="Diamond Coin" --chainid local[SmartCity]
@@ -273,7 +273,7 @@ we can confirm the token `TST` successful to account. If the account balance is 
 
 Cross-Chain Transaction Hash, that is `ibcHash`, we can get the status and information of cross-chain transaction throught it.
 
-We take the transfer from main chain to side chian in 2.1 as an example, we get the transaction height is 25974, we get `ibcHash` by the following command:
+We take the transfer from main chain to side chain in 2.1 as an example, we get the transaction height is 25974, we get `ibcHash` by the following command:
 
 ```shell
 ./bcc block -t 25974

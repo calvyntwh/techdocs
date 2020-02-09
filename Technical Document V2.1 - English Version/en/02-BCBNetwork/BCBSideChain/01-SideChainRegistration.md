@@ -13,7 +13,7 @@
 
 ### 1.2 Set the list of public access paths for the main chain
 
-After registering organizations, you need to set a list of public access paths for the main chain, that is OpenURLs, such as: `["http://localhost:46657"]`, the communication between the side chain and the main chain depends on the OpenURLs, if do not set it will cause the transaction sending from the side chain to the main chain can not be completed. We take the main chian id is `local`, OpenURLs is `["http://localhost:46657"]` as the example to show how to use bcc tools to complete the OpenURLs settings of the main chain.
+After registering organizations, you need to set a list of public access paths for the main chain, that is OpenURLs, such as: `["http://localhost:46657"]`, the communication between the side chain and the main chain depends on the OpenURLs, if do not set it will cause the transaction sending from the side chain to the main chain can not be completed. We take the main chain id is `local`, OpenURLs is `["http://localhost:46657"]` as the example to show how to use bcc tools to complete the OpenURLs settings of the main chain.
 
 ```shell
 ./bcc call --contract netgovernance --method SetOpenURLs --splitBy @ --params  private chain chainID@[\"http://localhost:46657\"] --gasLimit 10000000 --orgName genesis --name owner --password Ab1@Cd3$
@@ -51,7 +51,7 @@ The side chain owner account specified when registering the side chain will dete
 
 ### 2.1 Implementation of registration
 
-After finishing preparation work, you can register on the side chain. The following example takes the organization name `smartCity`, the side chain name `smartCity`, and the side chain owner account `localLvP9ForVPgagpSuH23MTp9jfW3GVxWfDK` as an example to show how to register the side chian using bcc tool:
+After finishing preparation work, you can register on the side chain. The following example takes the organization name `smartCity`, the side chain name `smartCity`, and the side chain owner account `localLvP9ForVPgagpSuH23MTp9jfW3GVxWfDK` as an example to show how to register the side chain using bcc tool:
 
 ```shell
 ./bcc call --contract netgovernance --method RegisterSideChain --splitBy @ --params smartCity@smartCity@localLvP9ForVPgagpSuH23MTp9jfW3GVxWfDK --gasLimit 100000 --orgName genesis --name owner --password Ab1@Cd3$

@@ -10,7 +10,7 @@ The IP of the default single node when installs is `127.0.0.1`, if you want to u
 
 `install-tmcore/pieces/local/v2/local-nodes.json`
 
-Excute the following commands, and in the interactive state, select the chian id, note type in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service.
+Excute the following commands, and in the interactive state, select the chain id, note type in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service.
 
 ```shell
 cd install-tmcore
@@ -98,7 +98,7 @@ version=$(cat thirdparty/version | tr -d "\r")
 tar cvfz install-bcchain/pieces/thirdparty_${version}.tar.gz thirdparty
 ```
 
-Excute the following commands, and in the interactive state, select the chian id: `local`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
+Excute the following commands, and in the interactive state, select the chain id: `local`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
 
 ```shell
 cd install-bcchain
@@ -172,7 +172,7 @@ You can see the following screen output:
 }
 ```
 
-## 3. Build Four Ndoes Test Chian
+## 3. Build Four-Nodes Test chain
 
 BCBChain's open source code comes with a full set fo creation parameters to build a four-node test chain, and noce the source code is compiled, excuting the following commands to finish the build of the installation directory of the consensus engine `tendermint`.
 
@@ -202,7 +202,7 @@ If you want to use a real IP when deploy, please modify the genesis node profile
 install-tmcore/pieces/test/v2/test-nodes.json
 ```
 
-Copy the installation directory to the planned ndoe, excute the following commands, and in the interactive state, select the chian id: `test`, note type: `VALIDATOR` in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service `tmcore`.
+Copy the installation directory to the planned ndoe, excute the following commands, and in the interactive state, select the chain id: `test`, note type: `VALIDATOR` in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service `tmcore`.
 
 ```shell
 cd install-tmcore
@@ -291,7 +291,7 @@ tar cvfz install-bcchain/pieces/thirdparty_${version}.tar.gz thirdparty
 
 ```
 
-Copy the installation directory to the planned ndoe, excute the following commands, and in the interactive state, select the chian id: `test`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
+Copy the installation directory to the planned ndoe, excute the following commands, and in the interactive state, select the chain id: `test`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
 
 ```shell
 cd install-bcchain
