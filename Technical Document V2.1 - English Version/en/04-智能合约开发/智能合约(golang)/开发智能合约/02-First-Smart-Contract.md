@@ -1,32 +1,31 @@
-# 第一个智能合约
+# First Smart Contract
 
-## 1. 创建新合约
+## 1. Create a new contract
 
-下面我们开始创建第一个智能合约。
+Let's start by creating the first smart contract.
 
-用 ```GoLand``` 打开刚刚创建的 ```GoLand Project```，然后通过 BCBChain 智能合约开发插件创建智能合约，以下为执行路径：
+Using ```GoLand``` open the ```GoLand Project``` you just created and create a new smart contract with the BCBChain plugin. The following is the execution path:
 
 ```
-GoLand左边栏 Project 浏览器
-	>> 在 src/contract 目录上点击鼠标右键出现菜单
-		>> BCB Smart Contrat
-			>> New...
-				>> 输入 Name             #mydonation
-				>> 输入 Type             #Mydonation
-				>> 输入 Version	       #1.0
-				>> 输入 OrganizationName #DAO
-				>> 计算 Organization     #orgE37w7wxhZwaox1fhndt5Czm8WnLBrh6db - DAO
-				>> 输入 Author           #alice
-				>> OK
+GoLand left sidebar Project Explorer
+    >> Right click on the src/contract directory to bring up the menu
+        >> BCB Smart Contrat
+            >> New...
+                >> Input  Name         #demo1
+                >> Input  Type         #Demo1
+                >> Input  Version       #1.0
+                >> Input  Organization #orgE37w7wxhZwaox1fhndt5Czm8WnLBrh6db - DAO
+                >> Input  Author       #alice
+                >> OK
 ```
 
-智能合约创建成功，将会自动生成框架代码，文件路径如下：
+Successful creation of the smart contract will automatically generate the framework code. The file path is as follows:
 
 ```
 src/contract/mydonation/v1.0/mydonation/mydonation.go
 ```
 
-智能合约初始代码如下：
+The initial code for the smart contract is as follows:
 
 ```
 package mydonation
@@ -73,9 +72,9 @@ func (m *Mydonation) SampleMethod() {
 
 
 
-## 2. 慈善捐款合约
+## 2. Donation Contract
 
-下面我们修改一下智能合约，让它看起来有点意思，下面这个智能合约代码包含了一组用于慈善捐款的简单功能，修改后的代码如下：
+Let's modify the smart contract to make it more interesting. The following smart contract code contains a set of simple functions for charitable donations. The modified code is as follows:
 
 ```
 package mydonation
@@ -228,32 +227,31 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
 }
 ```
 
-下面我们简单描述一下这个合约提供的几个方法。
-
+Let's briefly describe the methods provided by this contract.
 
 
 ### 2.1 AddDonee
 
- ```AddDonee``` 方法向智能合约添加一个接受捐款的账户地址。
+The ```AddDonee``` method adds an account address for accepting donations to the smart contract.
 
-约束如下：
+Constraint is as follows:
 
-> * 只有合约拥有者可以调用；
-> * 输入参数 ```donee``` 必须是一个合法地址；
-> * 输入参数 ```donee``` 不能是合约拥有者；
-> * 输入参数 ```donee``` 不能是合约地址；
-> * 输入参数 ```donee``` 不能是合约账户地址；
-> * 输入参数 ```donee``` 对应的地址不能是一个已经存在的接收捐款的账户地址。
+> * Only the contract owner can call;
+> * The input parameter  ```donee``` must be a legal address;
+> * The input parameter  ```donee``` cannot be the contract owner;
+> * The input parameter  ```donee``` cannot be the contract address;
+> * The input parameter  ```donee``` cannot be the contract account address;
+> * The input parameter  ```donee``` cannot be an existing account address for receiving donations.
 
-执行结果：
+Execution results:
 
-> * 状态数据库：
+> * State Database:
 >
->   新建KEY：```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，其中 ```xxx``` 为输入参数 ```donee``` 对应的地址，Value：```0```；
+>   Creates a new KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where ```xxx```is the address corresponding to the input parameter ```donee```，Value：```0```；
 >
 > * BCBChain：
 >
->   可扫描到交易执行成功的结果，其中包含收据 ```addDonee``` ：
+>   Results of successful transaction execution can be scanned, which includes receipts ```addDonee```:
 >   
 >   ```
 >    type addDonee struct {
@@ -264,24 +262,24 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
 
 ### 2.2 DelDonee
 
- ```DelDonee``` 方法从智能合约中删除一个接受捐款的账户地址。
+The ```DelDonee``` method deletes an account address that receives donations from the smart contract.
 
-约束如下：
+Constraint is as follows:
 
-> - 只有合约拥有者可以调用；
-> - 输入参数 ```donee``` 必须是一个合法地址；
-> - 输入参数 ```donee``` 对应的地址必须是一个已经存在的接收捐款的账户地址；
-> - 输入参数 ```donee``` 已经接收到的捐款已被全部提取，或者没有收到任何捐款。
+> - Only the contract owner can call;
+> - The input parameter ```donee``` must be a legal address;
+> - The input parameter ```donee``` must be an existing account address for receiving donations;
+> - The input parameter ```donee```'s all donations received have been withdrawn or no donations have been received.
 
-执行结果：
+Results of execution:
 
-> - 状态数据库：
+> - State Database:
 >
->   删除KEY：```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，其中 ```xxx``` 为输入参数 ```donee``` 对应的地址；
+>   Deletes the KEY:```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where  ```xxx``` is the address corresponding to the input paramete ```donee```；
 >
 > - BCBChain：
 >
->   可扫描到交易执行成功的结果，其中包含收据：
+>   Results of successful transaction execution can be scanned, which includes receipts:
 >
 >   ```
 >   type delDonee struct {
@@ -293,27 +291,27 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
 
 ### 2.3 Donate
 
- ```Donate``` 方法向智能合约中的一个接受捐款的账户地址进行捐款。
+The ```Donate``` method makes a donation to an account address in the smart contract that accepts donations.
 
-约束如下：
+Constraint is as follows:
 
-> - 任何人都可以调用；
-> - 输入参数 ```donee``` 必须是一个合法地址；
-> - 输入参数 ```donee``` 对应的地址必须是一个已经存在的接收捐款的账户地址；
-> - ```Donate``` 方法的调用必须在前面级联一个转账消息，转账消息将转账收据传递给 ```Donate``` 方法；
-> - 收到的转账收据的目标地址必须是 ```mydonation``` 合约的账户地址；
-> - 收到的捐款必须是 BCBChain 上的通证 ```BCB``` （也称为创世通证）；
-> - 只能收到满足上述条件的一笔捐款（转账收据）。
+> - Anyone can call;
+> - The input parameter ```donee``` must be a legal address;
+> - The input parameter ```donee``` must be an existing account address for receiving donations;
+> - The call to the ```Donate``` method must be preceded by a transfer message that passes the transfer receipt to the ```Donate``` method;
+> - The destination address of the received transfer receipt must be the account address of ```mydonation``` contract；
+> - The donation received must be the ```BCB``` token on BCBChain；
+> - Only one donation (transfer receipt) meeting the above conditions can be received.
 
-执行结果：
+Results of execution:
 
-> - 状态数据库：
+> - State Database:
 >
->   更新KEY：```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，其中 ```xxx``` 为输入参数 ```donee``` 对应的地址，Value：增加转账金额对应的数值；
+>   Updates the KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where  ```xxx``` is the address corresponding to the input parameter ```donee``` , Value: increase the value corresponding to the transfer amount;
 >
 > - BCBChain：
 >
->   可扫描到交易执行成功的结果，其中包含收据：
+>   Results of successful transaction execution can be scanned, which includes receipts:
 >
 >   ```
 >   type donate struct {
@@ -328,27 +326,27 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
 
 ### 2.4 Transfer
 
- ```Transfer``` 方法将智能合约收到的捐款转交给接受捐款的账户地址。
+The ```Transfer``` method transfers the donation received from the smart contract to the account address receiving the donation.
 
-约束如下：
+Constraint is as follows:
 
-> - 只有合约拥有者可以调用；
-> - 输入参数 ```donee``` 必须是一个合法地址；
-> - 输入参数 ```donee``` 对应的地址必须是一个已经存在的接收捐款的账户地址；
-> - 输入参数 ```value``` 必须大于等于 ```0```；
-> - 输入参数 ```donee``` 对应的地址已经接受的捐款余额必须大于等于输入参数 ```value```。
+> - Only the contract owner can call;
+> - The input parameter ```donee``` must be a legal address;
+> - The input parameter ```donee``` must be an existing account address for receiving donations;
+> - The input parameter ```value``` must be greater than or equal to ```0```;
+> - The accepted donation balance at the address corresponding to the input parameter ```donee``` must be greater than or equal to the input parameter ```value```.
 
-执行结果：
+Results of execution:
 
-> - 状态数据库：
+> - State Database:
 >
->   更新KEY：```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，其中 ```xxx``` 为输入参数 donee 对应的地址，Value：减去输入参数 ```value``` 对应的数值；
+>   Updates the KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where ```xxx``` is the address corresponding to the input parameter ```donee```, Value: subtract the value corresponding to the input parameter ```value```;
 >
->   更新KEY：```/account/ex/xxx/token/yyy```，其中 ```xxx``` 为输入参数 ```donee``` 对应的地址，```yyy``` 为 BCBChain 上的通证 ```BCB``` （创世通证）的地址，Value：账户余额增加输入参数 ```value``` 对应的数值；
+>   Updates the KEY: ```/account/ex/xxx/token/yyy```, where ```xxx``` is the address corresponding to the input parameter donee, ```yyy``` is the BCB token address on ```BCBChain```, Value: add the value corresponding to the input parameter ```value``` to the account balance.
 >
 > - BCBChain：
 >
->   可扫描到交易执行成功的结果，其中包含收据：
+>   Results of successful transaction execution can be scanned, which includes receipts:
 >
 >   ```
 >   type transferDonation struct {
@@ -367,49 +365,52 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
 
 
 
-## 3. 合约规范检查
+## 3. Contract specification check
 
-下面的执行路径可以检查上面完成的慈善捐款合约是否符合 BCBChain 智能合约规范：
-
-```
-GoLand左边栏 Project 浏览器
-	>> 在 src/contract/mydonation/v1.0/mydonation 目录上点击鼠标右键出现菜单
-		>> BCB Smart Contrat
-			>> Check
-```
-
-
-
-## 4. 合约代码补全
-
-到现在为止，我们已经完成了上链合约代码，但这个合约代码不能在 ```GoLand IDE``` 中直接运行，需要使用插件提供的代码生成功能补全代码以后才能在本地运行，下面是补全代码的执行路径：
+The following execution path can check whether the charitable donation contract completed above conforms to the BCBChain smart contract specification:
 
 ```
-GoLand左边栏 Project 浏览器
-	>> 在 src/contract/mydonation/v1.0/mydonation 目录上点击鼠标右键出现菜单
-		>> BCB Smart Contrat
-			>> Generate Code
-```
-
-补全代码执行以后，在合约代码目录将会自动生成如下代码文件：
-
-```
-//以下文件每次自动生成代码都会将原来的内容覆盖，请不要修改这些代码文件
-mydonation_autogen_store.go			//自动补全的状态数据库访问代码
-mydonation_autogen_receipt.go		//自动补全的收据发送代码
-mydonation_autogen_sdk.go			//自动补全的杂项代码
-mydonation_wrap_test.go				//自动补全的单元测试基础代码
-
-//以下文件为单元测试代码，需要程序员完成对各个方法的单元测试，下次自动生成代码时不会自动修改其中内容
-mydonation_case_adddonee_test.go	//自动补全的单元测试代码 - 针对 AddDonee 方法进行单元测试
-mydonation_case_deldonee_test.go	//自动补全的单元测试代码 - 针对 DelDonee 方法进行单元测试
-mydonation_case_donate_test.go		//自动补全的单元测试代码 - 针对 Donate 方法进行单元测试
-mydonation_case_transfer_test.go	//自动补全的单元测试代码 - 针对 Transfer 方法进行单元测试
+GoLand left sidebar Project Explorer
+    >> Right click on the src/contract/mydonation/v1.0/mydonation directory to bring up
+       the menu
+            >> BCB Smart Contrat
+                >> Check
 ```
 
 
 
-源代码 ```mydonation_autogen_store.go``` 
+## 4. Contract code completion
+
+So far, we have completed the contract code which will be uploaded to the ```BCBChain```, but this contract code cannot be directly run in ```Goland IDE```, and can only be run locally after completing the code using the code generation function provided by the plugin, the following is the execution path of the completion code:
+
+```
+GoLand left sidebar Project Explorer
+    >> Right click on the src/contract/mydonation/v1.0/mydonation directory to bring up
+       the menu
+            >> BCB Smart Contrat
+                >> Generate Code
+```
+
+After the completion code is executed, the following code files will be automatically generated in the contract code directory:
+
+```
+//The following files will overwrite the original contents every time the code is
+//automatically generated. Please do not modify these code files.
+mydonation_autogen_store.go            //Auto-completed code for state database accessing
+mydonation_autogen_receipt.go        //Auto-completed code for receipts
+mydonation_autogen_sdk.go            //Auto-completed code for miscellaneous
+mydonation_wrap_test.go                //Auto-completed code for unit test
+
+//The following files are codes for unit testing, which require programmers to complete
+//the unit tests for each method. The contents of these files will not be automatically
+//modified the next time the code is automatically generated.
+mydonation_case_adddonee_test.go    //Auto-completed unit test code -  for AddDonee
+mydonation_case_deldonee_test.go    //Auto-completed unit test code -  for DelDonee
+mydonation_case_donate_test.go        //Auto-completed unit test code -  for Donate
+mydonation_case_transfer_test.go    //Auto-completed unit test code -  for Transfer
+```
+
+The following is the content of  ```mydonation_autogen_store.go```:
 
 ```
 package mydonation
@@ -442,9 +443,7 @@ func (m *Mydonation) _delDonations(k types.Address) {
 }
 ```
 
-
-
-源代码 ```mydonation_autogen_receipt.go``` 
+The following is the content of ```mydonation_autogen_receipt.go```: 
 
 ```
 package mydonation
@@ -519,9 +518,7 @@ func (m *Mydonation) emitTransferDonation(donee types.Address, value, balance bn
 }
 ```
 
-
-
-下面是单元测试代码的初始内容。以源代码 ```mydonation_case_adddonee_test.go``` 文件为例：
+The following is the initial content of unit test code, take ```mydonation_case_adddonee_test.go``` file as an example:
 
 ```
 package mydonation
@@ -537,11 +534,11 @@ func (mysuit *MySuite) test_Donate(owner sdk.IAccount, test *TestObject) {
 
 
 
-## 5. 合约单元测试
+## 5. Contract unit test
 
-下面我们来完成慈善捐款合约的单元测试代码。
+Let's complete the unit test code of the charitable donation contract.
 
-源代码：```mydonation_case_AddDonee_test.go```
+Source code：```mydonation_case_AddDonee_test.go```:
 
 ```
 package mydonation
@@ -630,7 +627,7 @@ func (mysuit *MySuite) test_AddDonee(owner sdk.IAccount, test *TestObject) {
 
 
 
-源代码：```mydonation_case_DelDonee_test.go```
+Source code：```mydonation_case_DelDonee_test.go```
 
 ```
 package mydonation
@@ -760,7 +757,7 @@ func (mysuit *MySuite) test_DelDonee(owner sdk.IAccount, test *TestObject) {
 
 
 
-源代码：```mydonation_case_Donate_test.go```
+Source code：```mydonation_case_Donate_test.go```
 
 ```
 package mydonation
@@ -872,7 +869,7 @@ func (mysuit *MySuite) test_Donate(owner sdk.IAccount, test *TestObject) {
 
 
 
-源代码：```mydonation_case_Transfer_test.go```
+Source code：```mydonation_case_Transfer_test.go```
 
 ```
 package mydonation
@@ -987,16 +984,16 @@ func (mysuit *MySuite) test_Transfer(owner sdk.IAccount, test *TestObject) {
 
 
 
-单元测试代码完成以后，可以使用下面的执行路径来进行单元测试：
+After the unit test code is completed, you can use the following execution path to perform unit tests:
 
 ```
-GoLand左边栏 Project 浏览器
-	>> 在 src/contract/mydonation/v1.0/mydonation 目录上点击鼠标右键出现菜单
-		>> Run
-			>> go test mydonation
+GoLand left sidebar Project Explorer
+    >> Right click on the src/contract/mydonation/v1.0/mydonation directory to bring up
+       the menu
+            >> Run
+                >> go test mydonation
 ```
-
-单元测试执行完成后，输出测试结果，如下所示：
+After the unit test is completed, the test results are output as follows:
 
 ```GOROOT=C:\Go #gosetup
 === RUN   Test
