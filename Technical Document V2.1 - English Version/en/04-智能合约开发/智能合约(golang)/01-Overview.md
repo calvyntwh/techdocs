@@ -340,7 +340,7 @@ For example, imagine a table listing the balances of all accounts in an digital 
 
 In addition, the transaction is always signed by the sender (creator). This makes it very easy to add access protection mechanisms for specific modifications to the database. In the case of digital tokens, a simple check ensures that only the person holding the account key can transfer money from it.
 
-### 2.2 状态
+### 2.2 States
 
 BCBChain refrenced Ethereum、Fabric、Tendermint、Cosmos and other open source blockchain solutions, drawing on some of these excellent ideas.
 
