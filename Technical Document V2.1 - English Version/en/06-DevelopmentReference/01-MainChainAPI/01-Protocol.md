@@ -4,14 +4,14 @@
 
 Bcbchain supports the following `RPC` protocol:
 
-* ` URI over HTTP or HTTPS`
+* `URI over HTTP or HTTPS`
 * `JSONRPC over HTTP or HTTPS`
 
 All `RPC` interfaces and their parameters supported by bcbchain can be obtained through `URL`： `http://ip:port`  or `https://ip:port`, or through the domain name of a well-known node, for example: https://earth.bcbchain.io.
 
 bcb follower node（tendermint）the list of `RPC` interface is as follow(supports' HTTP 'or' HTTPS')
 
-```
+```html
 Available endpoints:
 //earth.bcbchain.io/abci_info
 //earth.bcbchain.io/dump_consensus_state
@@ -41,13 +41,11 @@ Endpoints that require arguments:
 
 When use `GET` method of the `HTTP` protocol for `RPC` requests, the parameters must be `URI` encoded. For the `URL` format of all `RPC` calls, please refer to the above table. For specific business and parameter descriptions, please refer to the subsequent sections of this chapter.
 
-
 ## 3. JSONRPC over HTTP
 
-采用 `HTTP` 协议 `POST` 方法进行 `RPC` 请求时，使用 `JSONRPC` 应用协议，请求的 `HTTP` 数据体的格式如下所示：
 When use `POST` method of the `HTTP` protocol for `RPC` requests, it will use the `JSONRPC` application protocol, the format of the `HTTP` data body of the request is as follows:
 
-```
+```json
 Example：
 {
   "jsonrpc": "2.0",
@@ -61,23 +59,21 @@ Example：
 
 Please refer to the following chapters for specific communication interface services and parameter descriptions.
 
-
 After successfully execute interface, the general data structure is defined as follows:
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
   "result": {
-    …		//different APIs return different JSON structures, and they are customized.
+    …  //different APIs return different JSON structures, and they are customized.
   }
 }
 ```
 
-
 After unsuccessfully execute interface, the general data structure is defined as follows:(all interfaces return the same data structure when failed):
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
