@@ -1,18 +1,18 @@
-# 智能合约编程实例
+# Examples of Smart Contract Implementation
 
-## 1. 委托投票
+## 1. Voting
 
-以下的合约相当复杂，它实现了一个委托投票合约。 当然，电子投票的主要问题是如何将投票权分配给正确的人员以及如何防止被操纵。 我们不会在这里解决所有的问题，但至少我们会展示如何进行委托投票，同时，计票又是自动和完全透明的 。
+The following contract is quite complex and it implements a commissioned voting contract. Of course, the main problems with electronic voting is how to assign voting rights to the right people and how to prevent them from being manipulated. We will not resolve all the problems here, but at least we will show how to conduct a proxy vote that is automatic and completely transparent at the same time.
 
-我们的想法是为每个（投票）表决创建一份合约，为每个选项提供简称。 然后作为合约的创造者——即主席，将给予每个独立的地址以投票权。
+Our idea is to create a contract for each (vote) vote, with an abbreviation for each option. Then, as the creator of the contract - the chairman, each independent address will be given the right to vote.
 
-地址后面的人可以选择自己投票，或者委托给他们信任的人来投票。
+Address owners can choose to vote on their own, or delegate to someone they trust to vote.
 
-在投票时间结束时，```WinningProposal()``` 将返回获得最多投票的提案。
+At the end of the voting period, ```WinningProposal()```will return the proposal that receives the most votes.
 
-这个合约实现采用了两个文件，分别如下：
+This contract implementation uses two files, as follows:
 
-源码文件：```myballot_types.go``` 
+Source File：```myballot_types.go``` 
 
 ```
 package myballot
@@ -38,7 +38,7 @@ type Proposal struct {
 }
 ```
 
-源码文件： ```myballot.go``` 
+Source File： ```myballot.go``` 
 
 ```
 package myballot
@@ -225,9 +225,9 @@ func (ballot *Ballot) WinnerName() (winnerName string) {
 
 
 
-## 2. 慈善捐款
+## 2. Charity Donation
 
-以下的合约实现了一个简单的慈善捐款功能。 合约代码如下：
+The following contract implements a simple charitable donation function. The contract code are as follows:
 
 ```
 package mydonation
