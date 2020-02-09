@@ -2,7 +2,7 @@
 
 In this section, we will experience the deployment of smart contracts to blockchains and make calls with the private chain ``` hello``` that we have set up previously.
 
-## 1. Developing an Organisation
+## 1. Registering an Organisation
 
 First, we need to use the test account ``` alice``` to register an organization ``` DAO``` for testing on the private chain. The commands are as follows:
 
