@@ -1,4 +1,4 @@
-# Summary
+# Overview
 
 BCBChain has many programs. The main programs for application development based on BCBChain are as follows:
 
@@ -18,4 +18,4 @@ BCBChain has many programs. The main programs for application development based 
 
 The basic relationship between the above components is depicted in the figure below.
 
-![](./p/basic.png)
+![bcb toolbox](./p/basic.png)
