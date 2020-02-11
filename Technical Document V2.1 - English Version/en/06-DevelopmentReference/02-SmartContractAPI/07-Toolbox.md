@@ -2,7 +2,7 @@
 
 ## 1. sdk/forx
 
-代码包 `blockchain/smcsdk/sdk/mapx`封装了对 `for` 循环进行优化处理的应用接口。
+The package `blockchain/smcsdk/sdk/mapx`封装了对 `for` loop 进行优化处理的应用接口。
 
 ### 1.1 func Range()
 

@@ -654,7 +654,6 @@ Function prototype:
 func (x Number) MarshalJSON() (data []byte, err error)
 ```
 
-实现标准的 JSON 序列化接口。将 `x` 转成简化版的 JSON 字符串，例如字符串`380`。`x` 未设定初始大数值将触发 `panic`。
 Implement the standard JSON serialization interface. Convert `x` to a simplified version of JSON string, such as string `380`. If no initial value is set for `x`, then `panic` will be triggered.
 
 
