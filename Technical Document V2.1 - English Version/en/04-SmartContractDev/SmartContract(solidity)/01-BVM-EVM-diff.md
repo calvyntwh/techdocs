@@ -21,8 +21,6 @@ The BVM virtual machine of the BCBchain is perfectly compatible with the EVM vir
   - BVM：BCBchain is not mining, so block.difficulty is set to 0 by default;
   - EVM：Difficulty of mining the current block;
 
-  
-
 ## 3. Other differences
 
 - Currency accuracy
@@ -31,9 +29,9 @@ The BVM virtual machine of the BCBchain is perfectly compatible with the EVM vir
 
     ```go
     type AccountInfo struct {
-    	Address       types.Address `json:"address"`
-    	Balance       bn.Number     `json:"balance"`
-    	BVMBalanceMod bn.Number     `json:"bbMod,omitempty"` // 十八位精度的后九位
+      Address       types.Address `json:"address"`
+      Balance       bn.Number     `json:"balance"`
+      BVMBalanceMod bn.Number     `json:"bbMod,omitempty"` // last nine digits of eighteen digits of precision
     }
     ```
 

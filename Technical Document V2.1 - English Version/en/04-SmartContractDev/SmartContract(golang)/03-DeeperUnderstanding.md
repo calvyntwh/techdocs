@@ -22,7 +22,7 @@ The way the BNF paradigm represents grammar rules is:
 
 The meta-characters commonly used in the BNF paradigm and their meanings are as follows:
 
-```
+```text
 1. Characters in double quotes (such as "word") represent the characters themselves.  
    Double_quote is used to represent double quotes themselves.
 2. Words outside the double quotes (possibly underlined) represent the grammar part.
@@ -52,12 +52,12 @@ The markup ```contract```is mandatory, but can only appear once in the entire co
 
 The BNF paradigm for ```contract``` markup is defined as follows:
 
-```
+```go
 <contract markup syntax> ::= "//@:contract:" <contract name>
 <contract name> ::= <letter> | <contract name> <alphanumeric string>
-<alphanumeric string> ::= <letter> | 
-                          <decimal number> | 
-                          <alphanumeric string> <letter> | 
+<alphanumeric string> ::= <letter> |
+                          <decimal number> |
+                          <alphanumeric string> <letter> |
                           <alphanumeric string> <decimal number>
 <let> ::= "_" | "-" | "." | <lowercase> | <uppercase>
 <lowercase letter> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" |
@@ -73,27 +73,28 @@ The code after the ```contract```markup must be strictly followed by a contract 
 
 Example below：
 
-```
+```go
 //@:contract:mycoin
 type Mycoin struct {
-	sdk sdk.ISmartContract
+    sdk sdk.ISmartContract
 
-	//@:public:store:cache
-	totalSupply bn.Number
+    //@:public:store:cache
+    totalSupply bn.Number
 
-	//@:public:store
-	balanceOf map[types.Address]bn.Number
+    //@:public:store
+    balanceOf map[types.Address]bn.Number
 }
 ```
 
 ### 3.2 version
+
 The markup```version```is used to identify the version of the contract and can only appear once in the entire contract code.
 
 ```version```is mandatory, but can only appear once in the entire contract code.
 
 The BNF paradigm for ```version```is defined as follows:
 
-```
+```go
 <version markup syntax> ::= "//@:version:" <contract version>
 <Contract version> ::= <decimal number> |
               <decimal number> "." <decimal number> |
@@ -105,7 +106,7 @@ The BNF paradigm for ```version```is defined as follows:
 
 Example below:
 
-```
+```go
 //@:version:1.0
 ```
 
@@ -119,15 +120,15 @@ The markup```organization```is used to identify the ID of the organization to wh
 
 The BNF paradigm for ```organization```is defined as follows:
 
-```
+```go
 <organization markup syntax> ::= "//@:organization:" <organization ID>
 <Organization ID> ::= <prefix code> <Base58 string>
 <prefix code> ::= "org"
 <Base58 string> ::= <Base58 character> | <Base58 string> <Base58 character>
 <Base58 characters> ::= <decimal numbers> | <uppercase letters> | <lowercase letters>
 <decimal number> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | 8 | "9"
-<Capital Letters> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" | 
-                      "L" | "M" | "N" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | 
+<Capital Letters> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "J" | "K" |
+                      "L" | "M" | "N" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" |
                       "W" | "X" | "Y" | "Z"
 <lowercase letter> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" |
                        "k" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" |
@@ -136,11 +137,9 @@ The BNF paradigm for ```organization```is defined as follows:
 
 An example is as follows:
 
-```
+```go
 //@:organization:orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer
 ```
-
-
 
 ### 3.4 author
 
@@ -150,7 +149,7 @@ The markup```author```is used to identify the account public key of the contract
 
 The BNF paradigm for```author```is defined as follows:
 
-```
+```go
 <author markup syntax> ::= "//@:author:" <account public key>
 <account public key> ::= <hex string>
 <hexadecimal string> ::= <hexadecimal number> | <hexadecimal string> <hexadecimal number>
@@ -161,7 +160,7 @@ The BNF paradigm for```author```is defined as follows:
 
 Example below:
 
-```
+```go
 //@:author:b37e7627431feb18123b81bcf1f41ffd37efdb90513d48ff2c7f8a0c27a9d06c
 ```
 
@@ -177,21 +176,21 @@ The valid code that follows the ```constructor``` must be a no-argument function
 
 The BNF paradigm for```constructor``` is defined as follows:
 
-```
+```go
 <author markup syntax> ::= "//@:constructor"
 ```
 
 Example below:
 
-```
+```go
 //@:constructor
 func (mc *Mycoin) InitChain() {
-	...
+    ...
 }
 
 //@:constructor
 func (mc *Mycoin) UpdateChain() {
-	...
+    ...
 }
 ```
 
@@ -205,25 +204,25 @@ The valid code that follows```public:store``` must be the definition of a member
 
 The BNF paradigm for ```public:store```is defined as follows:
 
-```
+```go
 <public:store markup syntax> ::= "//@:public:store"
 ```
 
 Example below:
 
-```
+```go
 //@:contract:mycoin
 type Mycoin struct {
-	sdk sdk.ISmartContract
-	...
-	//@:public:store
-	balanceOf map[types.Address]bn.Number
+    sdk sdk.ISmartContract
+    ...
+    //@:public:store
+    balanceOf map[types.Address]bn.Number
 }
 ```
 
 The state variable with the ```public:store``` markup cannot be directly accessed in the contract code. According to the BCBChain contract specification, the SDK matching tool provided by BCBChain automatically generates a read/write function for the state variable. Example below:
 
-```
+```go
 //Read the function of balanceOf
 func (mc *Mycoin) _balanceOf(k types.Address) bn.Number {
     return *mc.sdk.Helper().StateHelper().GetEx(
@@ -243,7 +242,7 @@ func (mc *Mycoin) _setBalanceOf(k types.Address, v bn.Number) {
 //Function to remove the key value of balanceOf from the state database
 func (mc *Mycoin) _delBalanceOf(k types.Address) {
     mc.sdk.Helper().StateHelper().Delete(fmt.Sprintf("/balanceOf/%v", k))
-} 
+}
 ```
 
 ### 3.7 public:store:cache
@@ -256,25 +255,25 @@ The valid code that follows```public:store:cache``` must be the definition of a 
 
 The BNF paradigm for ```public:store:cache```is defined as follows:
 
-```
+```go
 <public:store:cache markup syntax> ::= "//@:public:store:cache"
 ```
 
 Example below:
 
-```
+```go
 //@:contract:mycoin
 type Mycoin struct {
-	sdk sdk.ISmartContract
-	...
-	//@:public:store:cache
-	totalSupply bn.Number
+    sdk sdk.ISmartContract
+    ...
+    //@:public:store:cache
+    totalSupply bn.Number
 }
 ```
 
 The cacheable state variable cannot be directly accessed in the contract code. According to the BCBChain contract specification, the SDK matching tool provided by BCBChain automatically generates a read/write function for the state variable. Example below:
 
-```
+```go
 //Read the function of the state variable totalSupply
 func (mc *Mycoin) _totalSupply() bn.Number {
     return *mc.sdk.Helper().StateHelper().McGetEx(
@@ -299,7 +298,7 @@ func (mc *Mycoin) _clrTotalSupply() {
 //Remove totalSupply from the state database
 func (m *Mycoin) _delTotalSupply() {
     m.sdk.Helper().StateHelper().McDelete("/totalSupply")
-} 
+}
 ```
 
 ### 3.8 public:receipt
@@ -312,22 +311,22 @@ The valid code following ```public:receipt``` must be an interface definition ca
 
 The BNF paradigm for ```public:receipt```is defined as follows:
 
-```
+```go
 <public:receipt markup syntax> ::= "//@:public:receipt"
 ```
 
 Example below:
 
-```
+```go
 //@:public:receipt
 type receipt interface {
-	emitTransferMyCoin(token, from, to types.Address, value bn.Number)
+    emitTransferMyCoin(token, from, to types.Address, value bn.Number)
 }
 ```
 
 Every method that sends a ```receipt```must start with the word “```emit```”, as defined in the Receipt interface. The first word after the word “```emit```” is converted to lowercase and must be the name of the receipt struct, which can be used to retrieve from the BCBChain chain. Based on BCBChain contract specification, the SDK supporting tool provided by BCBChain will automatically generate the implementation code for the sending receipt function. Example below:
 
-```
+```go
 //The following functions are automatically generated by the BCBChain tool.
 func (mc *Mycoin) emitTransferMyCoin(token, from, to types.Address, value bn.Number) {
     type transferMyCoin struct {
@@ -370,7 +369,7 @@ The valid code following ```public:method``` must be a member function definitio
 
 The BNF paradigm for ```public:method``` is defined as follows:
 
-```
+```go
 <public:method markup syntax> ::= "//@:public:method:gas[" <gas quantity> "]"
 <number of gas> ::= ["-"] <decimal number>
 <decimal number> ::= <decimal number> | <decimal number> <decimal number>
@@ -379,15 +378,16 @@ The BNF paradigm for ```public:method``` is defined as follows:
 
 Note:
 
-* A positive integer number indicates that the gas cost consumed by the method call is paid by the original sender of the transaction;
-* A gas quantity of 0 means no payment is required;
-* A negative integer number indicates that the gas cost consumed by the method call is paid by the current smart contract account.
-Example below
+- A positive integer number indicates that the gas cost consumed by the method call is paid by the original sender of the transaction;
+- A gas quantity of 0 means no payment is required;
+- A negative integer number indicates that the gas cost consumed by the method call is paid by the current smart contract account.
+  
+Example below:
 
-```
+```go
 //@:public:method:gas[500]
 func (mc *Mycoin) Transfer(to types.Address, value bn.Number) {
-	...
+    ...
 }
 ```
 
@@ -401,7 +401,7 @@ The valid code following ```public:interface``` must be a member function defini
 
 The BNF paradigm for```public:interface``` is defined as follows:
 
-```
+```go
 <public:interface markup syntax> ::= "//@:public:interface:gas[" <gas quantity> "]"
 <number of gas> ::= <decimal number>
 <decimal number> ::= <decimal number> | <decimal number> <decimal number>
@@ -410,10 +410,10 @@ The BNF paradigm for```public:interface``` is defined as follows:
 
 Example below:
 
-```
+```go
 //@:public:interface:gas[450]
 func (mc *Mycoin) Transfer(to types.Address, value bn.Number) {
-	...
+    ...
 }
 ```
 
@@ -423,11 +423,11 @@ Note:
 
 Markups ```public:interface```and ```public:method```can be used simultaneously on same member function of the contract class. The example above can be written as belows:
 
-```
+```go
 //@:public:method:gas[500]
 //@:public:interface:gas[450]
 func (mc *Mycoin) Transfer(to types.Address, value bn.Number) {
-	...
+    ...
 }
 ```
 
@@ -441,23 +441,22 @@ The valid code following ```public:mine```must be a member function definition f
 
 The BNF paradigm for ```public:mine``` is defined as follows:
 
-```
+```go
 <public:interface tag syntax> ::= "//@:public:mine"
 ```
 
 Example below:
 
-```
+```go
 //@:public:mine
 func (mc *Mycoin) Mine() int64 {
-	...
+        ...
 }
 ```
 
 Note:
 
 - The mining function ```Mine()``` can only be used with the markup```public:mine```.
-
 
 ### 3.12 import
 
@@ -466,7 +465,8 @@ The markup ```import``` is used to import an interface prototype for an external
 ```import```is optional, and can appear multiple times in the entire contract code. Each time you import a cross-contract call interface of an external contract, the external contract can only be imported once.
 
 The BNF paradigm for ```import``` is defined as follows:
-```
+
+```go
 <import tag syntax> ::= "//@:import:" <contract name>
 <contract name> ::= <letter> | <contract name> <alphanumeric string>
 <alphanumeric string> ::= <letter> | <decimal number> | <alphanumeric string> <letter> | <alphanumeric string> <decimal number>
@@ -474,7 +474,7 @@ The BNF paradigm for ```import``` is defined as follows:
 <lowercase letter> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" |
                        "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" |
                        "u" | "v" | "w" | "x" | "y" | "z"
-<Capital letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | 
+<Capital letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" |
                      "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" |
                      "U" | "V" | "W" | "X" | "Y" | "Z"
 <decimal number> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | 8 | "9"
@@ -482,7 +482,7 @@ The BNF paradigm for ```import``` is defined as follows:
 
 Using the previous ```mycoin```token contract as an example, if you need to call the contract from other contracts, you need to write the following code:
 
-```
+```go
 //This code is in the contract mycontract
 
 //@:import:mycoin
@@ -495,10 +495,10 @@ The interface name of the external contract is customizable, so long it follows 
 
 The interface of the external contract cannot be directly accessed from the contract. According to the BCBChain contract specification, the ```SDK``` supporting tool provided by BCBChain will automatically generate an implementation function to access the external contract interface. The generated code example is as follows:
 
-```
+```go
 // This code is automatically generated by the SDK supporting tools
 
-//mycoin This is method of MyContract 
+//mycoin This is method of MyContract
 func (m *MyContract) mycoin() *InterfacemycoinStub {
     return &InterfacemycoinStub{}
 }
@@ -525,7 +525,7 @@ func (is *InterfacemycoinStub) contract() IContract {
 
 Below is a sample code that calls an external contract in the contract code:
 
-```
+```go
 //This code is in the contract mycontract
 
 func (m *MyContract)TransferTest(to types.Address, value bn.Number) {
@@ -537,42 +537,42 @@ cross-contract calling support transmit receipts to conntract that it's called, 
 
 > contract1, supply cross-contract interface service:
 >
-> ```
+> ```go
 > //@:contract:contract1
 > type C1 struct {
 >   sdk sdk.ISmartContract
 >   ...
 > }
-> 
+>
 > //@:public:interface:gas[450]
 > func (c *C1) Register() {
-> 
+>
 >   //I need receipt from caller
 >   transfers := dw.sdk.Message().GetTransferToMe()
 >   sdk.Require(transfers!=nil && len(transfers)==1,
 >     types.ErrInvalidParameter, "Please transfer to me first")
-> 
+>
 >   token := transfers[0].Token
 >   value := transfers[0].Value
-> 
+>
 >   ...
 > }
 > ```
 >
 > contract2, cross-contract invoker:
 >
-> ```
+> ```go
 > //@:contract:contract2
 > type C2 struct {
 >   sdk sdk.ISmartContract
 >   ...
 > }
-> 
+>
 > //@:import:contract1
 > type mycoin interface {
-> 	Register()
+>   Register()
 > }
-> 
+>
 > //@:public:method:gas[450]
 > func (c *C2) Register() {
 >   ...
@@ -587,112 +587,13 @@ cross-contract calling support transmit receipts to conntract that it's called, 
 > }
 > ```
 
-
-
 ## 4. Contract Specification
 
 ### 4.1 BNF Paradigm Definition
 
 Combining the above description of the contract mark, the following defines the ```BNF``` paradigm of the contract specification:
 
-```
-<智能合约> ::= <合约定义代码文件> {<合约实现代码文件>} {<合约测试代码文件>}
-
-<合约定义代码文件> ::= <代码包定义> <合约定义代码>
-<合约实现代码文件> ::= <代码包定义> <合约实现代码>
-<合约测试代码文件> ::= <代码包定义> <合约测试代码>
-<代码包定义> ::= "package" <合约包名>
-<合约包名> ::= 遵循glang语法规范，但不能为 std
-<合约定义代码> ::= "import ("
-                     <合约SDK包根路径>
-                     {[包别名] <合约支撑代码包路径>}
-                 ")"
-				 <合约类定义>
-                 [<合约上链初始化函数定义>]
-                 [<挖矿定义>]
-                 [<合约收据定义>]
-                 {<跨合约调用接口定义>}
-                 {<合约公开函数定义>}
-                 {<合约实现代码>}
-<合约SDK包根路径> ::= double_quote "blockchain/smcsdk/sdk" double_quote
-<合约支撑代码包路径> ::= 遵循golang代码包路径规范，遵循BCBChain合约规范的白名单与灰名单规范
-<包别名> ::= 遵循golang代码规范的代码包别名，不允许使用 '.'
-<合约实现代码> ::= 遵循golang代码规范的合约实现代码（不需要BCBChain合约标记的代码），包括类型定义、
-                 常量定义、函数定义（注：不能包含全局变量定义，不允许使用 for 关键字，不允许递归
-                 调用）
-<合约测试代码> ::= 遵循golang单元测试规范的测试代码
-
-<合约类定义> ::= "//@:contract:" <合约名称>
-               "//@:version:" <合约版本>
-               "//@:organization:" <组织ID>
-               "//@:author:" <账户公钥>
-               "type " <合约类名> " struct {"
-               "    sdk sdk.ISmartContract"
-                   {<状态变量定义>}
-				   {<golang变量定义>}
-               "}"
-<合约名称> ::= 参见<合约标记:contract>
-<合约版本> ::= 参见<合约标记:version>
-<组织ID> ::= 参见<合约标记:organization>
-<账户公钥> ::= 参见<合约标记:author>
-<合约类名> ::= <大写字母开头的标识符>
-<golang变量定义> ::= 遵循golang代码规范的标准变量定义代码
-<状态变量定义> ::= <基本状态变量定义> | <带缓存的状态变量定义>
-<基本状态变量定义> ::= "//@:public:store"
-                   	 <变量名称> ["*"] <变量类型>
-<带缓存的状态变量定义> ::= "//@:public:store:cache"
-                   	    <变量名称> ["*"] <变量类型>
-<变量名称> ::= <标识符>
-<变量类型> ::= <元数据类型> | <数组类型> | <映射表类型>
-
-<合约上链初始化函数定义> ::= <部署函数> | <升级函数>
-<部署函数> ::= "//@:constructor"
-              "func (" <合约对象定义> ") InitChain() {"
-                <上链代码>
-              "}"
-<升级函数> ::= "//@:constructor"
-              "func (" <合约对象定义> ") UpdateChain() {"
-                <上链代码>
-              "}"
-<挖矿定义> ::= "//@:public:mine"
-              "func (" <合约对象定义> ") Mine() int64 {"
-                <挖矿代码>
-              "}"
-<合约对象定义> ::= <变量名称> "*" <合约类名>
-<上链代码> ::= <golang函数体>
-              注1：只允许访问状态变量
-              注2：sdk中不允许访问Message()和Tx()
-<挖矿代码> ::= <golang函数体>
-              注1：sdk中不允许访问Message()和Tx()
-<golang函数体> ::= 遵循golang代码规范的函数体实现代码，参见 <合约实现代码> 的定义
-
-<合约收据定义> ::= "//@:public:receipt"
-                 "type receipt interface {"
-                     <收据函数名称> <函数入口参数定义>
-                 "}"
-<收据函数名称> ::= "emit" <大写字母开头的标识符>
-<函数入口参数定义> ::= "(" <参数表> ")"
-<参数表> ::= <参数定义> | <参数表> "," <参数定义>
-<参数定义> ::= <变量名称> ["*"] <变量类型>
-
-<跨合约调用接口定义> ::= "//@:import:" <合约名称>
-                      "type "<接口类名称>" interface {"
-                      	   <接口函数名称> <函数入口参数定义> <函数返回定义>
-                      "}"
-<接口类名称> ::= <大写字母开头的标识符>
-<接口函数名称> ::= <大写字母开头的标识符>
-<函数返回定义> ::= <空> | ["*"] <变量类型> | "(" <返回表> ")"
-<空> ::= 空白
-<返回表> ::= <返回定义> | <返回表> "," <返回定义>
-<返回定义> ::= [<变量名称>] ["*"] <变量类型>
-
-<合约公开函数定义> ::=[<合约公开方法标记>]
-                   [<合约公开接口标记>]
-                "func (" <合约对象定义> ")" <公开函数名称> <函数入口参数定义> <函数返回定义> "{"
-                     <golang函数体>
-                "}"                    
-<合约公开方法标记> ::= "//@:public:method:gas[ "<燃料数量> "]"
-<合约公开接口标记> ::= "//@:public:interface:gas[ "<燃料数量> "]"
+```go
 <BCBChain Smart Contract> ::= <Contract Definition Code File> {<Contract Implementation Code File>} {<Contract Test Code File>}
 
 <Contract Definition Code File> ::= <Code Package Definition> <Contract Definition Code>
@@ -827,13 +728,11 @@ Combining the above description of the contract mark, the following defines the 
 <map table definition> ::= "map[" <metadata type> "]"
 ```
 
-
-
 ### 4.2 Package Specification
 
 The BNF paradigm for defining the contract package structure is as follows:
 
-```
+```go
 <Smart Contract Package Structure> ::= <Contract Definition Code File> {<Contract Implementation Code File>} {<Contract Test Code File>}
 <Contract Definition Code File> ::= <Contract Code Directory> "/" <golang Implementation Code File Name>
 <contract implementation code file> ::= <contract code directory> "/" <golang implementation code file name>
@@ -851,8 +750,6 @@ The BNF paradigm for defining the contract package structure is as follows:
 
 Note: The white space interval that appears in the specification definition is only required for typesetting and is not part of the specification.
 
-
-
 ### 4.3 Whitelist
 
 For security reasons, the BCBChain Smart Contract is limited to allow only packages that follow explicit import behavior and do not produce inconsistent results for different nodes. Such packages are included in the whitelist.
@@ -863,7 +760,7 @@ The specific contents of the whitelist and graylist will be different with the u
 
 Below is the first version of the whitelist:
 
-```
+```go
 //The following are available golang ID packages
 bytes
 container/heap
@@ -917,9 +814,6 @@ unicode/utf8
 blockchain/smcsdk/sdk
 ```
 
-
-
-
 ## 5. BRC20 Token
 
 The smart contract “Token” issued in Section 2.1.2 of this guide is a sample token contract, not a ```BRC20``` token that complies with the BCBChain standard.
@@ -928,11 +822,11 @@ Users of BCBChain can write their own smart contracts to issue tokens that compl
 
 The specification is described as follows:
 
-* The contract must explicitly call the interface provided by the Smart Contract SDK ```ITokenHelper::RegisterToken(...)``` to register a new token with BCBChain (each smart contract can only register one token);
+- The contract must explicitly call the interface provided by the Smart Contract SDK ```ITokenHelper::RegisterToken(...)``` to register a new token with BCBChain (each smart contract can only register one token);
 
-* The contract registration token will automatically record a standard token generation receipt on BCBChain. The receipt is defined as follows:
+- The contract registration token will automatically record a standard token generation receipt on BCBChain. The receipt is defined as follows:
 
-  ```
+  ```go
   import (
       "blockchain/smcsdk/sdk/bn"
       "blockchain/smcsdk/sdk/types"
@@ -952,15 +846,13 @@ The specification is described as follows:
   }
   ```
 
-* The contract must implement the methods and interfaces defined in this section
-
-
+- The contract must implement the methods and interfaces defined in this section
 
 ### 5.1 Transfer
 
 **Method prototype**
 
-```
+```go
 import (
     "blockchain/smcsdk/sdk/bn"
     "blockchain/smcsdk/sdk/types"
@@ -998,7 +890,7 @@ Note: If the recipient address is a contract address, the received token will be
 
 - The BRC20 Token ```Transfer()``` method automatically records a standard token transfer receipt on BCBChain. The receipt is defined as follows：
 
-  ```
+  ```go
   import (
       "blockchain/smcsdk/sdk/bn"
       "blockchain/smcsdk/sdk/types"
@@ -1017,7 +909,7 @@ Note: If the recipient address is a contract address, the received token will be
 
 **Method Prototype**
 
-```
+```go
 import (
     "blockchain/smcsdk/sdk/bn"
 )
@@ -1047,7 +939,7 @@ AddSupply(bn.Number)
 
 - The BRC20 Token ```AddSupply()``` method automatically records a standard token extension receipt on BCBChain. The receipt is defined as follows:
 
-  ```
+  ```go
   import (
       "blockchain/smcsdk/sdk/bn"
       "blockchain/smcsdk/sdk/types"
@@ -1060,15 +952,14 @@ AddSupply(bn.Number)
       TotalSupply bn.Number     `json:"totalSupply"` // New total supply（单位：cong）
   }
   ```
+
 - The BRC20 Token ```AddSupply()``` method also automatically records a standard ```std::transfer```receipt on BCBChain
-
-
 
 ### 5.3 Burn
 
 **Method Prototype**
 
-```
+```go
 import (
     "blockchain/smcsdk/sdk/bn"
 )
@@ -1098,7 +989,7 @@ Burn(bn.Number)
 
 - The BRC20 Token ```Burn()``` method automatically records a standard token burning receipt on BCBChain. The receipt is defined as follows:
 
-  ```
+  ```go
   import (
       "blockchain/smcsdk/sdk/bn"
       "blockchain/smcsdk/sdk/types"
@@ -1111,15 +1002,14 @@ Burn(bn.Number)
       TotalSupply bn.Number     `json:"totalSupply"` // 新的总供应量（单位：cong）
   }
   ```
+  
 - The BRC20 Token ```Burn()``` method also automatically records a standard ```std::transfer``` receipt on BCBChain.
-
-
 
 ### 5.4 SetGasPrice
 
 **Method Prototype**
 
-```
+```go
 //@:public:method:gas[2400]
 SetGasPrice(int64)
 ```
@@ -1145,7 +1035,7 @@ SetGasPrice(int64)
 
 - The BRC20 Token ```SetGasPrice()``` method automatically records a standard set gas price receipt on BCBChain. The receipt is defined as follows:
 
-  ```
+  ```go
   import (
       "blockchain/smcsdk/sdk/types"
   )
@@ -1161,7 +1051,7 @@ SetGasPrice(int64)
 
 **Method Prototype**
 
-```
+```go
 import (
     "blockchain/smcsdk/sdk/types"
 )
@@ -1191,7 +1081,7 @@ SetOwner(types.Address)
 
 - The BRC20 Token ```SetOwner()``` method automatically records a standard transfer ownership receipt on BCBChain. The receipt is defined as follows:
 
-  ```
+  ```go
   import (
       "blockchain/smcsdk/sdk/types"
   )
@@ -1202,4 +1092,5 @@ SetOwner(types.Address)
       NewOwner     types.Address `json:"newOwner"`     // The external account address of the new owner
   }
   ```
+
 - The BRC20 Token ```SetOwner()``` method also automatically records a standard ```std::transfer``` receipt on BCBChain.

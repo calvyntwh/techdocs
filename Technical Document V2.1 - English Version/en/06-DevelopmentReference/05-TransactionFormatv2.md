@@ -14,14 +14,11 @@ The typical application scenario 1 of cascaded messages is described as follows 
 The typical application scenario 2 of cascade message is described as follows (using a token issued on BCBChain, such as "USDX"):
 
 * In the first message, transfer y USDX to the smart contract address B
-* 在第二个消息中调用智能合约地址B的合约方法，在该方法中使用y数量的USDX为用户购买游戏道具。
 * In the second message, call the function in the contract B. In this function, uses y USDX to purchase game props for users.
 
 Bcbchain v2.0 only supports two messages to be cascaded temporarily. In the future, more messages can be added for cascading calls according to business needs.
 
 Bcbchain v2.1 adds a container selection option for running smart contracts to support relay programs to handle cross chain messages.
-
-
 
 ## 1.  Frame
 
@@ -39,16 +36,11 @@ The transaction format is divided into multiple segments by "." and the meaning 
 | \<SignNumber> |    \<Int>     | the number of signatures. Note that it is a decimal integer expressed as a string, which must be 1, which means that all transactions on BCBChain must be signed, for example: "<1>". According to the number of signatures, the last signature should be repeated the same number of times|
 | Signature     | Base58 String | describes the signature of a signer. It is a base58 encoded string. Please refer to the subsequent sections of this chapter for specific definitions. According to the number of signatures, the last signature should be repeated the same number of times|
 
-
-
-
 ## 2. Payload
 
 This section defines the transaction payload data format in detail. All the defined fields in the table are encoded with RLP. Then, the RLP codes of these fields are output and spliced together in recursive hierarchical order, and the payload length field of RLP code format is added at the top as the naked data of transaction payload. The signature is based on the naked data of payload.
 
 Finally, the payload output to the transaction framework format package needs to be encoded as a base58 string based on the raw data.
-
-
 
 ### 2.1 Call smart contract
 
@@ -58,7 +50,7 @@ The data structure of the smart contract call request is defined as follows:
 
 | **grammer**                       | **type** | **comment**                                                     |
 | ------------------------------ | :------: | :----------------------------------------------------------- |
-| nonce                          |  Uint64  | Number  used once or Number once.交易发起者发起交易的计数<br/>值，从1开始，必须单调增长，增长步长为1。 The number of transactions initiated by the transaction initiator is less than br / > value. Starting from 1, it must grow monotonously with a growth step of 1|
+| nonce                          |  Uint64  | Number  used once or Number once. The number of transactions initiated by the transaction initiator is less than br / > value. Starting from 1, it must grow monotonously with a growth step of 1|
 | gasLimit                       |  Uint64  | the maximum amount of gas that the transaction originator is willing to pay to execute the transaction |
 | note                           |  String  | UTF-8 encoded note information, up to 256 characters |
 | msgs: [                        |  Array   | concatenated message list                                   |
@@ -74,9 +66,6 @@ The data structure of the smart contract call request is defined as follows:
 | &nbsp;}                        |          |                                                              |
 | ]                              |          |                                                              |
 
-
-
-
 ## 3. Signature
 
 This section defines the signature data format in detail. All the defined fields in the table are encoded with RLP. Then, the RLP codes of these fields are output and spliced together in order, and the signature length field of RLP code format is added at the front as the raw data of signature.
@@ -91,17 +80,13 @@ The data definition of signature in transaction framework layer is as follows:
 | pubkey    | [32]byte | signer's 32-byte public key        |
 | signature | [64]byte | 64 byte signature result. The data to be signed is the raw data of the transaction payload before the base58 encoding |
 
-
-
 ## 4. Transaction structure
 
 This chapter takes BCBChain transfer as an example to describe the structure of transaction format-v2 in detail.
 
 The following is the transaction construction process of calling a token transfer to the nickname of the specified contract registration game:
 
-
-
-```
+```shell
 <==== sender ===========================================================>
 privKey: 4a2c14697282e658b3ed7dd5324de1a102d216d6fa50d5937ffe89f35cbc12aa
          68eb9a09813bdf7c0869bf34a244cc545711509fe70f978d121afd3a4ae610e6

@@ -91,7 +91,6 @@ The side chain information can be seen from the above genesisInfo, the "nodepubk
 
 ## 3. Confirm results
 
-想要确认侧链是否创世成功，需要在主链以及侧链上分别进行确认，查询命令如下。
 In order to confirm whether the genesis creation of the side chain is successful, you need to confirm on the main chain and the side chain respectively, querying commands are:
 
 Confirm on the main chain:
