@@ -61,7 +61,7 @@ Use "bcw <command> --help" for more information about a command.
   | **Grammar**     | **Type** | **Comment** |
   | :------------ | :------: | :------------------------------------------------------------ |
   | name         |  String  | Wallet name                                                   |
-  | password     |  String  | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter a passward |
+  | password     |  String  | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter a password |
   | keystorepath |  String  | Optional, wallet storage path, if not specified, the system will use the default path          |
 
 - **Output SUCCESS Result**
@@ -109,7 +109,7 @@ Use "bcw <command> --help" for more information about a command.
   | **Grammar**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | Wallet name                                                   |
-  | password     |  String  | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter a passward |
+  | password     |  String  | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter a password |
   | file         |  String  | Full name of the file to sign                                             |
   | mode         |  String  | Signature mode：&nbsp;t:text files；&nbsp;b:binaries       |
   | keystorepath |  String  | Optional, wallet storage path, if not specified, the system will use the default path      |
@@ -134,7 +134,7 @@ Use "bcw <command> --help" for more information about a command.
   | **Grammar**     | **Type** | **Comment** |
   | ------------ | :-------: | ------------------------------------------------------------ |
   | name         |  String   | Wallet name                                                   |
-  | password     |  String   | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter a passward |
+  | password     |  String   | Optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, which requires at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). If do not specify a password at the command line, the program will prompt the user to enter a password |
   | data         | HexString | Hexadecimal form of data to be signed                                      |
   | file         |  String   | output filename after signing                                           |
   | keystorepath |  String   | Optional, wallet storage path, if not specified, the system will use the default path      |

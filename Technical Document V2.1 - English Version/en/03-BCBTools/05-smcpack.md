@@ -11,7 +11,7 @@ Sign contract, input `.tar.gz`, output signature file (for codehash signature)
 
 The format of the command is as follows:
 
-```
+```shell
 Usage:
   smcpack --path=dice2win/v2.0/dice2win  --name=hotwal001 [--password=aBig62_123]
 
@@ -23,13 +23,13 @@ Flags:
 
 - **command**
 
-  ```
+  ```shell
   smcpack --path=dice2win/v2.0/dice2win  --name=hotwal001 [--password=aBig62_123]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | path     |  String  | directory of contract code                                    |
   | name     |  String  | wallet name                                               |
@@ -37,7 +37,7 @@ Flags:
 
 - **Output SUCCESS Result**
 
-  ```
+  ```shell
   OK
   TarFile: dice2win.tar.gz
   ```

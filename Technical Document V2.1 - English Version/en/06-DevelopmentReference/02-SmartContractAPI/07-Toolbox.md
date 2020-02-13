@@ -93,7 +93,7 @@ The sample code is as follows:
 
 ```go
 forx.Range(10, func(i int) {
-	printf("i=%v\n", i)
+    printf("i=%v\n", i)
 })
 ```
 

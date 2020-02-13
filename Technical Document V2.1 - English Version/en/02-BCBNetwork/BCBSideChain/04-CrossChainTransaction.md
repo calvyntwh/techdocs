@@ -35,7 +35,7 @@ Response: [
 
 We can see the token balance of the new account is 0.
 
-We take the token is `LOC` as an example to show how to excute transfer operation from the account `owner` on the main chain to the account `scAccount` on the side chain:
+We take the token is `LOC` as an example to show how to execute transfer operation from the account `owner` on the main chain to the account `scAccount` on the side chain:
 
 ```shell
 ./bcc transfer --name owner --password Ab1@Cd3$ --token LOC --gasLimit 100000  --to local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG --value 100 --chainid local

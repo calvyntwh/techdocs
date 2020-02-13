@@ -1,13 +1,12 @@
 # Blockchain Interface
 
-
 ## 1. genesis
 
 Query the nodes of bcbchain for blockchain creation information.
 
 **. Request URI over HTTP/HTTPS**
 
-```
+```text
 http://earth.bcbchain.io/genesis
 or
 https://earth.bcbchain.io/genesis
@@ -15,7 +14,7 @@ https://earth.bcbchain.io/genesis
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -25,15 +24,13 @@ https://earth.bcbchain.io/genesis
 
 **. Request Parameters**
 
-| **grammer** | **type** | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                               |
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -314,7 +311,7 @@ https://earth.bcbchain.io/genesis
 
 **. Response SUCCESS Parameters**
 
-| **grammer**                      |   **type**    | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**                      |   **type**    | **comment** |
 | ----------------------------- | :-----------: | ------------------------------------------------------------ |
 | genesis: { | Object | Genesis information. |
 | &nbsp;&nbsp;genesis\_time | String | The genesis time, such as: **2018-07-15T11:25:08.0515146+08:00** |
@@ -334,7 +331,7 @@ https://earth.bcbchain.io/genesis
 | &nbsp;&nbsp;] | | |
 | &nbsp;&nbsp;app\_hash           | String            | The creation application hash must be empty.                |
 | &nbsp;&nbsp;app\_state: {           | Object            | The application state at the time of creation.          |
-| &nbsp;&nbsp;&nbsp;&nbsp;token: {                | Object            | Detailed parameters of the basic toekn **BCB** defined at the time of bcbchain creation.|
+| &nbsp;&nbsp;&nbsp;&nbsp;token: {                | Object            | Detailed parameters of the basic token **BCB** defined at the time of bcbchain creation.|
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address             | Address | The contract address of the token **BCB**.                   |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;owner               | Address | Address of the owner of the token **BCB**.                |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version             | String            | Contract version.                                    |
@@ -375,11 +372,9 @@ https://earth.bcbchain.io/genesis
 
 Download all the files required for node creation from the bcbchain node.
 
-
-
 **. Request URI over HTTP/HTTPS**
 
-```
+```text
 http://earth.bcbchain.io/genesis_pkg
 or
 https://earth.bcbchain.io/genesis_pkg
@@ -387,7 +382,7 @@ https://earth.bcbchain.io/genesis_pkg
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -397,15 +392,13 @@ https://earth.bcbchain.io/genesis_pkg
 
 **. Request Parameters**
 
-| **grammer** | **type** | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                               |
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
     "jsonrpc": "2.0",
     "id": "",
@@ -415,27 +408,21 @@ https://earth.bcbchain.io/genesis_pkg
 }
 ```
 
-
-
 - **Response SUCCESS Parameters**
 
-  | **grammer**      |    **type**     | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**      |    **type**     | **comment** |
   | ------------- | :-------------: | ------------------------------------------------------------ |
   | results: {    |     Object      | Execution results.                                |
   | &nbsp;&nbsp;f | json.RawMessage | Genesis information packs data in `tar.gz` format.            |
   | }             |                 |                                                              |
 
-
-
 ## 3. block
 
 Query the order of bcbchain for the specified height block data (including metadata and transaction data).
 
-
-
 **. Request URI over HTTP/HTTPS**
 
-```
+```text
 http://earth.bcbchain.io/block?height=1882
 or
 https://earth.bcbchain.io/block?height=1882
@@ -443,7 +430,7 @@ https://earth.bcbchain.io/block?height=1882
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -456,15 +443,13 @@ https://earth.bcbchain.io/block?height=1882
 
 **. Request Parameters**
 
-| **grammer** | **type** | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | height   | Uint64   | Specify block height, optional parameter, default to query the latest block height.           |
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -671,7 +656,7 @@ https://earth.bcbchain.io/block?height=1882
 
 **. Response SUCCESS Parameters**
 
-| **grammer**                  | **type**                   | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**                  | **type**                   | **comment** |
 | ------------------------- | :------------------------: | ------------------------------------------------------------ |
 | block\_meta: {            | Object                     |Metadata for the block.                                            |
 | &nbsp;&nbsp;block\_id: {              | Address          | Blockchain ID.                                                     |
@@ -717,17 +702,13 @@ https://earth.bcbchain.io/block?height=1882
 | }                         |                            |                                                              |
 | block\_size               | Int                        | Block size.                                                  |
 
-
-
 ## 4. block_results
 
 Query the nodes of bcbchain for the execution results of all transactions in the specified height block.
 
-
-
 **. Request URI over HTTP/HTTPS**
 
-```
+```text
 http://earth.bcbchain.io/block_results?height=1882
 or
 https://earth.bcbchain.io/block_results?height=1882
@@ -735,7 +716,7 @@ https://earth.bcbchain.io/block_results?height=1882
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -748,15 +729,13 @@ https://earth.bcbchain.io/block_results?height=1882
 
 **. Request Parameters**
 
-| **grammer** | **type** | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter** | **type** | **comment** |
 | -------- | :------: | ------------------------------------------------------------ |
 | height   |  Uint64  | Specify block height, optional parameter, default to query the latest block height.           |
 
-
-
 **. Response SUCCESS for Empty Block Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -774,7 +753,7 @@ https://earth.bcbchain.io/block_results?height=1882
 
 **. Response SUCCESS for Block with Txs Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -801,7 +780,7 @@ https://earth.bcbchain.io/block_results?height=1882
 
 **. Response SUCCESS Parameters**
 
-| **grammer**          | **type**          | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**          | **type**          | **comment** |
 | ----------------- | :---------------: | ------------------------------------------------------------ |
 | height            | Uint64            | Block height.                                             |
 | results: {        | Object            | Execution results.                                                |
@@ -823,11 +802,9 @@ https://earth.bcbchain.io/block_results?height=1882
 
 A request to query the nodes of bcbchain for block metadata of a specified height range (up to 21 blocks at a time).
 
-
-
 **. Request URI over HTTP/HTTPS**
 
-```
+```text
 http://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
 or
 https://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
@@ -835,7 +812,7 @@ https://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -849,7 +826,7 @@ https://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
 
 **. Request Parameters**
 
-| **grammer**  | **type** | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**  | **type** | **comment** |
 | --------- | :------: | ------------------------------------------------------------ |
 | minHeight |  Uint64  | Specifies the minimum block height.                  |
 | maxHeight |  Uint64  | Specifies the maximum block height.             |
@@ -858,11 +835,9 @@ https://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
 * Based on the parameter maxheight, 21 blocks can be returned at most;
 * Returns the last 21 blocks when there are no parameters, or when only the minheight parameter is specified.
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -1947,7 +1922,7 @@ https://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
 
 **. Response SUCCESS Parameters**
 
-| **grammer**                  | **type**          | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**                  | **type**          | **comment** |
 | ------------------------- | :---------------: | ------------------------------------------------------------ |
 | last\_height      | Uint64            | Block height of the last block.                            |
 | block\_metas: [       | Arrayof<br>Object |Metadata list for the block.                                 |
@@ -1986,17 +1961,13 @@ https://earth.bcbchain.io/blockchain?minHeight=10000&maxHeight=10020
 | &nbsp;&nbsp;}                         |                   |                                                              |
 | ]                         |                   |                                                              |
 
-
-
 ## 6. commit
 
 Query the nodes of bcbchain for the confirmation information of the specified block.
 
-
-
 **. Request URI over HTTP/HTTPS**
 
-```
+```text
 http://earth.bcbchain.io/commit?height=24103
 or
 https://earth.bcbchain.io/commit?height=24103
@@ -2004,7 +1975,7 @@ https://earth.bcbchain.io/commit?height=24103
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -2017,15 +1988,13 @@ https://earth.bcbchain.io/commit?height=24103
 
 **. Request Parameters**
 
-| **grammer** | **type** | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter** | **type** | **comment** |
 | -------- | :------: | ------------------------------------------------------------ |
 | height   |  Uint64  | Specify block height, optional parameter, default to query the latest block height.           |
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",

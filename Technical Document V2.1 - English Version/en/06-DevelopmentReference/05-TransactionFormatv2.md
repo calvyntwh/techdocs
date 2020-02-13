@@ -28,7 +28,7 @@ The transaction format of BCBChain is defined as follows (two formats):
 
 The transaction format is divided into multiple segments by "." and the meaning of each segment is described below (pay attention to case sensitivity)
 
-| grammer          |     type    | comment                                                   |
+| Parameter          |     type    | comment                                                   |
 | :------------ | :-----------: | :----------------------------------------------------------- |
 | **bcb\<tx>**  |    String     | uses the chain ID as the transaction prefix to identify the string, indicating that this is a transaction on which the smart contract is executed on the blockchain, and this transaction will modify the world state of the blockchain |
 | **v2**        |    String     | transaction version. The current version is defined as "V2"               |
@@ -48,7 +48,7 @@ The smart contract call only appears in the type "bcb\<tx\>", this function is t
 
 The data structure of the smart contract call request is defined as follows:
 
-| **grammer**                       | **type** | **comment**                                                     |
+| **Parameter**                       | **type** | **comment**                                                     |
 | ------------------------------ | :------: | :----------------------------------------------------------- |
 | nonce                          |  Uint64  | Number  used once or Number once. The number of transactions initiated by the transaction initiator is less than br / > value. Starting from 1, it must grow monotonously with a growth step of 1|
 | gasLimit                       |  Uint64  | the maximum amount of gas that the transaction originator is willing to pay to execute the transaction |
@@ -74,7 +74,7 @@ Finally, the signature output to the transaction framework format package needs 
 
 The data definition of signature in transaction framework layer is as follows:
 
-| **grammer**  | **type** | **comment**                                                     |
+| **Parameter**  | **type** | **comment**                                                     |
 | --------- | -------- | ------------------------------------------------------------ |
 | type      | String   | signature type, currently only ed25519 is supported          |
 | pubkey    | [32]byte | signer's 32-byte public key        |

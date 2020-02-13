@@ -290,7 +290,7 @@ Sends a request to bcbXwallet_rpc to request a single transfer
   | -------- | :-------: | ------------------------------------------------------------ |
   | code     |    Int    | Transaction execution response code, 200 indicates success |
   | log      |  String   | Error message when response code is not 200 |
-  | txHash   | HexString | Transaction hash, begainning with 0x |
+  | txHash   | HexString | Transaction hash, beginning with 0x |
   | height   |   Int64   | Height of the block that first confirmed this transfer |
 
 ## 6. bcb_transferOffline

@@ -206,7 +206,7 @@ Sends a request to bcbXwallet_rpc to query a transaction details.
       "txHash": "0x4E456161A6580A1D34D86F1560DCFE6034F5E08FA31D7DCEBCCCC72A0DC73654",
       "txTime": "2018-12-27T14:26:19.251820644Z",
       "code": 200,
-      "log": "Deliver tx succeed"
+      "log": "Deliver tx succeed",
       "blockHash": "0x583E820E58D2FD00B1A7D66CDBB6B7C26B207925",
       "blockHeight": 2495461,
       "from": "bcbAkTDzHLf5udamub38GdepKe7nek66EHqY",
@@ -217,7 +217,7 @@ Sends a request to bcbXwallet_rpc to query a transaction details.
       "messages": [
          {
           "smcAddress": "bcbCsRXXMGkUJ8wRnrBUD7mQsMST4d53JRKJ",
-          "smcName": ""token-templet-Diamond Coin",
+          "smcName": "token-templet-Diamond Coin",
           "method": "Transfer(smc.Address,big.Int)smc.Error",
           "to": "bcbKuqW1qdsnD7mRsRooXMEkCBj2s9GLF9pn",
           "value": "683000000000"
@@ -387,13 +387,13 @@ Sends a request to bcbXwallet_rpc to query all the tokens in an account.
     "id": "1",
     "result": [
         {
-          "tokenAddress": "bcbLVgb3odTfKC9Y9GeFnNWL9wmR4pwWiqwe"，
-          "tokenName": "BCB"，
+          "tokenAddress": "bcbLVgb3odTfKC9Y9GeFnNWL9wmR4pwWiqwe",
+          "tokenName": "BCB",
           "balance": "2500000000"
         },
         {
           "tokenAddress": "bcbJ4fKuUcC5TuzXNiHqT5jNxZBx2eUToyk1",
-          "tokenName": "XT"，
+          "tokenName": "XT",
           "balance": "10000000",
         }
     ]

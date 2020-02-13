@@ -10,7 +10,7 @@ The IP of the default single node when installs is `127.0.0.1`, if you want to u
 
 `install-tmcore/pieces/local/v2/local-nodes.json`
 
-Excute the following commands, and in the interactive state, select the chain id, note type in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service.
+Execute the following commands, and in the interactive state, select the chain id, note type in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service.
 
 ```shell
 cd install-tmcore
@@ -50,7 +50,7 @@ all finished ,gracefully quit
 Congratulation !!! TENDERMINT is successfully installed with version 2.0.1.13780.
 ```
 
-If the test chain has been built, you just need to upgrade the node program, excute the following commands, follow the interactive prompt to complete the upgrade:
+If the test chain has been built, you just need to upgrade the node program, execute the following commands, follow the interactive prompt to complete the upgrade:
 
 ```shell
 cd install-tmcore
@@ -98,7 +98,7 @@ version=$(cat thirdparty/version | tr -d "\r")
 tar cvfz install-bcchain/pieces/thirdparty_${version}.tar.gz thirdparty
 ```
 
-Excute the following commands, and in the interactive state, select the chain id: `local`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
+Execute the following commands, and in the interactive state, select the chain id: `local`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
 
 ```shell
 cd install-bcchain
@@ -121,7 +121,7 @@ End of copy files.
 Congratulation !!! BCCHAIN is successfully installed with version 2.0.1.13780.
 ```
 
-If the test chain has been built, you just need to upgrade the node program, excute the following commands, follow the interactive prompt to complete the upgrade:
+If the test chain has been built, you just need to upgrade the node program, execute the following commands, follow the interactive prompt to complete the upgrade:
 
 ```shell
 cd install-bcchain
@@ -174,7 +174,7 @@ You can see the following screen output:
 
 ## 3. Build Four-Nodes Test chain
 
-BCBChain's open source code comes with a full set fo creation parameters to build a four-node test chain, and noce the source code is compiled, excuting the following commands to finish the build of the installation directory of the consensus engine `tendermint`.
+BCBChain's open source code comes with a full set of creation parameters to build a four-node test chain, and noce the source code is compiled, executing the following commands to finish the build of the installation directory of the consensus engine `tendermint`.
 
 ```shell
 mkdir install-tmcore install-tmcore/pieces install-tmcore/pieces/test
@@ -202,7 +202,7 @@ If you want to use a real IP when deploy, please modify the genesis node profile
 install-tmcore/pieces/test/v2/test-nodes.json
 ```
 
-Copy the installation directory to the planned ndoe, excute the following commands, and in the interactive state, select the chain id: `test`, note type: `VALIDATOR` in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service `tmcore`.
+Copy the installation directory to the planned node, execute the following commands, and in the interactive state, select the chain id: `test`, note type: `VALIDATOR` in turn, and then wait for about 10s to finish the installation of the test chain consensus engine, once installed successfully, the consensus engine will automatically start the service `tmcore`.
 
 ```shell
 cd install-tmcore
@@ -242,7 +242,7 @@ all finished ,gracefully quit
 Congratulation !!! TENDERMINT is successfully installed with version 2.0.1.13780.
 ```
 
-If the test chain has been built, you just need to upgrade the node program, excute the following commands, follow the interactive prompt to complete the upgrade:
+If the test chain has been built, you just need to upgrade the node program, execute the following commands, follow the interactive prompt to complete the upgrade:
 
 ```shell
 cd install-tmcore
@@ -291,7 +291,7 @@ tar cvfz install-bcchain/pieces/thirdparty_${version}.tar.gz thirdparty
 
 ```
 
-Copy the installation directory to the planned ndoe, excute the following commands, and in the interactive state, select the chain id: `test`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
+Copy the installation directory to the planned node, execute the following commands, and in the interactive state, select the chain id: `test`, then you can finish the installation of the test chain business engine, and once it's installed successfully, the business engine `bccchain` will automatically start the service.
 
 ```shell
 cd install-bcchain
@@ -314,7 +314,7 @@ End of copy files.
 Congratulation !!! BCCHAIN is successfully installed with version 2.0.1.13780.
 ```
 
-If the test chain has been built, you just need to upgrade the node program, excute the following commands, follow the interactive prompt to complete the upgrade:
+If the test chain has been built, you just need to upgrade the node program, execute the following commands, follow the interactive prompt to complete the upgrade:
 
 ```shell
 cd install-bcchain

@@ -8,7 +8,7 @@ The package `blockchain/smcsdk/sdk/crypto/ed25519` encapsulates a simple applica
 
 Function prototype:
 
-```
+```go
 func VerifySign(pubkey, data, sign []byte) bool
 ```
 

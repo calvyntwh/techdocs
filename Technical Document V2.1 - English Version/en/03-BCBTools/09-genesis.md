@@ -6,7 +6,7 @@ genesis：The genesis creation tool, it generates the genesis file _genesis.json
 
 The format of the command is as follows:
 
-```
+```shell
 Usage:
   genesis --chainid=local --path=/data/genesis/local
 
@@ -18,19 +18,19 @@ Flags:
 
 - **command**
 
-  ```
+  ```shell
   genesis --chainid=local --charter=/data/genesis/local
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | chainid  |  String  | chain id                                                  |
   | charter  |  String  | saving path of genesis                                               |
 
 - **Output SUCCESS Result**
 
-  ```
+  ```shell
   OK
   ```

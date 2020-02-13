@@ -1,6 +1,5 @@
 # Model Introduction
 
-
 ## 1. Overview
 
 BCBChain has referred to Ethereum, Fabric, Tendermint, Cosmos and other open-source blockchain schemes, and some of the outstanding ideas.

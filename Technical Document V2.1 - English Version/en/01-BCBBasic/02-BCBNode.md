@@ -108,7 +108,7 @@ You selected CHAINID=bcb
 
 Start copying files ...
 install sdk with version 2.0.1.13774
-install thirdparty packages with version 2.0.1.12318
+install third party packages with version 2.0.1.12318
 End of copy files.
 
 Congratulation !!! BCCHAIN is successfully installed with version 2.0.1.13780.

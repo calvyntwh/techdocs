@@ -329,7 +329,7 @@ You can see the side chain has added the new node `node2` successfully.
 
 ### 2.4 Adjust verifier node weight
 
-When adjusting the verifier node weight, the current node must be guranteed to be greater than or equal to 4, we take the node public key is `0x2113d7a30d47a08ca79c8ebbc32a9c73a65a488b3f93da3a1eb42c57b35f9c9f`, ndoe weight is `12` as an example to show how to adjust the verifier node weight:
+When adjusting the verifier node weight, the current node must be guranteed to be greater than or equal to 4, we take the node public key is `0x2113d7a30d47a08ca79c8ebbc32a9c73a65a488b3f93da3a1eb42c57b35f9c9f`, node weight is `12` as an example to show how to adjust the verifier node weight:
 
 ```shell
 ./bcc call --contract governance --method SetPower --params 0x2113d7a30d47a08ca79c8ebbc32a9c73a65a488b3f93da3a1eb42c57b35f9c9f@12 --gasLimit 1000000 --orgName genesis --name scowner --password SCOwner@2019 --chainid local[SmartCity]

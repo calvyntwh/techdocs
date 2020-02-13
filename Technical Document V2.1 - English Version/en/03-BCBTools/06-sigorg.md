@@ -24,7 +24,7 @@ Flags:
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment** |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | name     |  String  | wallet name                                               |
   | password |  String  | optional, wallet password, 8-20 characters in length (it can be composed of any printable ASCII characters, and it is required to have at least one lowercase letter, at least one uppercase letter, at least one number, and at least one non alphanumeric character). <br>If the command line does not specify a password, the program prompts the user for the password. |

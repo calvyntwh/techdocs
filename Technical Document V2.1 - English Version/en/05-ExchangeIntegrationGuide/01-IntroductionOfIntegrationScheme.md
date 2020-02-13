@@ -1,18 +1,14 @@
 # How to Rapidly Setup with the Exchange
 
-
-
 ## 1. Setup using Address Labelling
 
 **Setup using Address Labelling Explanation:**
 
-​	BCBChain Exchange provides support for address labelling, hence the management can look into cryptocurrencies such as XRP and EOS.
+​BCBChain Exchange provides support for address labelling, hence the management can look into cryptocurrencies such as XRP and EOS.
 
-​	The exchange can generate multiple hot wallet addresses, which can be shared between multiple different accounts. Each user can assign their own remark (commonly known as address label) to the wallet. Since different users can share the same currency address, the exchange does not need to perform time-consuming operations such as fund collection.
+​The exchange can generate multiple hot wallet addresses, which can be shared between multiple different accounts. Each user can assign their own remark (commonly known as address label) to the wallet. Since different users can share the same currency address, the exchange does not need to perform time-consuming operations such as fund collection.
 
-​	Users top up their values and make withdrawals through these hot wallets. This fulfills the cycle internally.
-
-
+​Users top up their values and make withdrawals through these hot wallets. This fulfills the cycle internally.
 
 The four main considerations with regards to the exchange are as follows:
 
@@ -21,21 +17,15 @@ The four main considerations with regards to the exchange are as follows:
 - To withdraw from the exchange, the exchange can call the bcbXwallet_rpc to transfer out from the hot wallet.
 - With regards to wallet security, the exchange will need to store the encrypted password and access key of the wallets because the access keys are randomly generated. The exchange must use its own protection mechanisms to store these keys and encrypted passwords in a secure manner.
 
-
-
 The process details are explained in the diagram below:
 
-![](./p10/1.AddressLabelScheme.png)
-
-
+![Address Label Scheme](./p10/1.AddressLabelScheme.png)
 
 ## 2. Setup without using Address Labels
 
 **Setup without using address labels explanation:**
 
-​	When you don't use the address label feature about BCBChain, you can not distinguish the activities of the users in the account by the exchange hot wallet address. In this case, the user can only be identified by the address. Hence, every user needs to have one unique account and one unique corresponding address, and manually maintain the currencies in their accounts on a periodic basis by spreading the tokens and distributing the allocated tokens back to the hot wallet.
-
-
+When you don't use the address label feature about BCBChain, you can not distinguish the activities of the users in the account by the exchange hot wallet address. In this case, the user can only be identified by the address. Hence, every user needs to have one unique account and one unique corresponding address, and manually maintain the currencies in their accounts on a periodic basis by spreading the tokens and distributing the allocated tokens back to the hot wallet.
 
 The four main considerations with regards to the exchange are as follows:
 
@@ -46,20 +36,14 @@ The four main considerations with regards to the exchange are as follows:
 
 The process details are explained in the diagram below:
 
-![](./p10/2.NoAddressLabelScheme.png.png)
-
-
+![No Address Label Scheme](./p10/2.NoAddressLabelScheme.png.png)
 
 ## 3. Transfer from cold wallet to hot wallet
 
 **Transfer from cold wallet to hot wallet explanation:**
 
-​	The online transfer method will not work for the cold wallet, so the signing of the transaction will be performed by the physical cold wallet.
-
-
+​The online transfer method will not work for the cold wallet, so the signing of the transaction will be performed by the physical cold wallet.
 
 The process details are explained in the diagram below:
 
-![](./p10/3.SchemeOfTransferingFromColdWalletToHotWallet.png)
-
-
+![Scheme Of Transfering From ColdWallet To HotWallet](./p10/3.SchemeOfTransferingFromColdWalletToHotWallet.png)

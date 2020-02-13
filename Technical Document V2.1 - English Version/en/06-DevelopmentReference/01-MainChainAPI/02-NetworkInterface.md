@@ -1,13 +1,12 @@
 # Network Interface
 
-
 ## 1. abci\_info
 
 Query world status information of the **bcchain** from BCBChain's nodes.
 
 **. Request URI over HTTP/HTTPS**
 
-```
+```html
 http://earth.bcbchain.io/abci_info
 or
 https://earth.bcbchain.io/abci_info
@@ -15,7 +14,7 @@ https://earth.bcbchain.io/abci_info
 
 **.  Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -23,19 +22,15 @@ https://earth.bcbchain.io/abci_info
 }
 ```
 
-
-
 **. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | -------- |
 | ——       | ——       | no parameters |
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -49,11 +44,9 @@ https://earth.bcbchain.io/abci_info
 }
 ```
 
-
-
 **. Response SUCCESS Parameters**
 
-| **grammer**                |   **type**    | **comment** |
+| **Parameter**                |   **type**    | **comment** |
 | ----------------------- | :-----------: | ------------------------------------------------------------ |
 | response:   {           |    Object     | **bcchain** returned query result            |
 | &nbsp;&nbsp;version           |    String     | **bcchain** the release version of the program             |
@@ -63,7 +56,7 @@ https://earth.bcbchain.io/abci_info
 
 **.The world state data(last\_app\_state) format is defined as a string in JSON format, as shown in the following table:**
 
-| **grammer**                                  |       **type**       | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**                                  |       **type**       | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | ----------------------------------------- | :------------------: | ------------------------------------------------------------ |
 | {                                         |        Object        |                                                              |
 | &nbsp;&nbsp;block_height                  |        Uint64        | **bcbchain** The height of the last confirmation block of the state of the world.  |
@@ -102,7 +95,7 @@ https://earth.bcbchain.io/dump_consensus_state
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                                     |
 
@@ -465,7 +458,7 @@ https://earth.bcbchain.io/health
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                                     |
 
@@ -487,7 +480,7 @@ https://earth.bcbchain.io/health
 
 **\. Response SUCCESS Parameters**
 
-| **grammer**                        | **type** | **comment** |
+| **Parameter**                        | **type** | **comment** |
 | ------------------------------- | :------: | ------------------------------------------------------------ |
 | {                               |          |                                                              |
 | &nbsp;&nbsp;chain\_id           |  String  | Blockchain ID.                                     |
@@ -521,7 +514,7 @@ https://earth.bcbchain.io/net_info
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                                     |
 
@@ -681,7 +674,7 @@ https://earth.bcbchain.io/status
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                                     |
 
@@ -732,7 +725,7 @@ https://earth.bcbchain.io/status
 
 **\. Response SUCCESS Parameters**
 
-| **grammer**                | **type** | **comment** |
+| **Parameter**                | **type** | **comment** |
 | ----------------------- | :------: | ------------------------------------------------------------ |
 | node\_info:   {         |  Object  | Node information.                                         |
 | &nbsp;&nbsp;id          | Address  | Node ID.                                           |
@@ -790,7 +783,7 @@ https://earth.bcbchain.io/num_unconfirmed_txs
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                                     |
 
@@ -811,7 +804,7 @@ https://earth.bcbchain.io/num_unconfirmed_txs
 
 **\. Response SUCCESS Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | :------: | ------------------------------------------------------------ |
 | n_txs    |   Int    | number of unconfirmed transactions                   |
 | txs      |   null   | reserved                                                      |
@@ -844,15 +837,13 @@ https://earth.bcbchain.io/unconfirmed_txs
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | ——       | ——       | no parameters                                                     |
 
-
-
 **\. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -871,18 +862,14 @@ https://earth.bcbchain.io/unconfirmed_txs
 
 **\. Response SUCCESS Parameters**
 
-| **grammer** |       **type**       | **comment** |
+| **Parameter** |       **type**       | **comment** |
 | -------- | :------------------: | ------------------------------------------------------------ |
 | n_txs    |         Int          | number of unconfirmed transactions.                         |
 | txs      | Arrayof Base64String | unconfirmed transaction data table. The original data corresponding to each Base64 string in the table is a string that follows the message format defined in Chapter 5 of this article. The message type is limited to "bcb\<tx>"|
 
-
-
 ## 8. validators
 
 Queries the bcbchain's nodes for details of all valid verifier nodes in the bcbchain when the block height is specified.
-
-
 
 **\. Request URI over HTTP/HTTPS**
 
@@ -894,7 +881,7 @@ https://earth.bcbchain.io/validators?height=20000
 
 **\. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -904,15 +891,13 @@ https://earth.bcbchain.io/validators?height=20000
 
 **\. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | -------- | ------------------------------------------------------------ |
 | height   | Uint64   | Specify block height, optional parameter, default to query the latest block height  |
 
-
-
 **\. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -992,7 +977,7 @@ https://earth.bcbchain.io/validators?height=20000
 
 **\. Response SUCCESS Parameters**
 
-| **grammer**                      |   **type**    | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| **Parameter**                      |   **type**    | **comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 | ----------------------------- | :-----------: | ------------------------------------------------------------ |
 | height                 |  Uint64 | Block height.                   |
 | validators: [               | Arrayof<br>Object |Verifier node list. |

@@ -6,7 +6,7 @@ smccheck：a tool for checking contract format and content
 
 The format of the command is as follows:
 
-```
+```shell
 Usage:
   smccheck --path=dice2win/v2.0/dice2win
 
@@ -18,18 +18,18 @@ Flags:
 
 - **command**
 
-  ```
+  ```shell
   smccheck --path=dice2win/v2.0/dice2win
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | path     |  String  | Catalog of contract codes                                 |
 
 - **Output SUCCESS Result**
 
-```
+```json
 OK
 ```

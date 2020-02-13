@@ -6,7 +6,7 @@ orgid：calculation tool for organization ID.
 
 The format of the command is as follows:
 
-```
+```shell
 Usage:
   orgid --orgName=hello
 
@@ -18,19 +18,19 @@ Flags:
 
 - **command**
 
-  ```
+  ```shell
   orgid --orgName=hello
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | orgName  |  String  | organization name                                                |
 
 - **Output SUCCESS Result**
 
-  ```
+  ```shell
   OK
   OrgId： orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer
   ```

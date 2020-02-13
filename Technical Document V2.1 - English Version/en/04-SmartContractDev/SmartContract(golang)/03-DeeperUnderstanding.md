@@ -421,7 +421,7 @@ Note:
 
 - The amount of gas must be greater than or equal to zero.
 
-Markups ```public:interface```and ```public:method```can be used simultaneously on same member function of the contract class. The example above can be written as belows:
+Markups ```public:interface```and ```public:method```can be used simultaneously on same member function of the contract class. The example above can be written as below:
 
 ```go
 //@:public:method:gas[500]
@@ -533,7 +533,7 @@ func (m *MyContract)TransferTest(to types.Address, value bn.Number) {
 }
 ```
 
-cross-contract calling support transmit receipts to conntract that it's called, example code in below(from ```contract2``` to call ```contract1```'s interface):
+cross-contract calling support transmit receipts to contract that it's called, example code in below(from ```contract2``` to call ```contract1```'s interface):
 
 > contract1, supply cross-contract interface service:
 >
@@ -752,7 +752,7 @@ Note: The white space interval that appears in the specification definition is o
 
 ### 4.3 Whitelist
 
-For security reasons, the BCBChain Smart Contract is limited to allow only packages that follow explicit import behavior and do not produce inconsistent results for different nodes. Such packages are included in the whitelist.
+For security reasons, the BCBChain Smart Contract is limited to allow only packages that follow explicit import behaviour and do not produce inconsistent results for different nodes. Such packages are included in the whitelist.
 
 The code packages supported in the whitelist are safe to use in smart contracts.
 
@@ -997,7 +997,7 @@ Burn(bn.Number)
   
   // Name of receipt: std::burn
   type Burn struct {
-      Token       types.Address `json:"token"`       // 代币地址
+      Token       types.Address `json:"token"`       // Token address
       Value       bn.Number     `json:"value"`       // 燃烧的供应量（单位：cong）
       TotalSupply bn.Number     `json:"totalSupply"` // 新的总供应量（单位：cong）
   }

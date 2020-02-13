@@ -2,7 +2,6 @@
 
 BCBChain uses many security algorithms, and we will explain in detail in this document.
 
-
 ## 1. Signature algorithm Ed25519
 
 The BCBChain signature algorithm uses ed25519.
@@ -21,7 +20,7 @@ According to its website, Ed25519 algorithm has the following advantages:
 
 The following is the original description of its website:
 
-* **Fast single-signature verification**.The softwaretakes only 273364 cycles to verify a signature on Intel's widely deployed Nehalem/Westmere lines of CPUs. (This performance measurement is for short messages; for very long messages, verification time is dominated by hashing time.) Nehalem and Westmere include all Core i7, i5, and i3 CPUs released between 2008 and 2010, and most Xeon CPUs released in the same period.
+* **Fast single-signature verification**.The software takes only 273364 cycles to verify a signature on Intel's widely deployed Nehalem/Westmere lines of CPUs. (This performance measurement is for short messages; for very long messages, verification time is dominated by hashing time.) Nehalem and Westmere include all Core i7, i5, and i3 CPUs released between 2008 and 2010, and most Xeon CPUs released in the same period.
 * **Even faster batch verification**.The software performs a batch of 64 separate signature verifications (verifying 64 signatures of 64 messages under 64 public keys) in only 8.55 million cycles, i.e., under 134000 cycles per signature. The software fits easily into L1 cache, so contention between cores is negligible: a quad-core 2.4GHz Westmere verifies 71000 signatures per second, while keeping the maximum verification latency below 4 milliseconds.
 * **Very fast signing**.The software takes only 87548 cycles to sign a message. A quad-core 2.4GHz Westmere signs 109000 messages per second.
 * **Fast key generation**.Key generation is almost as fast as signing. There is a slight penalty for key generation to obtain a secure random number from the operating system;/dev/urandomunder Linux costs about 6000 cycles.
@@ -32,8 +31,6 @@ The following is the original description of its website:
 * **No secret branch conditions**.The software never performs conditional branches based on secret data; the pattern of jumps is completely predictable. The software is therefore immune to side-channel attacks that rely on leakage of information through the branch-prediction unit.
 * **Small signatures**.Signatures fit into 64 bytes. These signatures are actually compressed versions of longer signatures; the times for compression and decompression are included in the cycle counts reported above.
 * **Small keys**.Public keys consume only 32 bytes. The times for compression and decompression are again included.
-
-
 
 ## 2. Hash algorithm sha3-256
 
@@ -49,8 +46,6 @@ Keccak uses an innovative "sponge engine" to hash message text. It's fast, with 
 
 Keccak has been able to resist attacks with a minimum complexity of 2n, where n is the size of the hash. It has a wide margin of safety. So far, third-party cryptanalysis has shown that keccak has no serious weakness.
 
-
-
 ## 3. Hash algorithm RIPEMD160
 
 BCBChain account address generation algorithm is based on bitcoin mode, and it needs to output 20 bytes of address using ripemd160 hash algorithm.
@@ -61,7 +56,6 @@ The 160 bit version of ripemd-160 is an improvement on ripemd-128 and is the mos
 
 In addition to the 128 bit and 160 bit versions, the ripemd algorithm also has 256 bit and 320 bit versions, which constitute four members of the ripemd family: ripemd-128, ripemd-160, ripemd-256, and ripemd-320. Among them, the security of 128 bit version has been questioned. 256 and 320 bit version reduce the possibility of accidental collision, but compared with ripemd-128 and ripemd-160, they do not have a high level of security, because they only modify the initial parameters and S-box to achieve the purpose of 256 and 320 bit output on the basis of 128 bit and 160 bit.
 
-
 ## 4. Serialization algorithm RLP
 
 RLP(recursive length prefix): recursive length prefix.
@@ -70,12 +64,9 @@ RLP code is the serialization format of transaction data in bcbchain. See Append
 
 RLP is designed to be a highly simplified serialization format with the sole purpose of storing nested byte arrays. Unlike protobuf, bson and other existing solutions, RLP does not define any specified data types, such as boolean, float, double or integer. It simply stores the structure as a nested array and leaves it to the protocol to determine the meaning of the array. RLP also does not explicitly support map sets. The semi official recommendation is to use a nested array in the form of [[K1, V1], [K2, V2],...] to represent the key value pair set. K1, K2... Are sorted according to the standard string.
 
-
-
 ## 5. Serialization algorithm JSON
 
 JSON encoding is the serialization format of value in the state database of bcbchain, which is mainly for the convenience of decoding operation when the client queries.
-
 
 ## 6. Encoding algorithm base58
 
@@ -85,12 +76,9 @@ Base58 is a unique encoding method used in bitcoin, which is mainly used to gene
 
 Base58 can be understood as a 58 base. Base58 contains Arabic numerals, lower case letters and upper case letters. But some confusing numbers and letters are removed: 0 (the number 0), O (the capital letter of O), l (the small letter of L), I (the capital letter of I).
 
-
 Bcbchain uses the same base58 alphabet as bitcoin:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz**
-
-
+**123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz**
 
 ## 7. Method ID
 
@@ -98,12 +86,12 @@ BCBChain's call mode of smart contract refers to Ethereum's call mode of smart c
 
 * **method prototype example**
 
-  `
-      func Transfer(
-          to types.Address,
-          bn.Number
-      )
-  `
+```go
+    func Transfer(
+        to types.Address,
+        bn.Number
+    )
+```
 
 * **SETUP-1**
 
@@ -117,8 +105,6 @@ BCBChain's call mode of smart contract refers to Ethereum's call mode of smart c
   | ------------------------------------------------------------ |
   | 1、calculation: A1 = sha3-256 (string output by the method prototype processing algorithm); <br>2、value：MethodID = get\_first\_FOUR_bytes( A1 ); <br>3、example：0x44D8CA60(network byte order) |
 
-
-
 ## 8. Account address
 
 | External account address calculation algorithm     |
@@ -131,8 +117,7 @@ BCBChain's call mode of smart contract refers to Ethereum's call mode of smart c
 
 The following figure describes the relationship between private key, public key and account address:
 
-![](./p/keys.png)
-
+![keys](./p/keys.png)
 
 ## 9. Contract address
 
@@ -140,13 +125,9 @@ The following figure describes the relationship between private key, public key 
 | ------------------------------------------------------------ |
 | 1、Preprocess the chain ID（such as "bcb"、"bcb[vcity]"）<br/>         if it is the main chain, the chain ID is the main chain ID;<br/>         if it is the side chain, extract the main chain ID from the side chain ID<br/>2、Use the main chain ID as the prefix of the data to be calculated;<br>3Then splice the unique identification string (contract name) provided by the contract under the same organization\|\| Contract version);<br>4、The ID of the organization to which the contract belongs is spliced as the original data;<br>5、Calculation hash value: A1 = RIPEMD160( SHA3-256(original data) );<br>6、Calculate the check code: A2 = get_first_FOUR_bytes( RIPEMD160( A1 ) );<br>7、Calculation contract address: Address = chain ID \|\| Base58( A1 \|\| A2 )。 |
 
-
-
 ### 10. Address conversion between main chain and side chain
 
 For the same account or contract address, the main chain address and the side chain address are identical except for the prefix chain ID. For a given address, it is only necessary to transform the prefix's Chain ID below to perform free conversion between the primary and side chain addresses.
-
-
 
 ## 11. RLP
 
@@ -154,11 +135,7 @@ The purpose of RLP (Recursive Length Prefix) is to encode arbitrarily nested arr
 
 If one wishes to use RLP to encode a dictionary, the two suggested canonical forms are to either use [[k1,v1],[k2,v2]...] with keys in lexicographic order or to use the higher-level Patricia Tree encoding as Ethereum does.
 
-
-
 **Definition**
-
-
 
  The RLP encoding function takes in an item. An item is defined as follows：
 
@@ -166,11 +143,7 @@ If one wishes to use RLP to encode a dictionary, the two suggested canonical for
 
 2. A list of items is an item
 
-
-
 For example, an empty string is an item, as is the string containing the word "cat", a list containing any number of strings, as well as more complex data structures like ["cat",["puppy","cow"],"horse",[[]],"pig",[""],"sheep"]. Note that in the context of the rest of this article, "string" will be used as a synonym for "a certain number of bytes of binary data"; no special encodings are used and no knowledge about the content of the strings is implied.
-
-
 
 RLP encoding is defined as follows:
 
@@ -184,11 +157,9 @@ RLP encoding is defined as follows:
 
 5. If the total payload of a list is more than 55 bytes long, the RLP encoding consists of a single byte with value 0xf7 plus the length in bytes of the length of the payload in binary form, followed by the length of the payload, followed by the concatenation of the RLP encodings of the items. The range of the first byte is thus [0xf8, 0xff].
 
-
-
 In code, this is:
 
-  `
+```go
 
 def rlp_encode(input):
     if isinstance(input,str):
@@ -213,10 +184,7 @@ def to_binary(x):
         return ''
     else:
         return to_binary(int(x / 256)) + chr(x % 256)
-
-  `
-
-
+```
 
 **Examples**
 
@@ -240,11 +208,7 @@ The set theoretical representation of three, [ [], [[]], [ [], [[]] ] ] = [ 0xc7
 
 The string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = [ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]
 
-
-
 **RLP decoding**
-
-
 
 According to rules and process of RLP encoding, the input of RLP decode shall be regarded as Arrayof binary data, the process is as follows:
 
@@ -253,8 +217,6 @@ According to rules and process of RLP encoding, the input of RLP decode shall be
 2. According to type and offset of data, decode data correspondingly;
 
 3. Continue to decode the rest of the input;
-
-
 
 Among them, the rules of decoding data types and offset is as follows:
 
@@ -268,11 +230,9 @@ Among them, the rules of decoding data types and offset is as follows:
 
 5. the data is a list if the range of the first byte is [0xf8, 0xff], and the total payload of the list whose length is equal to the first byte minus 0xf7 follows the first byte, and the concatenation of the RLP encodings of all items of the list follows the total payload of the list;
 
-
-
 In code, this is:
 
-```
+```go
 
 def rlp_decode(input):
     if len(input) == 0:
@@ -321,12 +281,8 @@ def to_integer(b):
 
 ```
 
-
-
 ## 11. Base58
 
 Base58 is a group of binary-to-text encoding schemes used to represent large integers as alphanumeric text. It is similar to Base64 but has been modified to avoid both non-alphanumeric characters and letters which might look ambiguous when printed. It is therefore designed for human users who manually enter the data, copying from some visual source, but also allows easy copy and paste because a double-click will usually select the whole string.
 
 Compared to Base64, the following similar-looking letters are omitted: 0 (zero), O (capital o), I (capital i) and l (lower case L) as well as the non-alphanumeric characters + (plus) and / (slash). In contrast to Base64, the digits of the encoding do not line up well with byte boundaries of the original data. For this reason, the method is well-suited to encode large integers, but not designed to encode longer portions of binary data. The actual order of letters in the alphabet depends on the application, which is the reason why the term “Base58” alone is not enough to fully describe the format. A variant, Base56, excludes 1 (one) and o (lowercase o) compared to Base 58.
-
-

@@ -8,11 +8,11 @@ Since ```V2.0```, BCBChain supports independent development and deployment of sm
 
 Let us first take a look at the simplest form of a smart contract
 
-```
+```go
 package mystorage
 
 import (
-	"blockchain/smcsdk/sdk"
+    "blockchain/smcsdk/sdk"
 )
 
 //MyStorage a demo contract
@@ -21,10 +21,10 @@ import (
 //@:organization:orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer
 //@:author:b37e7627431feb18123b81bcf1f41ffd37efdb90513d48ff2c7f8a0c27a9d06c
 type MyStorage struct {
-	sdk sdk.ISmartContract
+    sdk sdk.ISmartContract
 
-	//@:public:store
-	storedData uint64
+    //@:public:store
+    storedData uint64
 }
 
 //InitChain init when deployed on the blockchain first time
@@ -35,13 +35,13 @@ func (ms *MyStorage) InitChain() {
 //Set set a data to the stored data
 //@:public:method:gas[100]
 func (ms *MyStorage) Set(data uint64) {
-	ms._setStoredData(data)
+    ms._setStoredData(data)
 }
 
 //Get get the stored data
 //@:public:method:gas[100]
 func (ms *MyStorage) Get() uint64 {
-	return ms._storedData()
+    return ms._storedData()
 }
 ```
 
@@ -49,7 +49,7 @@ BCBChain's smart contract is a combination of code (functions of the contract) a
 
 Code line:
 
-```
+```go
 package mystorage
 ```
 
@@ -57,9 +57,9 @@ Declare the name of the smart contract code package, this can be set by the deve
 
 Code segment:
 
-```
+```go
 import (
-	"blockchain/smcsdk/sdk"
+    "blockchain/smcsdk/sdk"
 )
 ```
 
@@ -67,17 +67,17 @@ Declaration of the library to import, it is a smart contract ```SDK``` released 
 
 Code segment:
 
-```
+```go
 //MyStorage a demo contract
 //@:contract:mystorage
 //@:version:1.0
 //@:organization:orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer
 //@:author:b37e7627431feb18123b81bcf1f41ffd37efdb90513d48ff2c7f8a0c27a9d06c
 type MyStorage struct {
-	sdk sdk.ISmartContract
+    sdk sdk.ISmartContract
 
-	//@:public:store
-	storedData uint64
+    //@:public:store
+    storedData uint64
 }
 ```
 
@@ -94,7 +94,7 @@ Declare the metadata and status of the smart contract.
 
 Code segment:
 
-```
+```go
 //InitChain init when deployed on the blockchain first time
 //@:constructor
 func (ms *MyStorage) InitChain() {
@@ -109,11 +109,11 @@ Declares the initialization code for the smart contract when it first joins the 
 
 Code segment:
 
-```
+```go
 //Set set a data to the stored data
 //@:public:method:gas[100]
 func (ms *MyStorage) Set(data uint64) {
-	ms._setStoredData(data)
+    ms._setStoredData(data)
 }
 ```
 
@@ -125,11 +125,11 @@ Declares the code for the smart contract
 
 Code segment:
 
-```
+```go
 //Get get the stored data
 //@:public:method:gas[100]
 func (ms *MyStorage) Get() uint64 {
-	return ms._storedData()
+    return ms._storedData()
 }
 ```
 
@@ -146,18 +146,17 @@ Note:
 * All identifiers (contract name, function name, and variable name) of the smart contract code can only use the ```ASCII``` character set.
 * Smart contract codes require storage in the form of ```ASCII``` or ```UTF-8``` encoding.
 
-
 ### 1.2 Token
 
 The following contract implements one of the simplest encryption tokens. Here, the token can indeed be produced out of nothing, but only the owner of the contract can do it, and anyone can transfer the currency to others without registering the username and password - all that is required is a BCBChain-compliant encrypted key pair.
 
-```
+```go
 package mycoin
 
 import (
-	"blockchain/smcsdk/sdk"
-	"blockchain/smcsdk/sdk/bn"
-	"blockchain/smcsdk/sdk/types"
+    "blockchain/smcsdk/sdk"
+    "blockchain/smcsdk/sdk/bn"
+    "blockchain/smcsdk/sdk/types"
 )
 
 //Mycoin a demo contract for digital coin
@@ -166,13 +165,13 @@ import (
 //@:organization:orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer
 //@:author:b37e7627431feb18123b81bcf1f41ffd37efdb90513d48ff2c7f8a0c27a9d06c
 type Mycoin struct {
-	sdk sdk.ISmartContract
+    sdk sdk.ISmartContract
 
-	//@:public:store:cache
-	totalSupply bn.Number
+    //@:public:store:cache
+    totalSupply bn.Number
 
-	//@:public:store
-	balanceOf map[types.Address]bn.Number
+    //@:public:store
+    balanceOf map[types.Address]bn.Number
 }
 
 const oneToken int64 = 1000000000
@@ -188,32 +187,32 @@ func (mc *Mycoin) InitChain() {
 
 //@:public:receipt
 type receipt interface {
-	emitTransferMyCoin(token, from, to types.Address, value bn.Number)
+    emitTransferMyCoin(token, from, to types.Address, value bn.Number)
 }
 
 //Transfer transfer coins from sender to another
 //@:public:method:gas[500]
 //@:public:interface:gas[450]
 func (mc *Mycoin) Transfer(to types.Address, value bn.Number) {
-	sdk.Require(value.IsPositive(),
-		types.ErrInvalidParameter, "value must be positive")
+    sdk.Require(value.IsPositive(),
+        types.ErrInvalidParameter, "value must be positive")
 
-	sender := mc.sdk.Message().Sender().Address()
-	newBalanceOfSender := mc._balanceOf(sender).Sub(value)
-	sdk.Require(newBalanceOfSender.IsGEI(0),
-		types.ErrInsufficientBalance, "")
+    sender := mc.sdk.Message().Sender().Address()
+    newBalanceOfSender := mc._balanceOf(sender).Sub(value)
+    sdk.Require(newBalanceOfSender.IsGEI(0),
+        types.ErrInsufficientBalance, "")
 
-	receiver := to
-	newBalanceOfReceiver := mc._balanceOf(receiver).Add(value)
+    receiver := to
+    newBalanceOfReceiver := mc._balanceOf(receiver).Add(value)
 
-	mc._setBalanceOf(sender, newBalanceOfSender)
-	mc._setBalanceOf(receiver, newBalanceOfReceiver)
+    mc._setBalanceOf(sender, newBalanceOfSender)
+    mc._setBalanceOf(receiver, newBalanceOfReceiver)
 
-	mc.emitTransferMyCoin(
-		mc.sdk.Message().Contract().Address(),
-		sender,
-		receiver,
-		value)
+    mc.emitTransferMyCoin(
+        mc.sdk.Message().Contract().Address(),
+        sender,
+        receiver,
+        value)
 }
 ```
 
@@ -221,9 +220,9 @@ This contract introduces some new concepts, which will be explained one-by-one i
 
 Code segment:
 
-```
-	//@:public:store:cache
-	totalSupply bn.Number
+```go
+    //@:public:store:cache
+    totalSupply bn.Number
 ```
 
 Declare state data for smart contracts.
@@ -233,19 +232,19 @@ Code line ```totalSupply bn.Number``` declares a state variable of type ```bn.Nu
 
 Code segment:
 
-```
-	//@:public:store
-	balanceOf map[types.Address]bn.Number
+```go
+    //@:public:store
+    balanceOf map[types.Address]bn.Number
 ```
 
 A public state variable is also declared, but it is a more complex data type. This type maps the address to a large number and is used to store the balance corresponding to the account address that owns the token. The KEY value of this variable from the external access state database is ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mycoin/balanceOf/address```, where ```address``` is the actual account address to be queried. The helper tool provided by BCBChain will automatically encapsulate and generate access functions for this variable```_balanceOf(types.Address) bn.Number```,```_setBalanceOf(types.Address, bn.Number)```,```_chkBalanceOf(types.Address) bool```and ```_delBalanceOf(types.Address)```.
 
 Code segment:
 
-```
+```go
 //@:public:receipt
 type receipt interface {
-	emitTransferMyCoin(token, from, to types.Address, value bn.Number)
+    emitTransferMyCoin(token, from, to types.Address, value bn.Number)
 }
 ```
 
@@ -258,7 +257,7 @@ Declares the receipt of the smart contract transaction, which be stored in the B
 
 Code segment:
 
-```
+```go
 //Transfer transfer coins from sender to another
 //@:public:method:gas[500]
 //@:public:interface:gas[450]
@@ -275,28 +274,28 @@ Declares the code for the smart contract
 
 Code segment:
 
-```
+```go
   sdk.RequireAddress(to)
   sdk.Require(value.IsPositive(),
-		types.ErrInvalidParameter, "value must be positive")
+        types.ErrInvalidParameter, "value must be positive")
 ```
 
-Declares a part of the code logic in the contract. The function ```sdk.RequireAddress()``` is provided by the SDK to validate if input parameter ```to```is an account address. If not, it will terminate the contract excecution and return an error message in the response. The function```sdk.Require()``` is provided by the SDK to detect that a certain condition must be met (in this case, the input parameter ```value```must be greater than 0), otherwise, it will terminate the contract excecution and return an error message in the response.
+Declares a part of the code logic in the contract. The function ```sdk.RequireAddress()``` is provided by the SDK to validate if input parameter ```to```is an account address. If not, it will terminate the contract execution and return an error message in the response. The function```sdk.Require()``` is provided by the SDK to detect that a certain condition must be met (in this case, the input parameter ```value```must be greater than 0), otherwise, it will terminate the contract execution and return an error message in the response.
 
 Code segment:
 
-```
+```go
   sender := mc.sdk.Message().Sender().Address()
   newBalanceOfSender := mc._balanceOf(sender).Sub(value)
   sdk.Require(newBalanceOfSender.IsGEI(0),
-		types.ErrInsufficientBalance, "")
+        types.ErrInsufficientBalance, "")
 ```
 
-Declares a part of the code logic in the contract. The function ```mc.sdk.Message().Sender().Address()``` is provided by the SDK to retrieve the account address of the sender ```mc._balanceOf(sender).Sub(value)``` is used to obtain the balance of the tokens in the sender's account address after subtracting the transfer amount. The function ```_balanceOf()```is automatically generated by a support tool in BCBChain. The function ```sdk.Require()``` is provided by the SDK to detect that a certain condition must be met (in this case, the balance of the sender is must be sufficient for the transfer), otherwise, it will terminate the contract excecution and return an error message in the response.
+Declares a part of the code logic in the contract. The function ```mc.sdk.Message().Sender().Address()``` is provided by the SDK to retrieve the account address of the sender ```mc._balanceOf(sender).Sub(value)``` is used to obtain the balance of the tokens in the sender's account address after subtracting the transfer amount. The function ```_balanceOf()```is automatically generated by a support tool in BCBChain. The function ```sdk.Require()``` is provided by the SDK to detect that a certain condition must be met (in this case, the balance of the sender is must be sufficient for the transfer), otherwise, it will terminate the contract execution and return an error message in the response.
 
 Code segment:
 
-```
+```go
   receiver := to
   newBalanceOfReceiver := mc._balanceOf(receiver).Add(value)
 ```
@@ -305,7 +304,7 @@ Declares a part of the code logic in the contract. ```mc._balanceOf(receiver).Ad
 
 Code segment:
 
-```
+```go
   mc._setBalanceOf(sender, newBalanceOfSender)
   mc._setBalanceOf(receiver, newBalanceOfReceiver)
 ```
@@ -314,23 +313,21 @@ Declares a part of the code logic in the contract. Used to write the calculated 
 
 Code segment:
 
-```
+```go
   mc.emitTransferMyCoin(
-		mc.sdk.Message().Contract().Address(),
-		sender,
-		receiver,
-		value)
+        mc.sdk.Message().Contract().Address(),
+        sender,
+        receiver,
+        value)
 ```
 
 Declares a part of the code logic in the contract. It is to be used for updating the receipt of the current transfer transaction into the blockchain. The function ```emitTransferMyCoin()``` is automatically generated by the support tool provided by BCBChain.
 
 This contract provides two functions. The function ```InitChain()``` is automatically called once by the BCBChain chain after contract creation to initialize the contract. The function for actual use by the user or other contract, and for completing the contract, is ```Transfer()```. This function can be used by anyone to send tokens to others (provided, of course, that the sender owns these tokens). Remember, if you use a contract to send tokens to an address, you will not see any relevant information when you view the address on the BCBChain chain browser. This is because the detailed information of the transfer and changes in balances is only stored in the data store of this contract (requires special means to query from the state database). By using receipts, you can easily create a “blockchain browser” for your new token to track transactions and balances.
 
-
-
 ## 2. Blockchain basics
 
-Programmers should not find the concept of blockchain difficult to understand, because most of the complex algorithms and protocols (hash, elliptic curve cryptography, peer-to-peer networking (P2P), etc.) are only used to fulfill special-case functionality and promise. Smart contract development programmers only need to accept these existing features and functions, and not care about the implementation of the underlying technology.
+programmers should not find the concept of blockchain difficult to understand, because most of the complex algorithms and protocols (hash, elliptic curve cryptography, peer-to-peer networking (P2P), etc.) are only used to fulfill special-case functionality and promise. Smart contract development programmers only need to accept these existing features and functions, and not care about the implementation of the underlying technology.
 
 ### 2.1 Transactions
 
@@ -342,25 +339,23 @@ In addition, the transaction is always signed by the sender (creator). This make
 
 ### 2.2 States
 
-BCBChain refrenced Ethereum、Fabric、Tendermint、Cosmos and other open source blockchain solutions, drawing on some of these excellent ideas.
+BCBChain referenced Ethereum、Fabric、Tendermint、Cosmos and other open source blockchain solutions, drawing on some of these excellent ideas.
 
 BCBChain is essentially a transaction-based state machine. In computer science, a state machine is a calculation model that contains a set of states, a start state, a set of input symbols (alphabet), and a A conversion function that maps the input symbol from current state to the next state (transition function).
 
 In BCBChain, the state set is expressed by the state database. The initial state is called the genesis state. The input symbol set is the transaction (transaction, tx for short) in the blockchain field. The state transition function is the Smart contract.
 
-![](./p/statemachine.png)
+![state machine](./p/statemachine.png)
 
 According to the state machine of BCBChain, we start with the genesis state. This is almost similar to a blank slate, and there is no state of any transaction in the network. When the transaction is executed, the Genesis status will be transformed into the final state. At any time, this final state represents the current state of BCBChain.
-
 
 ### 2.3 Blocks
 
 The state of BCBChain is composed of thousands of transactions. These transactions are "grouped" into blocks. A block contains a series of transactions, each block is linked to its previous block, and each block causes the state machine to reach a new state.
 
-![](./p/blockchain.png)
+![blockchain](./p/blockchain.png)
 
-For the state transition to happen, the transaction must be valid (ie, to promote the non-repudiation characteristics of the blockchain technique). For a transaction to be considered valid, it must go through a verification process. Each transaction must be signed by the sender using its own private key, and the BCBChain's smart contract must be verified to meet certain conditions. Only then can the validation be successful.
-
+For the state transition to happen, the transaction must be valid (i.e, to promote the non-repudiation characteristics of the blockchain technique). For a transaction to be considered valid, it must go through a verification process. Each transaction must be signed by the sender using its own private key, and the BCBChain's smart contract must be verified to meet certain conditions. Only then can the validation be successful.
 
 ### 2.4 Message Calls
 
@@ -372,11 +367,6 @@ Each top-level message called, will in turn generate more message calls across m
 
 The number of message call layers is limited to 8. In order to prevent infinite loops, each layer of message calls are prohibited from forming a loop.
 
-
-
 ### 2.5 Receipt
 
 On top of transaction result, message calls can also return the log data of the transaction execution process. Here, we call it the receipt, which is stored on the block and very easy to retrieve.
-
-
-

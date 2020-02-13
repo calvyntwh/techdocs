@@ -4,8 +4,6 @@
 
 The interface ```sdk/ISmartContract``` encapsulates the path to smart contract context acquisition.
 
-
-
 ### 1.1 func Block()
 
 Function Prototype:
@@ -685,7 +683,7 @@ func (IContract) CodeHash() types.Hash
 
 Returns the hash corresponding to the smart contract code.
 
-### 6.7 func EffectHeigt()
+### 6.7 func EffectHeight()
 
 Function Prototype:
 
@@ -1270,17 +1268,17 @@ package std
 
 type ContractMeta struct {
       Name         string           //Contract name
-      ContractAddr types.Address //Contract address
+      ContractAddr types.Address    //Contract address
       OrgID        string           //The organization ID to which the contract belongs
-      Version      string        //Contract version
-      EffectHeight int64           //Block height when the contract begins to take effect
-      LoseHeight   int64           //Height at which the block fails (Fixed at 0)
+      Version      string           //Contract version
+      EffectHeight int64            //Block height when the contract begins to take effect
+      LoseHeight   int64            //Height at which the block fails (Fixed at 0)
       CodeData     []byte           //Contract code compression package data
       CodeHash     []byte           //Contract code hash
       CodeDevSig   []byte           //Contract developer's signature data for the contract
-                               //code compression package
+                                    //code compression package
       CodeOrgSig   []byte           //The signature data of the organization's signature on
-                               //the contract developer
+                                    //the contract developer
 }
 ```
 
@@ -1491,7 +1489,7 @@ Returns the token information object that is registered in the current contract,
 
 An error occurs when any of the following is satisfied, and `nil` will be returned:
 
-> - There is no registered token in the current contrac
+> - There is no registered token in the current contract
 
 ### 15.3 func TokenOfAddress()
 

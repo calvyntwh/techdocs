@@ -24,7 +24,7 @@
 
 ​        BCB's smart contracts support [Solidity](https://en.wikipedia.org/wiki/Solidity) and Golang to develop. BCB's Solidity contract is completely compatible with the EVM environment of Ethereum. Developers can easily migrate smart contracts in Ethereum to BVM in the BCB blockchain. At the same time, developers can build in a mixed environment with Solidity, debug and execute smart contracts.
 
-​        The Golang language contract in the BCB blockchain is implemented through plug-in technology, which mainly solves the problem that today's mainstream smart contracts cann't write complex logic (such as tens of thousands of lines of code), and and that a large number of contracts call each other, which makes the complexity of contract development, debugging, and upgrading very large.
+​        The Golang language contract in the BCB blockchain is implemented through plug-in technology, which mainly solves the problem that today's mainstream smart contracts can't write complex logic (such as tens of thousands of lines of code), and and that a large number of contracts call each other, which makes the complexity of contract development, debugging, and upgrading very large.
 
 ### 3.3 Side Chain
 
@@ -60,7 +60,7 @@
 
 ### 4.3 High availability
 
-- Supports adding and removing nodes dynamicly.
+- Supports adding and removing nodes dynamically.
 
 - Detection with node failure and fast recovery mechanism.
 

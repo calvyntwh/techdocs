@@ -7,7 +7,7 @@ Bcbchain supports the following `RPC` protocol:
 * `URI over HTTP or HTTPS`
 * `JSONRPC over HTTP or HTTPS`
 
-All `RPC` interfaces and their parameters supported by bcbchain can be obtained through `URL`： `http://ip:port`  or `https://ip:port`, or through the domain name of a well-known node, for example: https://earth.bcbchain.io.
+All `RPC` interfaces and their parameters supported by bcbchain can be obtained through `URL`： `http://ip:port`  or `https://ip:port`, or through the domain name of a well-known node, for example: <https://earth.bcbchain.io.>
 
 bcb follower node（tendermint）the list of `RPC` interface is as follow(supports' HTTP 'or' HTTPS')
 
@@ -66,7 +66,7 @@ After successfully execute interface, the general data structure is defined as f
   "jsonrpc": "2.0",
   "id": "",
   "result": {
-    …  //different APIs return different JSON structures, and they are customized.
+    ...  //different APIs return different JSON structures, and they are customized.
   }
 }
 ```

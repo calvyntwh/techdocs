@@ -1,13 +1,12 @@
 # Global Interface
 
-
 ## 1. abci\_query
 
 Query **bcchain** world status from BCBChain node.
 
 **. Request URI over HTTP/HTTPS**
 
-```
+```html
 http://earth.bcbchain.io/abci_query?path="/genesis/token"
 or
 https://earth.bcbchain.io/abci_query?path="/genesis/token"
@@ -15,7 +14,7 @@ https://earth.bcbchain.io/abci_query?path="/genesis/token"
 
 **. Request JSONRPC over HTTP/HTTPS**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
@@ -28,15 +27,13 @@ https://earth.bcbchain.io/abci_query?path="/genesis/token"
 
 **. Request Parameters**
 
-| **grammer** | **type** | **comment** |
+| **Parameter** | **type** | **comment** |
 | -------- | :------: | ------------------------------------------------------------ |
 | path     |  String  | The key value to query.                                         |
 
-
-
 **. Response SUCCESS Example**
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "",
@@ -52,7 +49,7 @@ https://earth.bcbchain.io/abci_query?path="/genesis/token"
 
 **. Response SUCCESS Parameters**
 
-| **grammer**         |   **type**    | **comment** |
+| **Parameter**         |   **type**    | **comment** |
 | ---------------- | :-----------: | ------------------------------------------------------------ |
 | response: {   |         |        |
 | &nbsp;&nbsp;code |    Int  | bcbchain program execution result of this operation, 200 indicates success. |
@@ -61,16 +58,13 @@ https://earth.bcbchain.io/abci_query?path="/genesis/token"
 | &nbsp;&nbsp;value      | Base64 String | After the query is successful, the value of the corresponding key value in the blockchain status database is returned <br/> The output string is encoded according to Base64, and the encoded original data is JSON format <br/> string. When the key value does not exist, there is no "value" field in the returned result. |
 | }                |               |                                                              |
 
-
-
 ## 2. abci_query_ex
 
 Query multiple **bcbchain** world states from BCBChain nodes at a time.
 
-
 - **Request URI over HTTP/HTTPS**
 
-  ```
+  ```text
   http://earth.bcbchain.io/abci_query_ex?path="/token/[bcbLVgb3odTfKC9Y9GeFnNWL9wmR4pwWiqwe,bcbMLpC7HFd8JCm6RXQiu1t7aX4GaiW5c4Cm]"
   or
   https://earth.bcbchain.io/abci_query_ex?path="/token/[bcbLVgb3odTfKC9Y9GeFnNWL9wmR4pwWiqwe,bcbMLpC7HFd8JCm6RXQiu1t7aX4GaiW5c4Cm]"
@@ -78,7 +72,7 @@ Query multiple **bcbchain** world states from BCBChain nodes at a time.
 
 - **Request JSONRPC over HTTP/HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
@@ -91,15 +85,13 @@ Query multiple **bcbchain** world states from BCBChain nodes at a time.
 
 - **Request Parameters**
 
-  | **grammer** | **type** | **comment** |
+  | **Parameter** | **type** | **comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | path     |  String  |  As for the **KEY** value to query, multiple **KEY** values are enclosed in square brackets **[ ]**, separated by **,**, for example: <br>&nbsp;&nbsp;&nbsp;&nbsp;**/token[token address1, token address2, token address3]**|
 
-
-
 - **Response SUCCESS Example【参见：[abci_query.json](./json20/abci_query.json)】**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "",
@@ -123,7 +115,7 @@ Query multiple **bcbchain** world states from BCBChain nodes at a time.
 
 - **Response SUCCESS Parameters**
 
-  | **grammer**          |   **type**    | **comment** |
+  | **Parameter**          |   **type**    | **comment** |
   | ----------------- | :-----------: | ------------------------------------------------------------ |
   | response: {       |               |                                                              |
   | &nbsp;&nbsp;code  |      Int      | bcbchain program execution result of this operation, 200 indicates success.                |

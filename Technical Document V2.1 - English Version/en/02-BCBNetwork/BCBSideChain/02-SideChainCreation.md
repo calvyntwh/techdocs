@@ -12,7 +12,7 @@
 
 After building the observer node of the main chain, we need to derive the public key of the observer node, which will be used when sending the side chain creation transaction.
 
-Excute the following commands on the observer node of the main chain to export the public key of the node:
+execute the following commands on the observer node of the main chain to export the public key of the node:
 
 ```shell
 export TMHOME=/etc/tmcore
@@ -30,7 +30,7 @@ Return results:
 
 ## 2. Genesis transaction
 
-### 2.1 Excute transaction
+### 2.1 execute transaction
 
 After the node public key is exported, the side chain genesis transactioncan be sent to the main chain, using the owner account prepared in `Side chain registration 1.3` for genesis transaction. we take the side chain name is `smartCity`, the side chain node name is `node1`, the side chain reward address is `0x75f90e9fd9b8c7cc2ac4ecfb8be865a41a3774d7b2d1327e9a5b93dc8a18a29a`, the side chain open access path OpenURLs is `http://side chain ip:46657`, and the gas price ratio is `1.000` as an example to show how to send the side chain genesis transaction.
 

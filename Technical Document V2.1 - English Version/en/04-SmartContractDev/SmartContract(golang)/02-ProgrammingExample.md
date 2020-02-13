@@ -14,7 +14,7 @@ This contract implementation uses two files, as follows:
 
 Source File：```myballot_types.go``` 
 
-```
+```go
 package myballot
 
 import (
@@ -40,7 +40,7 @@ type Proposal struct {
 
 Source File： ```myballot.go``` 
 
-```
+```go
 package myballot
 
 import (
@@ -56,17 +56,17 @@ import (
 //@:author:b37e7627431feb18123b81bcf1f41ffd37efdb90513d48ff2c7f8a0c27a9d06c
 type Ballot struct {
     sdk sdk.ISmartContract
-    
+
     //chairperson this declares a state variable that stores a chairperson's 
     //      address for the contract
     //@:public:store:cache
     chairperson string
-    
+
     //voters this declares a state variable that stores a 'Voter' struct for
     //    each possible address
     //@:public:store
     voters map[types.Address]Voter
-    
+
     //proposals a dynamically-sized array of 'Proposal' structs
     //@:public:store:cache
     proposals []Proposal
@@ -81,17 +81,17 @@ func (ballot *Ballot) InitChain() {
 //@:public:method:gas[500]
 func (ballot *Ballot) Init(proposalNames []string) {
     sender := ballot.sdk.Message().Sender().Address()
-    
+
     // Only cntract's owner can perform init
     sdk.RequireOwner()
-    
+
     proposals := ballot._proposals()
     sdk.Require(len(proposals) <= 0,
         types.ErrUserDefined, "Already inited")
-    
+
     chairperson := sender
     ballot._setChairperson(chairperson)
-    
+
     voter := ballot._voters(chairperson)
     voter.weight = 1
     ballot._setVoters(chairperson, voter)
@@ -122,7 +122,7 @@ func (ballot *Ballot) GiveRightToVote(voterAddr types.Address) {
         types.ErrUserDefined, "The voter already voted.")
     sdk.Require(voter.weight == 0,
         types.ErrUserDefined, "The voter's weight must be zero.")
-    
+
     voter.weight = 1
     ballot._setVoters(voterAddr, voter)
 }
@@ -132,12 +132,12 @@ func (ballot *Ballot) GiveRightToVote(voterAddr types.Address) {
 func (ballot *Ballot) Delegate(to types.Address) {
     sender := ballot.sdk.Message().Sender().Address()
     sendVoter := ballot._voters(sender)
-    
+
     sdk.Require(sendVoter.voted == false,
         types.ErrUserDefined, "You already voted.")
     sdk.Require(to != sender,
         types.ErrUserDefined, "Self-delegation is disallowed.")
-    
+
     // Forward the delegation as long as 'to' also delegated.
     // In general, such loops are very dangerous, because if they run too 
     // long, they might need more gas than is available in a block.
@@ -150,7 +150,7 @@ func (ballot *Ballot) Delegate(to types.Address) {
         func(i int) {
             to = toVoter.delegate
             toVoter = ballot._voters(to)
-        
+
             // We found a loop in the delegation, not allowed.
             sdk.Require(to != sender,
                 types.ErrUserDefined, "Found loop in delegation.")
@@ -180,14 +180,14 @@ func (ballot *Ballot) Delegate(to types.Address) {
 func (ballot *Ballot) Vote(proposal uint) {
     sender := ballot.sdk.Message().Sender().Address()
     sendVoter := ballot._voters(sender)
-    
+
     sdk.Require(sendVoter.voted == false,
         types.ErrUserDefined, "You already voted.")
-    
+
     proposals := ballot._proposals()
     sdk.Require(proposal < uint(len(proposals)),
         types.ErrUserDefined, "Proposal is out of index.")
-    
+
     sendVoter.voted = true
     sendVoter.vote = proposal
     proposals[int(proposal)].voteCount += sendVoter.weight
@@ -199,7 +199,7 @@ func (ballot *Ballot) Vote(proposal uint) {
 //@:public:method:gas[500]
 func (ballot *Ballot) WinningProposal() (winningProposal uint) {
     var winningVoteCount uint
- 
+
     proposals := ballot._proposals()
     forx.Range(proposals, func(i int, proposal Proposal) {
         if proposal.voteCount > winningVoteCount {
@@ -223,13 +223,11 @@ func (ballot *Ballot) WinnerName() (winnerName string) {
 }
 ```
 
-
-
 ## 2. Charity Donation
 
 The following contract implements a simple charitable donation function. The contract code are as follows:
 
-```
+```go
 package mydonation
 
 import (
@@ -247,7 +245,7 @@ import (
 //@:author:b37e7627431feb18123b81bcf1f41ffd37efdb90513d48ff2c7f8a0c27a9d06c
 type Mydonation struct {
     sdk sdk.ISmartContract
-    
+
     //Total donations received by donees
     //@:public:store
     donations map[types.Address]bn.Number // key=address of donee
@@ -288,9 +286,9 @@ func (d *Mydonation) AddDonee(donee types.Address) {
         errDoneeCannotBeSmc, "Donee can not be account of this smart contract")
     sdk.Require(!d._chkDonations(donee),
         errDoneeAlreadyExist, "Donee already exists")
-    
+
     d._setDonations(donee, bn.N(0))
-    
+
     //emit receipt
     d.emitAddDonee(donee)
 }
@@ -304,9 +302,9 @@ func (d *Mydonation) DelDonee(donee types.Address) {
         errDoneeNotExist, "Donee does not exist")
     sdk.Require(d._donations(donee).IsEqualI(0),
         errDonationExist, "Donation exists")
-    
+
     d._delDonations(donee)
-    
+
     //emit receipt
     d.emitDelDonee(donee)
 }
@@ -317,7 +315,7 @@ func (d *Mydonation) Donate(donee types.Address) {
     sdk.RequireAddress(donee)
     sdk.Require(d._chkDonations(donee),
         errDoneeNotExist, "Donee does not exist")
-    
+
     var valTome *std.Transfer
     token := d.sdk.Helper().GenesisHelper().Token()
     forx.Range(
@@ -361,7 +359,7 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
     sdk.Require(d._donations(donee).IsGE(value),
         errDonationNotEnough, 
         "Donation is not enough")
-    
+
     token := d.sdk.Helper().GenesisHelper().Token()
     account := d.sdk.Message().Contract().Account()
     account.TransferByToken(token.Address(), donee, value)
@@ -376,5 +374,3 @@ func (d *Mydonation) Transfer(donee types.Address, value bn.Number) {
     )
 }
 ```
-
-

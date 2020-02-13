@@ -45,7 +45,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -70,7 +70,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success                             |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe|
@@ -90,7 +90,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -115,7 +115,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success                              |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -134,7 +134,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                   |
   | password     |  String  | *wallet password                                                  |
@@ -159,7 +159,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success                              |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -178,7 +178,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                   |
   | password     |  String  | *wallet password                                                  |
@@ -208,7 +208,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment** |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success  |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -228,7 +228,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Grammer**         | **Type** | **Comment** |
+  | **Parameter**         | **Type** | **Comment** |
   | ---------------- | :------: | ------------------------------------------------------------ |
   | name             |  String  | *wallet name                                                  |
   | password         |  String  | *wallet password                                                  |
@@ -258,7 +258,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment** |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -279,7 +279,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Request Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -305,7 +305,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment** |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -324,7 +324,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet access password                                       |
@@ -363,7 +363,7 @@ Use "bcc [command] --help" for more information about a command.
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -384,7 +384,7 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment** |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | orgName      |  String  | *organization name                                                  |
   | contractName |  String  | *contract name                                                  |
@@ -443,7 +443,7 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Output SUCCESS Result**
 
-  | **Grammer**                                                    |   **Type**    | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**                                                    |   **Type**    | **Comment** |
   | ----------------------------------------------------------- | :-----------: | ------------------------------------------------------------ |
   | Version                                                     |    string     | contract all iteration versions                                             |
   | Name                                                        |    string     | contract name                                                     |
@@ -466,27 +466,25 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
   | SettleBet([]byte)                                           |    String     | SettleBet method prototype                                          |
   | RefundBet([]byte)                                           |    String     | RefundBet method prototype                                          |
 
-
-
 ### 2.8 blockHeight
 
 - Function Description: query block height
 
 - **command**
 
-  ```
+  ```shell
   bcc blockHeight  [--chainid bcb]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | chainid  |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
       "lastBlock": 2500
@@ -495,11 +493,9 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Output SUCCESS Result**
 
-  | **Grammer**  | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**  | **Type** | **Comment** |
   | --------- | :------: | ------------------------------------------------------------ |
   | lastBlock |  Int64   | latest block height.                                               |
-
-
 
 ### 2.9 block
 
@@ -507,14 +503,14 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **command**
 
-  ```
+  ```shell
   bcc block [--height 2500]|[--rt "2019-05-10 09:37:14"] [--chainid bcb]
   bcc block [--height 2500]|[--rt "2019-05-10 09:37:14"] [--num 3] [--chainid bcb]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | height   |  int64   | specifies the block height                                  |
   | rt       |  string  | specifies the block time. UTC time is used. The block time returned is greater than and closest to the input time |
@@ -525,7 +521,7 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Output SUCCESS Example1**（detailed information）
 
-  ```
+  ```json
   OK
   Response: {
     "blockHeight": 2500,
@@ -566,7 +562,7 @@ bcc contractInfo [--orgName example] [--orgID orgBtjf...] [--contractName mydice
 
 - **Output SUCCESS Example2**(brief information）
 
-```shell
+```json
 OK
 Response: {
  "result": [
@@ -591,7 +587,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**                                       |   **Type**   | **Comment** |
+  | **Parameter**                                       |   **Type**   | **Comment** |
   | ---------------------------------------------- | :----------: | ------------------------------------------------------------ |
   | blockHeight                                    |    Int64     | block height                                                   |
   | blockHash                                      |  HexString   | block hash value, starting with '0x'                          |
@@ -630,20 +626,20 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc tx --txHash 0x4E456161... [--chainid bcb]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type**  | **Comment** |
   | -------- | :-------: | ------------------------------------------------------------ |
   | txHash   | HexString | specifies the transaction hash, starting with '0x'                                |
   | chainid  |  String   | [optional] Chain ID, the default is the configuration in the configuration file                     |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "txHash": "0xc2d613b000c56b53099b3668664c44f1395406a6e8b8f288fb0e045f72a3c83c",
@@ -757,7 +753,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**       |        **Type**        | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**       |        **Type**        | **Comment** |
   | -------------- | :--------------------: | ------------------------------------------------------------ |
   | txHash         |       HexString        | transaction hash, starting with '0x'                                     |
   | txTime         |         String         | transaction time                                                   |
@@ -795,13 +791,13 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc balance [--address bcbAkTD... | --name hotwal-001 --password aBig62_123] [--token bcb] [--all false] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | address      | Address  | [choose one from wallet information] account address, which is blank by default    |
   | name         |  String  | [choose one from account address] wallet name, which is blank by default       |
@@ -813,7 +809,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: [
     {
@@ -826,13 +822,11 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | token        |  String  | token name                                                   |
   | tokenAddress |  String  | token address                        |
   | balance      |  String  | account balance (unit: cong)                       |
-
-
 
 ### 2.12 nonce
 
@@ -840,13 +834,13 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc nonce [--address bcbAkTD... | --name hotwal-001 --password aBig62_123]  [--chainid local] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | address      | Address  | [choose one from wallet] account address                           |
   | name         |  String  | [choose one from account address] wallet address                       |
@@ -856,7 +850,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "nonce": 5000
@@ -865,11 +859,9 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
-  | nonce    |  Uint64  | next avaiable transaction count value of a specific address  on the blockchain                  |
-
-
+  | nonce    |  Uint64  | next available transaction count value of a specific address  on the blockchain                  |
 
 ### 2.13 commitTx
 
@@ -877,13 +869,13 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc commitTx [--tx bcb<tx>.v1.AetboY...] [--file xxxxx] [--chainid bcb]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | tx       |  String  | transaction data.                                                   |
   | chainid  |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
@@ -891,7 +883,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
      "code": 200,
@@ -903,14 +895,12 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction verification / endorsement result code, 200 indicates success               |
-  | &nbsp;&nbsp;log    |  String   | the description of the transaction verification / endorsement result. When the code is not equal to 200, it will descibe a specific error information |
+  | &nbsp;&nbsp;log    |  String   | the description of the transaction verification / endorsement result. When the code is not equal to 200, it will describe a specific error information |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
-
-
 
 ### 2.14 version
 
@@ -918,32 +908,30 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc version [--chainid bcb]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | chainid  |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
-  	version: 1.0.7.9636
+    version: 1.0.7.9636
   }
   ```
 
 - **Output SUCCESS Result**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | version  |  string  | the current program version number                               |
-
-
 
 ### 2.15 runAsRPCService
 
@@ -951,25 +939,25 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc runAsRPCService
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | ——       |    ——    | ——                                                           |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   ```
 
 - **Output SUCCESS Result**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | ——       |    ——    | ——                                                           |
 
@@ -981,41 +969,35 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc query [--path /contract/all/0] [--chainid bcb]
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | path     |  string  | [required] the key to query the specified information                   |
   | chainid  |  String  | [optional] Chain ID, the default is the configuration in the configuration file                     |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   response: {
-     "code"	:  200
-     "key"	:  "L2NvbnRyYWN0L2FsbC8w"
-     "value"  :	"WyJ0ZXN0NVpYaG8zdUw1WlNCV3BIMmlmbmJzQmFRY3k1NTNnWDhGIiwidGVzdEFSUlZm
-  				na3V4ekE1VlpGaGhvNjUxYkZGZ21ncyIsInRlc3Q2cnlWS1NnZFpCZ2NnUjNhV2djbWRa
-   				WEpLaDFRSnoiLCJ0ZXN0QWlXdXNuc0ZzVVFXa2ZIR1NLNXpoNjNGb3pDUFY1UGlCIiwid
-   				Es2a2pnQ2tBQm5TVFMxTUI4NkNpeEVRV005Nlpic1A5IiwidGVzdFA4ZEMyUHVCcHNVQ
-   				Dhqb0t1RjFFdXpaTFhGbXg1NyJd"
+     "code" :  200,
+     "key" :  "L2NvbnRyYWN0L2FsbC8w",
+     "value" : "WyJ0ZXN0NVpYaG8zdUw1WlNCV3BIMmlmbmJzQmFRY3k1NTNnWDhGIiwidGVzdEFSUlZmna3V4ekE1VlpGaGhvNjUxYkZGZ21ncyIsInRlc3Q2cnlWS1NnZFpCZ2NnUjNhV2djbWRaWEpLaDFRSnoiLCJ0ZXN0QWlXdXNuc0ZzVVFXa2ZIR1NLNXpoNjNGb3pDUFY1UGlCIiwidEs2a2pnQ2tBQm5TVFMxTUI4NkNpeEVRV005Nlpic1A5IiwidGVzdFA4ZEMyUHVCcHNVQDhqb0t1RjFFdXpaTFhGbXg1NyJd"
   }
   ```
 
 - **Output SUCCESS Result**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | code     |   Int    | transaction verification / endorsement result code, 200 indicates success               |
   | key      |  string  | Base64 encoded string, encoded by the input parameter (path)       |
   | value    |  string  | Base64 encoded string, encoded by the output result          |
-
-
 
 ### 2.16 solDeploy
 
@@ -1023,13 +1005,13 @@ Response: {
 
 - **command**
 
-  ```
+  ```shell
   bcc solDeploy --name hotwal001 --password aBig62_123 --gasLimit 1000000 [--tokenAddr bcbaabdf...]|[--tokenName bcb] [--abiFile ./test.abi] [--binFile ./test.bin]|[--sourceFile ./test.sol] [--note ...] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**         | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**         | **Type** | **Comment** |
   | ---------------- | :------: | ------------------------------------------------------------ |
   | name             |  String  | *wallet name                                                  |
   | password         |  String  | *wallet password                                                  |
@@ -1045,7 +1027,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1059,7 +1041,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -1067,21 +1049,19 @@ Response: {
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
   | data               |  Address  | contract address                                                     |
 
-
-
 ### 2.16 solCall
 
 - Function Description: query the specified information according to the instruction
 
 - **command**
 
-  ```
+  ```shell
   bcc solCall --name hotwal001 --password aBig62_123 --gasLimit 1000000 --contractAddr bcbGP7ktCj3HwY1... --method getValue [--paramsArr hello] [--abiFile ./test.abi] [--value 1000] [--note ...] [--chainid bcb] [--keystorepath ./.keystore]
   ```
 
 - **Input Parameters**
 
-  | **Grammer**         | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**         | **Type** | **Comment** |
   | ---------------- | :------: | ------------------------------------------------------------ |
   | name             |  String  | *wallet name                                                  |
   | password         |  String  | *wallet password                                                  |
@@ -1097,7 +1077,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1107,12 +1087,11 @@ Response: {
     "height": 49092,
     "data": "0000000000000000000000000000000000000000000000000000000000000040"
   }
-
   ```
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -1120,21 +1099,19 @@ Response: {
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
   | data               |  Address  | function return value                                    |
 
-
-
 ## 3. Interface details
 
 ### 3.1 registerOrg
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_registerOrg?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
@@ -1143,19 +1120,19 @@ Response: {
         "name": "hotwal001",
         "password": "aBig62_123",
         "bccParams": {
-        	  "gasLimit": "1000000",
-        	  "note": "",
-            "orgName": "example",
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+          "gasLimit": "1000000",
+          "note": "",
+          "orgName": "example",
+          "chainID": "bcb",
+          "keyStorePath": "./.keystore"
+        }
+      }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                 |
@@ -1164,7 +1141,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1178,7 +1155,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -1190,35 +1167,35 @@ Response: {
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_setOrgSigners?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_setOrgSigners",
     "params": {
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "bccParams": {
-        	  "gasLimit": "1000000",
-        	  "note": "",
-            "orgName": "example",
-            "pubKeys": ["0x..."],
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "bccParams": {
+        "gasLimit": "1000000",
+        "note": "",
+        "orgName": "example",
+        "pubKeys": ["0x..."],
+        "chainID": "bcb",
+        "keyStorePath": "./.keystore"
+      }
+    }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -1231,7 +1208,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1243,48 +1220,46 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 3.3 setOrgDeployer
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_setOrgDeployer?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_setOrgDeployer",
     "params": {
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "bccParams": {
-        	  "gasLimit": "1000000",
-        	  "note": "",
-            "orgName": "example",
-            "deployer": local...,
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "bccParams": {
+        "gasLimit": "1000000",
+        "note": "",
+        "orgName": "example",
+        "deployer": local...,
+        "chainID": "bcb",
+        "keyStorePath": "./.keystore"
+      }
+    }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -1297,7 +1272,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1310,52 +1285,50 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 3.4 deployContract
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_deployContract?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_deployContract",
     "params": {
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "bccParams": {
-        	  "gasLimit": "100000",
-        	  "note": "",
-            "contractName": "dice2win",
-            "version": "1.0",
-            "orgName": "genesis",
-            "codeFile": "./example.tar.gz",
-            "effectHeight": 100,
-            "owner": "bcbES5d6kwoX4vMeNLENMee2Mnsf2KL9ZpWo",
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "bccParams": {
+        "gasLimit": "100000",
+        "note": "",
+        "contractName": "dice2win",
+        "version": "1.0",
+        "orgName": "genesis",
+        "codeFile": "./example.tar.gz",
+        "effectHeight": 100,
+        "owner": "bcbES5d6kwoX4vMeNLENMee2Mnsf2KL9ZpWo",
+        "chainID": "bcb",
+        "keyStorePath": "./.keystore"
+      }
+    }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -1372,7 +1345,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1385,7 +1358,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -1393,45 +1366,43 @@ Response: {
   | smcAddress         |  Address  | address of deployed contract                                 |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 3.5 registerToken
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_registerToken?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_registerToken",
     "params": {
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "bccParams": {
-            "tokenName": "tx",
-            "tokenSymbol": "tx",
-            "totalSupply": "1000000000",
-            "addSupplyEnabled": true,
-            "burnEnabled": true,
-            "gasPrice": 2500,
-            "gasLimit": "100000",
-        	  "note": "",
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "bccParams": {
+        "tokenName": "tx",
+        "tokenSymbol": "tx",
+        "totalSupply": "1000000000",
+        "addSupplyEnabled": true,
+        "burnEnabled": true,
+        "gasPrice": 2500,
+        "gasLimit": "100000",
+        "note": "",
+        "chainID": "bcb",
+        "keyStorePath": "./.keystore"
+      }
+    }
   }
   ```
 
 - Input Parameters**
 
-  | **Grammer**         | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**         | **Type** | **Comment** |
   | ---------------- | :------: | ------------------------------------------------------------ |
   | name             |  String  | *wallet name                                                  |
   | password         |  String  | *wallet password                                                  |
@@ -1445,7 +1416,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1459,7 +1430,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
@@ -1467,42 +1438,40 @@ Response: {
   | tokenAddress       |  String   | token address                        |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 3.6 transfer
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_transfer?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_transfer",
     "params": {
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "bccParams": {
-            "token": "bcb",
-            "gasLimit": "1000",
-            "note": "",
-            "to": "bcbLocFJG5Q792eLQXhvNkG417kwiaaoPH5a",
-            "value": "150000000",
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "bccParams": {
+        "token": "bcb",
+        "gasLimit": "1000",
+        "note": "",
+        "to": "bcbLocFJG5Q792eLQXhvNkG417kwiaaoPH5a",
+        "value": "150000000",
+        "chainID": "bcb",
+        "keyStorePath": "./.keystore"
+      }
+    }
   }
   ```
 
 - **Request Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet password                                                  |
@@ -1515,7 +1484,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1528,53 +1497,51 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 3.7 call
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_call?name=_&password=_&bccParams=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_call",
     "params": {
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "bccParams": {
-            "orgName": "example",
-            "contract": "dice2win",
-            "method": "placeBet",
-            "gasLimit": "10000",
-            "splitBy": ";",
-            "params": "1,2,100,0x234...,0xjsdj...,bcbLocF...",
-            "paramsFile": "./params",
-            "note": "",
-            "pay": "1.002bcb",
-            "chainID": "bcb",
-            "keyStorePath": "./.keystore"
-      	}
-    	}
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "bccParams": {
+        "orgName": "example",
+        "contract": "dice2win",
+        "method": "placeBet",
+        "gasLimit": "10000",
+        "splitBy": ";",
+        "params": "1,2,100,0x234...,0xjsdj...,bcbLocF...",
+        "paramsFile": "./params",
+        "note": "",
+        "pay": "1.002bcb",
+        "chainID": "bcb",
+        "keyStorePath": "./.keystore"
+      }
+    }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | name         |  String  | *wallet name                                                  |
   | password     |  String  | *wallet access password                                              |
@@ -1591,7 +1558,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "code": 200,
@@ -1603,43 +1570,41 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction execution result code, 200 indicates success            |
   | &nbsp;&nbsp;log    |  String   | the description of the transaction execution result. When the code is not equal to 200, it will show a specific error information to describe |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
 
-
-
 ### 3.8 contractInfo
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_contractInfo?orgName=_&contractName=_&orgID=_&contractAddr=_&chainID=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_contractInfo",
     "params": {
-    	"orgName": "jiujiu"
-    	"contractName": "excellencies"
-    	"orgID": "orgCZkw5xz9DYa3h5pJ2CzZSuGHRCj2ot5xq"
-    	"contractAddr": "devtest7rXz2j8Vv1ZnawYMi3vswQ1ra2Lt33LTs"
-    	"chainID": "devtest"
+      "orgName": "jiujiu",
+      "contractName": "excellencies",
+      "orgID": "orgCZkw5xz9DYa3h5pJ2CzZSuGHRCj2ot5xq",
+      "contractAddr": "devtest7rXz2j8Vv1ZnawYMi3vswQ1ra2Lt33LTs",
+      "chainID": "devtest"
     }
   }
   ```
 
 - **Input Parameters**
 
-| **Grammer**     | **Type** | **Comment**                                 |
+| **Parameter**     | **Type** | **Comment**                                 |
 | ------------ | -------- | ---------------------------------------- |
 | orgName      | String   | *organization name                              |
 | contractName | String   | *contract name                              |
@@ -1649,7 +1614,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "",
@@ -1716,7 +1681,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-| **Grammer**                                                    | **Type**      | **Comment**                       |
+| **Parameter**                                                    | **Type**      | **Comment**                       |
 | ----------------------------------------------------------- | ------------- | ------------------------------ |
 | Version                                                     | string        | contract all iteration versions               |
 | Name                                                        | string        | contract name                       |
@@ -1739,38 +1704,36 @@ Response: {
 | SettleBet([]byte)                                           | String        | SettleBet method prototype            |
 | RefundBet([]byte)                                           | String        | RefundBet method prototype            |
 
-
-
 ### 3.8 blockHeight
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_blockHeight?chainID=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_blockHeight",
     "params": {
-    	"chainID": "bcb"
+      "chainID": "bcb"
     }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | ——       |    ——    | ——                                                           |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
       "lastBlock": 2500
@@ -1779,23 +1742,21 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**  | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**  | **Type** | **Comment** |
   | --------- | :------: | ------------------------------------------------------------ |
   | lastBlock |  Int64   | latest block height                                               |
-
-
 
 ### 3.9 block
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_block?height=_&rt=_&num=_&chainID=_
   ```
 
 - **Request JSONRPC over HTTPS1**（detailed information parameter）
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
@@ -1809,21 +1770,21 @@ Response: {
 
 - **Request JSONRPC over HTTPS2**（brief information parameter）
 
-```
+```json
 {
   "jsonrpc": "2.0",
   "id": "dontcare/anything",
   "method": "bcc_block",
   "params": {
-   	 "rt": "2019-05-10 09:37:14",
-     "num": "3"
+    "rt": "2019-05-10 09:37:14",
+    "num": "3"
   }
 }
 ```
 
 - **Input Parameters**
 
-| **Grammer** | **Type** | **Comment**                                                     |
+| **Parameter** | **Type** | **Comment**                                                     |
 | -------- | -------- | ------------------------------------------------------------ |
 | height   | int64    | specific block height                                               |
 | rt       | string   | specifies the block time. UTC time is used. The block time returned is greater than and closest to the input time |
@@ -1834,7 +1795,7 @@ Notice: time and height are mutually exclusive parameters; if height and time ar
 
 - **Output SUCCESS Example1**（detailed information parameter）
 
-  ```
+  ```json
   OK
   Response: {
     "blockHeight": 2500,
@@ -1875,32 +1836,32 @@ Notice: time and height are mutually exclusive parameters; if height and time ar
 
 - **Output SUCCESS Example2**(brief information parameter）
 
-```
+```json
 OK
-Response: {
- [
- 	{
- 	 "blockHeight": 2500,
-	 "blockHash": "0x95880AC3BE0A89AA2C82FA5E9DADF95A0E99DC3C",
- 	 "blockTime": "2019-05-10T09:37:14.923456881Z",
-  	},
-  	{
- 	 "blockHeight": 2501,
-	 "blockHash": "0x476DC319F4D3AD9B8C4C4AB03EDCC100BB7C90DA",
- 	 "blockTime": "2019-05-10T09:39:16.234023422Z",
-  	},
-  	{
- 	 "blockHeight": 2502,
-	 "blockHash": "0xCF499509BF839A3083B954F409742C3C9AF93367",
- 	 "blockTime": "2019-05-10T09:41:17.544988709Z",
-  	}
+Response:{
+  [
+    {
+      "blockHeight": 2500,
+      "blockHash": "0x95880AC3BE0A89AA2C82FA5E9DADF95A0E99DC3C",
+      "blockTime": "2019-05-10T09:37:14.923456881Z",
+    },
+    {
+      "blockHeight": 2501,
+      "blockHash": "0x476DC319F4D3AD9B8C4C4AB03EDCC100BB7C90DA",
+      "blockTime": "2019-05-10T09:39:16.234023422Z",
+    },
+    {
+      "blockHeight": 2502,
+      "blockHash": "0xCF499509BF839A3083B954F409742C3C9AF93367",
+      "blockTime": "2019-05-10T09:41:17.544988709Z",
+    }
   ]
 }
 ```
 
 - **Output SUCCESS Result**
 
-  | **Grammer**                                       |   **Type**   | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**                                       |   **Type**   | **Comment** |
   | ---------------------------------------------- | :----------: | ------------------------------------------------------------ |
   | blockHeight                                    |    Int64     | block height                                                   |
   | blockHash                                      |  HexString   | block hash, starting with '0x'                          |
@@ -1933,39 +1894,37 @@ Response: {
   | &nbsp;&nbsp;}                                  |              |                                                              |
   | ]                                              |              |                                                              |
 
-
-
 ### 3.10 transaction
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_transaction?txHash=_&chainID=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_transaction",
     "params": {
-        "txHash": "0x4E456161...",
-    	"chainID": "bcb"
+      "txHash": "0x4E456161...",
+      "chainID": "bcb"
     }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type**  | **Comment** |
   | -------- | :-------: | ------------------------------------------------------------ |
   | txHash   | HexString | specifies the transaction hash, starting with '0x'                                |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "txHash": "0xc2d613b000c56b53099b3668664c44f1395406a6e8b8f288fb0e045f72a3c83c",
@@ -2079,7 +2038,7 @@ Response: {
 
 - **Output SUCCESS Result**
 
-| **Grammer**     | **Type**               | **Comment**                                              |
+| **Parameter**     | **Type**               | **Comment**                                              |
 | ------------ | ---------------------- | ----------------------------------------------------- |
 | txHash       | HexString              | transaction hash, starting with '0x'                              |
 | txTime       | String                 | transaction time                                            |
@@ -2115,32 +2074,32 @@ Response: {
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_balance?address=_&name=_&password=_&token=_&all=_&chainID=_&keyStorePath=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_balance",
     "params": {
-        "address": "bcbAkTD...",
-        "name": "hotwal001",
-        "password": "aBig62_123",
-        "token": "bcb",
-        "all": true,
-    	  "chainID": "bcb",
-        "keyStorePath": "./.keystore"
+      "address": "bcbAkTD...",
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "token": "bcb",
+      "all": true,
+      "chainID": "bcb",
+      "keyStorePath": "./.keystore"
     }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | address      | Address  | [choose one from wallet information] account address, which is blank by default    |
   | name         |  String  | [choose one from account address] wallet name, which is blank by default       |
@@ -2152,7 +2111,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: [
     {
@@ -2165,42 +2124,40 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | token        |  String  | token name                                                   |
   | tokenAddress |  String  | token address                        |
   | balance      |  String  | account balance(uint: cong)                                  |
 
-
-
 ### 3.12 nonce
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_nonce?address=_&name=_&password=_&chainID=_&keyStorePath=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_nonce",
     "params": {
-        "address": "bcbAkTD...",
-        "name": "hotwal001",
-        "password": "aBig62_123",
-    	  "chainID": "bcb",
-        "keyStorePath": "./.keystore"
+      "address": "bcbAkTD...",
+      "name": "hotwal001",
+      "password": "aBig62_123",
+      "chainID": "bcb",
+      "keyStorePath": "./.keystore"
     }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer**     | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**     | **Type** | **Comment** |
   | ------------ | :------: | ------------------------------------------------------------ |
   | address      | Address  | [choose one from wallet] account address                           |
   | name         |  String  | [choose one from account address] wallet address                       |
@@ -2210,7 +2167,7 @@ Response: {
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     "nonce": 5000
@@ -2219,42 +2176,41 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
-  | nonce    |  Uint64  | next avaiable transaction count value of a specific address  on the blockchain                  |
-
+  | nonce    |  Uint64  | next available transaction count value of a specific address  on the blockchain                  |
 
 ### 3.13 commitTx
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_commitTx?tx=_&chainID=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
     "method": "bcc_commitTx",
     "params": {
-        "tx": "bcb<tx>.v1.AetboY...",
-        "chainID": "bcb"
+      "tx": "bcb<tx>.v1.AetboY...",
+      "chainID": "bcb"
     }
   }
   ```
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | tx       |  String  | *transaction data                                            |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
      "code": 200,
@@ -2267,26 +2223,24 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer**           | **Type**  | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter**           | **Type**  | **Comment** |
   | ------------------ | :-------: | ------------------------------------------------------------ |
   | &nbsp;&nbsp;code   |    Int    | transaction verification / endorsement result code, 200 indicates success               |
-  | &nbsp;&nbsp;log    |  String   | the description of the transaction verification / endorsement result. When the code is not equal to 200, it will descibe a specific error information |
+  | &nbsp;&nbsp;log    |  String   | the description of the transaction verification / endorsement result. When the code is not equal to 200, it will describe a specific error information |
   | &nbsp;&nbsp;txHash | HexString | transaction hash, starting with `0x`           |
   | &nbsp;&nbsp;height |   Int64   | confirmed block number                     |
-
-
 
 ### 3.14 version
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_version?chainID=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
@@ -2299,13 +2253,13 @@ Response: {
 
 - **Input Parameters**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | ——       |    ——    | ——                                                           |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   Response: {
     version: 1.0.7.9636
@@ -2314,23 +2268,21 @@ Response: {
 
 - **Output SUCCESS Result**
 
-  | **Grammer** | **Type** | **Comment**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+  | **Parameter** | **Type** | **Comment** |
   | -------- | :------: | ------------------------------------------------------------ |
   | version  |  string  | the current program version number                               |
-
-
 
 ### 3.15 query
 
 - **Request URI over HTTPS**
 
-  ```
+  ```html
   https://localhost:37658/bcc_query?path=_
   ```
 
 - **Request JSONRPC over HTTPS**
 
-  ```
+  ```json
   {
     "jsonrpc": "2.0",
     "id": "dontcare/anything",
@@ -2343,30 +2295,25 @@ Response: {
 
 - **Input Parameters**
 
-| **Grammer** | **Type** | **Comment**                  |
+| **Parameter** | **Type** | **Comment**                  |
 | -------- | -------- | ------------------------- |
 | path     | string   |[require] query the key for the specified information |
 
 - **Output SUCCESS Example**
 
-  ```
+  ```json
   OK
   response: {
      "code"	:  200
-     "key"	:  "L2NvbnRyYWN0L2FsbC8w"
-     "value"  :	"WyJ0ZXN0NVpYaG8zdUw1WlNCV3BIMmlmbmJzQmFRY3k1NTNnWDhGIiwidGVzdEFSUlZm
-  				na3V4ekE1VlpGaGhvNjUxYkZGZ21ncyIsInRlc3Q2cnlWS1NnZFpCZ2NnUjNhV2djbWRa
-   				WEpLaDFRSnoiLCJ0ZXN0QWlXdXNuc0ZzVVFXa2ZIR1NLNXpoNjNGb3pDUFY1UGlCIiwid
-   				Es2a2pnQ2tBQm5TVFMxTUI4NkNpeEVRV005Nlpic1A5IiwidGVzdFA4ZEMyUHVCcHNVQ
-   				Dhqb0t1RjFFdXpaTFhGbXg1NyJd"
+     "key" : "L2NvbnRyYWN0L2FsbC8w"
+     "value" : "WyJ0ZXN0NVpYaG8zdUw1WlNCV3BIMmlmbmJzQmFRY3k1NTNnWDhGIiwidGVzdEFSUlZmna3V4ekE1VlpGaGhvNjUxYkZGZ21ncyIsInRlc3Q2cnlWS1NnZFpCZ2NnUjNhV2djbWRaWEpLaDFRSnoiLCJ0ZXN0QWlXdXNuc0ZzVVFXa2ZIR1NLNXpoNjNGb3pDUFY1UGlCIiwidEs2a2pnQ2tBQm5TVFMxTUI4NkNpeEVRV005Nlpic1A5IiwidGVzdFA4ZEMyUHVCcHNVQDhqb0t1RjFFdXpaTFhGbXg1NyJd"
   }
   ```
 
 - **Output SUCCESS Result**
 
-| **Grammer** | **Type** | **Comment**                                               |
+| **Parameter** | **Type** | **Comment**                                               |
 | -------- | -------- | ------------------------------------------------------ |
 | code     | Int      | transaction verification / endorsement result code, 200 indicates success         |
 | key      | string   | Base64 encoded string, encoded by the input parameter (path) |
 | value    | string   | Base64 encoded string, encoded by the output result    |
-
