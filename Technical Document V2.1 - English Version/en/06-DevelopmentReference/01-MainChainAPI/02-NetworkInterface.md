@@ -984,7 +984,7 @@ https://earth.bcbchain.io/validators?height=20000
 | &nbsp;&nbsp;{        | Object            | Verifier information for the node.                              |
 | &nbsp;&nbsp;&nbsp;&nbsp;address                | Address        | Node address.                                            |
 | &nbsp;&nbsp;&nbsp;&nbsp;pub\_key: {                | Object            | Public key object.                                         |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type                   | Base64<br>String | The signature type, Base64 decoded, is a fixed string **ED25519**。        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type                   | Base64<br>String | The signature type, Base64 decoded, is a fixed string **ED25519**.        |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value                  | Base64<br>String | The public key data is 32 bytes binary data after Base64 decoding.               |
 | &nbsp;&nbsp;&nbsp;&nbsp;}                            |                   |                                                              |
 | &nbsp;&nbsp;&nbsp;&nbsp;voting\_power           | Int               | Voting weight, observer node is 0.                                   |

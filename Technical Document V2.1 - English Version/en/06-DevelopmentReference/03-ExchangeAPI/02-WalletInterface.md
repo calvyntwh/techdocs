@@ -29,7 +29,7 @@ Sends a request to bcbXwallet_rpc service to create a new wallet.
   | **Parameter** | **Type** | **Description** |
   | -------- | :------: | ------------------------------------------------------------ |
   | name     |  String  | Wallet name, 1-40 characters long, only upper case, lower case, digits, @, _, - , . allowed. |
-  | password |  String  | Password for wallet，8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character). |
+  | password |  String  | Password for wallet,8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character). |
 
 - **Response SUCCESS Example**
 
@@ -82,7 +82,7 @@ Sends a request to bcbXwallet_rpc to export a wallet.
   | **Parameter**  | **Type** | **Description** |
   | --------- | :------: | ------------------------------------------------------------ |
   | name      |  String  | Wallet name                                                   |
-  | password  |  String  | Password for wallet，8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
+  | password  |  String  | Password for wallet,8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
   | accessKey |  String  | Access key of wallet                                               |
   | plainText |   Bool   | Whether to export the wallet’s private key in plaintext. true: plaintext, false:encrypted private key. |
 
@@ -140,7 +140,7 @@ Sends a request to bcbXwallet_rpc to import a new wallet.
   | ---------- | :-------: | ------------------------------------------------------------ |
   | name       |  String   | Wallet name, 1-40 characters long, only upper case, lower case, digits, @, _, - , . allowed. |
   | privateKey | HexString | Encrypted private key, starting with 0x |
-  | password   |  String   | Password for wallet，8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
+  | password   |  String   | Password for wallet,8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
   | accessKey  |  String   | Access key, optional if plainText is true              |
   | plainText  |   Bool    | Indicates whether the privateKey is plaintext, true for plaintext, and false for ciphertext |
 
@@ -264,7 +264,7 @@ Sends a request to bcbXwallet_rpc to request a single transfer
   | &nbsp;&nbsp;smcAddress | Address  | The smart contract address corresponding to the traded currency (fiat or crypto) |
   | &nbsp;&nbsp;gasLimit   |  String  | Gas limit for the transaction                                             |
   | &nbsp; note            |  String  | Transaction note (max 255 characters)                                    |
-  | &nbsp;&nbsp;to         | Address  | Address of recipient。                                         |
+  | &nbsp;&nbsp;to         | Address  | Address of recipient.                                         |
   | &nbsp;&nbsp;value      |  String  | Amount of currency transferred（Unit：Cong)                               |
   | }                      |          |                                                              |
 
@@ -336,7 +336,7 @@ Sends a request to bcbXwallet_rpc to transfer currency offline
   | &nbsp;&nbsp;gasLimit   |  String  | Gas limit for the transaction                                             |
   | &nbsp; note            |  String  | Transaction note (max 255 characters) |
   | &nbsp;&nbsp;nonce      |  Uint64  | This value can be obtained through the ```bcb_nonce``` interface |
-  | &nbsp;&nbsp;to         | Address  | Address of recipient。 |
+  | &nbsp;&nbsp;to         | Address  | Address of recipient. |
   | &nbsp;&nbsp;value      |  String  | Amount of currency transferred（Unit：Cong) |
   | } | | |
 

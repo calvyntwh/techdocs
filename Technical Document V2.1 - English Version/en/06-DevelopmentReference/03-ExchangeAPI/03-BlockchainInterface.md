@@ -153,14 +153,14 @@ Sends a request to bcbXwallet_rpc to query block data.
   | smcName                                |    String    | Smc Name.                                                   |
   | method                                 |    String    | method.                                                   |
   | to                                     |   Address    | Destination address, valid only when the transaction is a BRC20 standard transfer.            |
-  | value                                  |    string    | Transaction total (unit: cong)，valid only when the transaction is a BRC20 standard transfer.          |
+  | value                                  |    string    | Transaction total (unit: cong),valid only when the transaction is a BRC20 standard transfer.          |
   | &nbsp;}]&nbsp;                         |              |                                                              |
   | transferReceipts[                      | Object Array | Transfer receipt list                     |
   | {                                      |    Object    | Receipt parameters.                                                   |
   | token                                  |   Address    | Token address |
   | from                                   |   Address    | Address of the transaction from party.                                             |
   | to                                     |   Address    | Destination address, valid only when the transaction is a BRC20 standard transfer.            |
-  | value                                  |  bn.Number   | Transaction total (unit: cong)，valid only when the transaction is a BRC20 standard transfer.。        |
+  | value                                  |  bn.Number   | Transaction total (unit: cong),valid only when the transaction is a BRC20 standard transfer..        |
   | note                                   |    string    | note                                                     |
   | }                                      |              |                                                              |
   | ]                                      |              |                                                              |
@@ -248,7 +248,7 @@ Sends a request to bcbXwallet_rpc to query a transaction details.
   | &nbsp;&nbsp;&nbsp;&nbsp;smcName    |    String    | Smc Name.                                                   |
   | &nbsp;&nbsp;&nbsp;&nbsp;method     |    String    | method.                                                   |
   | &nbsp;&nbsp;&nbsp;&nbsp;to         |   Address    | Destination address, valid only when the transaction is a BRC20 standard transfer.            |
-  | &nbsp;&nbsp;&nbsp;&nbsp;value      |    String    | Transaction total (unit: cong)，valid only when the transaction is a BRC20 standard transfer.。        |
+  | &nbsp;&nbsp;&nbsp;&nbsp;value      |    String    | Transaction total (unit: cong),valid only when the transaction is a BRC20 standard transfer..        |
   | &nbsp;&nbsp;}                                  |              |                                                              |
   | ]                                  |              |                                                              |
 
@@ -510,7 +510,7 @@ Sends a request to bcbXwallet_rpc to commit a transaction.
   | **Parameter** | **Type**  | **Description** |
   | -------- | :-------: | ------------------------------------------------------------ |
   | code     |    Int    | Transaction response code, 200 means success, anything else means failure.                         |
-  | log      |  String   | Error message when response code is not 200。 |
+  | log      |  String   | Error message when response code is not 200. |
   | txHash   | HexString | Transaction hash                                    |
   | height   |   Int64   | Block height of transaction                                 |
 

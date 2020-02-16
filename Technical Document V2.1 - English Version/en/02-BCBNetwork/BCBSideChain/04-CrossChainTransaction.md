@@ -8,9 +8,9 @@
 
 ### 1.1 Prepare account
 
-Prepare a transfer account for the side chain, we assume that the account user name created is `scAccount`, the password is `Ab1@Cd3$`, an account address on the side chain `SmartCity` is `local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG`，another account address on the side chain `EShop` is `local[EShop]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG`.
+Prepare a transfer account for the side chain, we assume that the account user name created is `scAccount`, the password is `Ab1@Cd3$`, an account address on the side chain `SmartCity` is `local[SmartCity]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG`,another account address on the side chain `EShop` is `local[EShop]HMpSyt2Jk5BiFiR2j45nGGjToF9miUVaG`.
 
-> Learn how to create an accout, please refer to [BCBTools-bcwTool](../../03-BCBTools\02-bcw.md)
+> Learn how to create an account, please refer to [BCBTools-bcwTool](../../03-BCBTools\02-bcw.md)
 
 ## 2. Token cross-chain transfer
 

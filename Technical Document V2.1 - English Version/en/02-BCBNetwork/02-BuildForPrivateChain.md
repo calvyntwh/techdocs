@@ -190,7 +190,7 @@ cp bcbchain/version install-tmcore/pieces/
 Notice: The default node IPs of the four-node test chain with open source code are:
 
 ```html
-192.168.1.101、
+192.168.1.101,
 192.168.1.102、
 192.168.1.103、
 192.168.1.104

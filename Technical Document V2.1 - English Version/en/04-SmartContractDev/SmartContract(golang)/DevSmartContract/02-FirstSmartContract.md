@@ -244,7 +244,7 @@ Execution results:
 
 > * State Database:
 >
->   Creates a new KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where ```xxx```is the address corresponding to the input parameter ```donee```，Value：```0```；
+>   Creates a new KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```,where ```xxx```is the address corresponding to the input parameter ```donee```,Value：```0```；
 >
 > * BCBChain：
 >
@@ -271,7 +271,7 @@ Results of execution:
 
 > - State Database:
 >
->   Deletes the KEY:```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where  ```xxx``` is the address corresponding to the input parameter ```donee```；
+>   Deletes the KEY:```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```,where  ```xxx``` is the address corresponding to the input parameter ```donee```；
 >
 > - BCBChain：
 >
@@ -301,7 +301,7 @@ Results of execution:
 
 > - State Database:
 >
->   Updates the KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where  ```xxx``` is the address corresponding to the input parameter ```donee``` , Value: increase the value corresponding to the transfer amount;
+>   Updates the KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```,where  ```xxx``` is the address corresponding to the input parameter ```donee``` , Value: increase the value corresponding to the transfer amount;
 >
 > - BCBChain：
 >
@@ -332,7 +332,7 @@ Results of execution:
 
 > - State Database:
 >
->   Updates the KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```，where ```xxx``` is the address corresponding to the input parameter ```donee```, Value: subtract the value corresponding to the input parameter ```value```;
+>   Updates the KEY: ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mydonation/xxx```,where ```xxx``` is the address corresponding to the input parameter ```donee```, Value: subtract the value corresponding to the input parameter ```value```;
 >
 >   Updates the KEY: ```/account/ex/xxx/token/yyy```, where ```xxx``` is the address corresponding to the input parameter donee, ```yyy``` is the BCB token address on ```BCBChain```, Value: add the value corresponding to the input parameter ```value``` to the account balance.
 >

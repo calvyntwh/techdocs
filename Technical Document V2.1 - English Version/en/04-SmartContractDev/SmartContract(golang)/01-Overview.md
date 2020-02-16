@@ -103,9 +103,9 @@ func (ms *MyStorage) InitChain() {
 
 Declares the initialization code for the smart contract when it first joins the chain (executed only on the first time,another initialization code ```UpdateChain```will be executed when the contract is upgraded, this does not need to be defined in this contract).
 
-- Markup ```//@:constructor``` indicates that the function ```InitChain()``` defined below is an initialization function that is to be used once, when a smart contract is first deployed to BCBChain in order to complete the initialization of the smart contract on the blockchain. A part of the initialization, for example, includes the initialization of certain values in the global state variables.
-- Code line ```func (ms *MyStorage) InitChain() {``` A function prototype that declares the initialization of a smart contract. The function name must be ```InitChain```, which has no input parameters.
-- The code line ```}``` completes the function.
+* Markup ```//@:constructor``` indicates that the function ```InitChain()``` defined below is an initialization function that is to be used once, when a smart contract is first deployed to BCBChain in order to complete the initialization of the smart contract on the blockchain. A part of the initialization, for example, includes the initialization of certain values in the global state variables.
+* Code line ```func (ms *MyStorage) InitChain() {``` A function prototype that declares the initialization of a smart contract. The function name must be ```InitChain```, which has no input parameters.
+* The code line ```}``` completes the function.
 
 Code segment:
 
@@ -227,8 +227,8 @@ Code segment:
 
 Declare state data for smart contracts.
 
-- Markup ```//@:public:store:cache``` means that the next line of code will declare a state data that will be cached in memory.
-Code line ```totalSupply bn.Number``` declares a state variable of type ```bn.Number```. The variable name is ```totalSupply```. The```bn.Number``` type represents a signed large number. The addition, subtraction, multiplication, and division operations do not need to consider the overflow problem. The KEY value of this variable in the database is ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mycoin/totalSupply```. The helper tool provided by BCBChain will automatically encapsulate the variable and generate access functions ```_totalSupply() bn.Number```,```_setTotalSupply(bn.Number)```, ```_chkTotalSupply() bool``` and```_delTotalSupply()```, which will also be generated due to the influence of the tag ```cache```. A function to clear the memory cache ```_clrTotalSupply()```.
+* Markup ```//@:public:store:cache``` means that the next line of code will declare a state data that will be cached in memory.
+* Code line ```totalSupply bn.Number``` declares a state variable of type  ```bn.Number```. The variable name is ```totalSupply```. The ```bn.Number``` type represents a signed large number. The addition, subtraction, multiplication, and division operations do not need to consider the overflow problem. The KEY value of this variable in the database is ```/orgBtjfCSPCAJ84uQWcpNr74NLMWYm5SXzer/mycoin/totalSupply```. The helper tool provided by BCBChain will automatically encapsulate the variable and generate access functions ```_totalSupply() bn.Number```,```_setTotalSupply(bn.Number)```, ```_chkTotalSupply() bool``` and```_delTotalSupply()```, which will also be generated due to the influence of the tag ```cache```. A function to clear the memory cache ```_clrTotalSupply()```.
 
 Code segment:
 

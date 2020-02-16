@@ -34,7 +34,7 @@ Function prototype:
 func N2(b int64, d1, d2 int64) Number
 ```
 
-According to the incoming `b`，`d1`，`d2`, calculate the result of `b * d1 * d2` and return the `Number` type object.
+According to the incoming `b`,`d1`,`d2`, calculate the result of `b * d1 * d2` and return the `Number` type object.
 
 ### 1.4 func NB()
 
@@ -126,7 +126,7 @@ func NewNumberStringBase(s string, base int) Number
 
 Convert the large integer `s` represented by the string into an object of type `Number` and return it. The string is parsed according to the given cardinality `base`. If the parsing fails, it will return `0`.
 
-The cardinality `base` must be an integer between `0` or `2` and `MaxBase`. If `base` is `0`, the prefix of string `s` determines the actual conversion cardinality: prefix `"0x"`、`"0X"` indicates hexadecimal; prefix `"0b"`、`"0B"` indicates binary; prefix `"0"` indicates octal; others automatically use decimal as cardinality.
+The cardinality `base` must be an integer between `0` or `2` and `MaxBase`. If `base` is `0`, the prefix of string `s` determines the actual conversion cardinality: prefix `"0x"`,`"0X"` indicates hexadecimal; prefix `"0b"`,`"0B"` indicates binary; prefix `"0"` indicates octal; others automatically use decimal as cardinality.
 
 For the cardinal number of `<= 36`, upper case letters and lower case letters express the same number. The letters `'a'` to `'z'` and `'A'` to `'Z'` express the values `10` to `35`.
 
@@ -160,7 +160,7 @@ Function prototype:
 func NewNumberLongLong(b int64, d1, d2 int64) Number
 ```
 
-According to the incoming `b`，`d1`，`d2`, calculate the result of `b * d1 * d2` and return the `Number` type object.
+According to the incoming `b`,`d1`,`d2`, calculate the result of `b * d1 * d2` and return the `Number` type object.
 
 ## 2 class Number
 

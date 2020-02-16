@@ -269,7 +269,7 @@ Function Prototype:
 func (IMessage) Contract() types.Address
 ```
 
-Returns the smart contract address called by the current message。
+Returns the smart contract address called by the current message.
 
 ### 4.2 func MethodID()
 
@@ -1405,7 +1405,7 @@ Function Prototype:
 func (IGenesisHelper) ChainID() string
 ```
 
-Return to the block chain ID specified at the time of genesis。
+Return to the block chain ID specified at the time of genesis.
 
 ### 14.2 func OrgID()
 

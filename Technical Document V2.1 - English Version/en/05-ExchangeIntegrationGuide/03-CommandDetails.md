@@ -48,7 +48,7 @@ Use "bcbXwallet [command] --help" for more information about a command.
   | **Parameter**   | **Type** | **Description** |
   | -------- | :------: | ------------------------------------------------------------ |
   | name     |  String  | Wallet name, 1-40 characters long, only upper case, lower case, digits, @, _, - , . allowed. |
-  | password |  String  | Password for wallet，8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character). |
+  | password |  String  | Password for wallet,8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character). |
   | url      |  String  | Wallet service address, optional, default local service. |
 
 - **Output FAILED Example**
@@ -92,7 +92,7 @@ Use "bcbXwallet [command] --help" for more information about a command.
   | **Parameter**   | **Type** | **Description** |
   | --------- | :------: | ------------------------------------------------------------ |
   | name      |  String  | Wallet name |
-  | password  |  String  | Password for wallet，8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
+  | password  |  String  | Password for wallet,8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
   | accessKey |  String  | Access key |
   | plainText |   Bool   | Whether to export the wallet’s private key in plaintext. true - plaintext, false - encrypted private key. |
   | url       |  String  | Wallet service address, optional, default local service. |
@@ -128,7 +128,7 @@ Use "bcbXwallet [command] --help" for more information about a command.
   | ---------- | :-------: | ------------------------------------------------------------ |
   | name       |  String   | Transaction nName of wallet, 1-40 characters long, only upper case, lower case, digits, @, _, - , . allowed. |
   | privateKey | HexString | Wallet’s private key, with 0x as the header. |
-  | password   |  String   | Name of wallet, 1-40 characters long, only upper case, lower case, digits, @, _, - , . allowed Password for wallet，8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
+  | password   |  String   | Name of wallet, 1-40 characters long, only upper case, lower case, digits, @, _, - , . allowed Password for wallet,8-20 characters long（Any ASCII characters allowed, must contain at least one lower case, one upper case, one number, and one non-alphanumeric character) |
   | accessKey  |  String   | Access key, optional if plainText is true |
   | plainText  |   Bool    | Indicates whether the privateKey is plain text, true for plain text, and false for encrypted |
   | url        |  String   | Wallet service address, optional, default local service. |
@@ -395,7 +395,7 @@ Use "bcbXwallet [command] --help" for more information about a command.
 | smcName           | String       | Smc Name                                            |
 | method            | String       | method                                            |
 | to                | Address      | Destination address, valid only when the transaction is a BRC20 standard transfer     |
-| value             | string       | Transaction total (unit: cong)，valid only when the transaction is a BRC20 standard transfer   |
+| value             | string       | Transaction total (unit: cong),valid only when the transaction is a BRC20 standard transfer   |
 | }]                |              |                                                       |
 | transferReceipts[ | Object Array | the list of the receipts                                  |
 | {                 | Object       | receipt parameter                                         |

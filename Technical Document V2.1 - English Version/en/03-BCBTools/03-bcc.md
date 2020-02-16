@@ -593,7 +593,7 @@ Response: {
   | blockHash                                      |  HexString   | block hash value, starting with '0x'                          |
   | parentHash                                     |  HexString   | parent block hash, starting with '0x'                        |
   | chainID                                        |    String    | chain ID                                                      |
-  | validatorsHash                                 |  HexString   | verifier list hash, starting with '0x'。                       |
+  | validatorsHash                                 |  HexString   | verifier list hash, starting with '0x'.                       |
   | consensusHash                                  |  HexString   | consensus information hash value                       |
   | blockTime                                      |    String    | block packing time                                      |
   | blockSize                                      |     Int      | current block size.                                        |
@@ -1341,7 +1341,7 @@ Response: {
   | gasLimit     |  int64   | *gas limit for trading                                            |
   | note         |  String  | [optional] transaction notes                                             |
   | chainID      |  String  | [optional] chain ID                                          |
-  | keystorepath |  String  |  [optional] wallet file access path，default is"./.keystore"              |
+  | keystorepath |  String  |  [optional] wallet file access path,default is"./.keystore"              |
 
 - **Output SUCCESS Example**
 
@@ -1867,7 +1867,7 @@ Response:{
   | blockHash                                      |  HexString   | block hash, starting with '0x'                          |
   | parentHash                                     |  HexString   | parent block hash, starting with '0x'                        |
   | chainID                                        |    String    | chain ID                                                      |
-  | validatorsHash                                 |  HexString   | verifier list hash, starting with '0x'。                               |
+  | validatorsHash                                 |  HexString   | verifier list hash, starting with '0x'.                               |
   | consensusHash                                  |  HexString   | consensus information hash value                       |
   | blockTime                                      |    String    | block packing time                                      |
   | blockSize                                      |     Int      | current block size.                                        |
